@@ -23,7 +23,7 @@ Things you may want to cover:
 
 * ...
 
-## usersテーブル
+<!-- ## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -33,7 +33,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :
-- belongs_to :
+- belongs_to : -->
 
 <!-- 上記はフォーマットとして活用 -->
 <!-- テーブル名の「＿」は、自由でOK。readme上でわかりやすいように付けているだけ -->
