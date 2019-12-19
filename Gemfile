@@ -59,7 +59,7 @@ group :test do
 end
 
 group :production do
-  gem 'unicorn', '5.4.1'
+  gem 'unicorn', '5.5.5'
 end
 
 
@@ -72,5 +72,3 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'font-awesome-sass'
 gem 'carrierwave'
-gem 'ransack'
-gem 'test'
