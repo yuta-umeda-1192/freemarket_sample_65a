@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root to: 'testtop#index'
+  root to: 'item_exhibit#index'
 end

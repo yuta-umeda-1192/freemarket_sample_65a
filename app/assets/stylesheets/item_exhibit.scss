@@ -1,0 +1,47 @@
+// Place all the styles related to the item_exhibit controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+  
+.exhibit{
+  background-color: #f5f5f5;
+  padding-bottom: 220px;
+  position: relative;
+
+  .header{
+    height: 130px;
+    &__logo{
+      text-align: center;
+    }
+  }
+
+  .main{
+    &__container{
+      background-color: white;
+      width: 700px;
+      margin: 0 auto;
+    }
+  }
+
+  .footer{
+    position: absolute;
+    bottom: 0;
+    padding: 40px 0;
+    width: 100%;
+
+    &__container{
+      text-align: center;
+      &--nav{
+
+      }
+      &--logo{
+        width: 80px;
+        height: 65px;
+        margin: 40px auto 0;
+      }
+      &--copyright{
+        margin-top: 10px;
+      }
+    }
+  }
+}
+  
