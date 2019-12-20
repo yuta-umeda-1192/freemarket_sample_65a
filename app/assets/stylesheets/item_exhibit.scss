@@ -1,7 +1,7 @@
 // Place all the styles related to the item_exhibit controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-  
+
 .exhibit{
   background-color: #f5f5f5;
   padding-bottom: 220px;
@@ -10,7 +10,10 @@
   .header{
     height: 130px;
     &__logo{
+      position: relative;
       text-align: center;
+      display: inline-block;
+      margin: 40px 50% 0 50%;
     }
   }
 
@@ -19,6 +22,40 @@
       background-color: white;
       width: 700px;
       margin: 0 auto;
+
+      .container__title{
+        padding:35px 20px;
+        font-size: 25px;
+        text-align: center;
+        border-bottom: solid 1px #f5f5f5;
+      }
+
+      .form__container{
+        .form__image{
+          border-bottom: solid 1px #f5f5f5;
+          padding: 40px;
+        }
+        .form__content{
+          border-bottom: solid 1px #f5f5f5;
+          padding: 40px;
+        }
+        .form__details{
+          border-bottom: solid 1px #f5f5f5;
+          padding: 40px;
+        }
+        .form__delivery{
+          border-bottom: solid 1px #f5f5f5;
+          padding: 40px;
+        }
+        .form__sale{
+          border-bottom: solid 1px #f5f5f5;
+          padding: 40px;
+        }
+        .form__exhibit{
+          border-bottom: solid 1px #f5f5f5;
+          padding:40px;
+        }
+      }
     }
   }
 
@@ -44,4 +81,3 @@
     }
   }
 }
-  

@@ -4,19 +4,93 @@
   .header
     .header__logo
       mercari
+
   .main
     .main__container
-      %p t
-      %p t
-      %p a
-      %p s
-      %p s
-      %p c
+      .container__title
+        商品の情報を入力
+
+      .form__container
+        .form__image
+          .image--title
+            出品画像
+            必須
+            %p 最大10枚までアップロードできます
+          .image--drop
+            ファイル投稿欄
+
+        .form__content
+          .item__name
+            .item__name--title
+              商品名
+              必須
+            .item__name--form
+              商品名（最大40字以内)
+
+          .item__description
+            .item__description__title
+              商品の説明
+              必須
+            .item__description__form
+              商品の説明（必須、最大１０００字以内）
+
+        .form__details
+          商品の詳細
+          .form__group
+            .details__title
+              カテゴリー
+            .details__category__menu
+              プルダウン
+          .form__group
+            .details__title
+              商品の状態
+            .datails__status__menu
+              プルダウン
+
+        .form__delivery
+          配送について
+          .form__group
+            .delivery__title
+              配送料の負担
+            .delivery__menu
+              プルダウン
+          .form__group
+            .delivery__title
+              配送元の地域
+            .delivery__menu
+              プルダウン
+          .form__group
+            .delivery__title
+              配送までの日数
+            .delivery__menu
+              プルダウン
+
+        .form__sale
+          販売価格
+          .form__group
+            .sale__group__content
+              .sale__title
+                価格
+                必須
+              .sale__menu
+                ￥プルダウン
+
+        .form__exhibit
+          .exhibit__description
+          %p 禁止されている出品、行為を必ずご確認ください
+          %p またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
+          %p また、出品をもちまして加盟店規約に同意したことになります。
+
+          .exhibit__sell
+            出品する
+          .exhibit__back
+            戻る
+
   .footer
     .footer__container
       .footer__container--nav
-        test3
+        リンク３つ
       .footer__container--logo
-        logo
+        ロゴ
       .footer__container--copyright
         Mercari, Inc.
