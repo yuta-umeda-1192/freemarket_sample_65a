@@ -54,16 +54,15 @@ Things you may want to cover:
 |month|integer|null: false|
 |day|integer|null: false|
 |phone_number|integer|null: false unique: true|
-|todo_id|integer|null: false, foreign_key: true|
+|saler_id|integer|null: false, foreign_key: true|
+|item_id|integer|null: false, foreign_key: true|
+|likes_count_id|integer|null: false, foreign_key: true|
 
 
 ### Association
 - has_many :todo
 - has_many :evaluations, through: users_evaluations
-- has_many :items, through: item_comments
-- has_many :items, through: seller
-- has_many :items, through: buyer
-- has_many :items, through: like
+- has_many :likes
 
 
 <!-- 住所テーブル -->
@@ -114,16 +113,17 @@ Things you may want to cover:
 |name|string|null: false|
 |price|integer|null: false|
 |prefeture|string|null: false|
-|comment|string|null: false|
+|discription|string|null: false|
 |brand_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|saler_id|integer|null: false, foreign_key: true|
+|buyer_id|integer|null: false, foreign_key: true|
+|like_id|integer|null: false, foreign_key: true|
 
 
 ### Association
-- has_many :users, through: item_comments
-- has_many :users, through: seller
-- has_many :users, through: buyer
-- has_many :users, through: like
-- belongs_to :brands
+- has_many :likes
+- belongs_to :brand
 - belongs_to :upper_layer_category
 - belongs_to :middle_layer_category
 - belongs_to :lowest_layer_category
@@ -263,47 +263,6 @@ Things you may want to cover:
 - belongs_to :evaluation
 
 
-<!-- 中間テーブル：出品者 -->
-## sellerテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|item_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :user
-- belongs_to :item
-
-
-<!-- 中間テーブル：購入者 -->
-## buyerテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|item_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :user
-- belongs_to :item
-
-
-<!-- 中間テーブル：商品名コメント -->
-## item_commentsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|item_id|integer|null: false, foreign_key: true|
-|comment_text|text|null: false|
-
-### Association
-- belongs_to :user
-- belongs_to :item
-
-
-<!-- 中間テーブル：いいね  -->
 ## likeテーブル
 
 |Column|Type|Options|
