@@ -93,10 +93,28 @@
         .form__details{
           border-bottom: solid 1px #f5f5f5;
           padding: 40px;
+          .form__details__title{
+            display: block;
+            float: left;
+          }
           .details__right{
+            width: 400px;
+            float: right;
             .form__group{
-              width: 400px;
-              float: right;
+              .details__title{
+
+              }
+              .details__category__menu{
+                height: 48px;
+                border: solid 1px #cccccc;
+              }
+              .details__title{
+
+              }
+              .datails__status__menu{
+                height: 48px;
+                border: solid 1px #cccccc;
+              }
             }
           }
         }
