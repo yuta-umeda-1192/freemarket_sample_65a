@@ -48,23 +48,13 @@ Things you may want to cover:
 |password|string|null: false|
 |family_name|string|null: false|
 |first_name|string|null: false|
-|sei|string|null: false|
-|mei|string|null: false|
+|family_name_kana|string|null: false|
+|first_name_kana|string|null: false|
 |year|integer|null: false|
 |month|integer|null: false|
 |day|integer|null: false|
-|postal code|integer|null: false|
-|city|string|null: false|
-|address|string|null: false|
-|building_name|string|null: false|
 |phone_number|integer|null: false unique: true|
-|postal code|integer|null: false|
-|prefeture|string|null: false|
-|city|string|null: false|
-|address|string|null: false|
-|building_name|string|null: false|
-|profile_id|integer|null: false, foreign_key: true|
-|to_to_id|integer|null: false, foreign_key: true|
+|todo_id|integer|null: false, foreign_key: true|
 
 
 ### Association
@@ -74,6 +64,21 @@ Things you may want to cover:
 - has_many :items, through: seller
 - has_many :items, through: buyer
 - has_many :items, through: like
+
+
+<!-- 住所テーブル -->
+## テーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|postal_code|integer|null: false|
+|prefeture|string|null: false|
+|city|string|null: false|
+|address|string|null: false|
+|building_name|string|null: false|
+
+### Association
+- belongs_to :user
 
 
 <!-- やることリスト -->
@@ -96,7 +101,6 @@ Things you may want to cover:
 |good|string|null: true|
 |usual|string|null: true|
 |bad|string|null: true|
-<!-- 相談：考え方が、null: trueで良いのか？！３つのうち、１つはチェックしなければいけないが・・・ -->
 
 ### Association
 - has_many :users, through: users_evaluations
@@ -183,7 +187,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|burden_fee|integer|null: false|     
+|burden_fee|integer|null: false|
 
 ### Association
 - has_many :items
@@ -193,7 +197,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|day|string|null: false|    
+|day|string|null: false|
 
 ### Association
 - has_many :items
@@ -293,7 +297,6 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 |item_id|integer|null: false, foreign_key: true|
 |comment_text|text|null: false|
-<!-- comment_textのオプションは怪しい -->
 
 ### Association
 - belongs_to :user
@@ -308,7 +311,6 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 |item_id|integer|null: false, foreign_key: true|
 |notice_comment|text|null: false|
-<!-- notice_commentのオプションは怪しい -->
 
 ### Association
 - belongs_to :user
