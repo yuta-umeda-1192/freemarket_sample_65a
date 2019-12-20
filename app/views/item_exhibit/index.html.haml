@@ -12,12 +12,15 @@
 
       .form__container
         .form__image
-          .image--title
+          .image__title
             出品画像
             必須
             %p 最大10枚までアップロードできます
-          .image--drop
-            ファイル投稿欄
+          .image__drop
+            .drop__text
+              .drop__text--sentence
+                %p ドラッグアンドドロップ
+                %p またはクリックしてファイルをダンロード
 
         .form__content
           .item__name
@@ -25,7 +28,8 @@
               商品名
               必須
             .item__name--form
-              商品名（最大40字以内)
+              .form__text
+                商品名（最大40字以内)
 
           .item__description
             .item__description__title

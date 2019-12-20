@@ -34,10 +34,46 @@
         .form__image{
           border-bottom: solid 1px #f5f5f5;
           padding: 40px;
+          .image__title{
+
+          }
+          .image__drop{
+            width: 620px;
+            height: 160px;
+            background-color: #f5f5f5;
+            border: dotted 1px #cccccc;
+            .drop__text{
+              text-align: center;
+              padding: 40px;
+              height: 80px;
+              &--sentence{
+                height: 80px;
+                padding-top: 20px;
+              }
+            }
+          }
         }
         .form__content{
           border-bottom: solid 1px #f5f5f5;
           padding: 40px;
+          .item__name{
+            .item__name--title{
+
+            }
+            .item__name--form{
+              width: 620px;
+              height: 50px;
+              border:solid 1px #cccccc;
+              border-radius: 4px;
+              margin-top: 10px;
+              .form__text{;
+                color:#cccccc;
+                height: 50px;
+                padding-top: 15px;
+                padding-left: 20px;
+              }
+            }
+          }
         }
         .form__details{
           border-bottom: solid 1px #f5f5f5;
