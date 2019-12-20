@@ -74,10 +74,31 @@
               }
             }
           }
+
+          .item__description{
+            margin-top: 40px;
+            .item__description__title{
+
+            }
+
+            .item__description__form{
+              .description__form__text{
+                height: 145px;
+                width: 620px;
+                border:solid 1px #cccccc;
+              }
+            }
+          }
         }
         .form__details{
           border-bottom: solid 1px #f5f5f5;
           padding: 40px;
+          .details__right{
+            .form__group{
+              width: 400px;
+              float: right;
+            }
+          }
         }
         .form__delivery{
           border-bottom: solid 1px #f5f5f5;
