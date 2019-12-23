@@ -150,7 +150,6 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |status|string|null: false|
-|item_id|intger|null: false, foreign_key: true|
 
 ### Association
 - has_many :items
