@@ -123,9 +123,7 @@ Things you may want to cover:
 ### Association
 - has_many :likes
 - belongs_to :brand
-- belongs_to :upper_layer_category
-- belongs_to :middle_layer_category
-- belongs_to :lowest_layer_category
+- belongs_to :item_category
 - belongs_to :delivery_method
 - belongs_to :delivery_burden_fee
 - belongs_to :delivery_day
@@ -179,36 +177,13 @@ Things you may want to cover:
 - has_many :items
 
 
-<!-- カテゴリー大  -->
-## upper_layer_category テーブル
+<!-- カテゴリー  -->
+## item_category テーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-
-### Association
-- has_many :items
-
-
-<!-- カテゴリー中  -->
-## middle_layer_category テーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|upper_layer_category_id|integer|null: false, foreign_key: true|
-
-### Association
-- has_many :items
-
-
-<!-- カテゴリー小  -->
-## lowest_layer_category テーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|middle_layer_category_id|integer|null: false, foreign_key: true|
+|ancestry|string||
 
 ### Association
 - has_many :items
