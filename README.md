@@ -53,20 +53,17 @@ Things you may want to cover:
 |year|integer|null: false|
 |month|integer|null: false|
 |day|integer|null: false|
-|phone_number|integer|null: false unique: true|
-|saler_id|integer|null: false, foreign_key: true|
-|item_id|integer|null: false, foreign_key: true|
-|likes_count_id|integer|null: false, foreign_key: true|
 
 
 ### Association
 - has_many :todo
 - has_many :evaluations, through: users_evaluations
 - has_many :likes
+- has_one :address
 
 
 <!-- 住所テーブル -->
-## テーブル
+## addressテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -74,6 +71,7 @@ Things you may want to cover:
 |prefeture|string|null: false|
 |city|string|null: false|
 |address|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
 |building_name|string|null: false|
 
 ### Association
@@ -114,11 +112,12 @@ Things you may want to cover:
 |price|integer|null: false|
 |prefeture|string|null: false|
 |discription|string|null: false|
+|delivery_day|string|null: false|
+|delively_method|string|null: false|
+|delivery_burden_fee|string|null: false|
 |brand_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
-|saler_id|integer|null: false, foreign_key: true|
 |buyer_id|integer|null: false, foreign_key: true|
-|like_id|integer|null: false, foreign_key: true|
 
 
 ### Association
@@ -168,39 +167,7 @@ Things you may want to cover:
 |image|string|null: false|
 
 ### Association
-- belongs_to :image
-
-
-<!-- 配送方法 -->
-## delively_methodテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|method|string|null: false|
-
-### Association
-- has_many :items
-
-
-<!-- 配送料負担 -->
-## delivery_burden_feeテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|burden_fee|integer|null: false|
-
-### Association
-- has_many :items
-
-
-## delivery_dayテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|day|string|null: false|
-
-### Association
-- has_many :items
+- belongs_to :item
 
 
 <!-- ブランド名 -->
@@ -208,7 +175,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|brand_name|string|null: true|
+|name|string|null: true|
 
 ### Association
 - has_many :items
@@ -262,7 +229,7 @@ Things you may want to cover:
 - belongs_to :user
 - belongs_to :evaluation
 
-
+<!-- いいねテーブル -->
 ## likeテーブル
 
 |Column|Type|Options|
