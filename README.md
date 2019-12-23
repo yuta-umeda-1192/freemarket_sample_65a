@@ -115,6 +115,7 @@ Things you may want to cover:
 |delivery_day|string|null: false|
 |delively_method|string|null: false|
 |delivery_burden_fee|string|null: false|
+|item_category|string|null: false|
 |brand_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 |buyer_id|integer|null: false, foreign_key: true|
@@ -130,7 +131,6 @@ Things you may want to cover:
 - belongs_to :delivery_day
 - belongs_to :size
 - belongs_to :status
-- has_one :item_category
 
 
 <!-- 商品サイズ -->
@@ -161,6 +161,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |image_name|string|null: false|
+|item_id|integer|null: false, foreign_key: true|
 |image|string|null: false|
 
 ### Association
