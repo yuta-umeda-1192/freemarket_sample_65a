@@ -122,6 +122,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :likes
+- has_many :images
 - belongs_to :brand
 - belongs_to :item_category
 - belongs_to :delivery_method
@@ -129,6 +130,7 @@ Things you may want to cover:
 - belongs_to :delivery_day
 - belongs_to :size
 - belongs_to :status
+- has_one :item_category
 
 
 <!-- 商品サイズ -->
@@ -159,7 +161,6 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |image_name|string|null: false|
-|item_id|integer|null: false, foreign_key: true|
 |image|string|null: false|
 
 ### Association
