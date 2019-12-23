@@ -129,8 +129,8 @@ Things you may want to cover:
 - belongs_to :delivery_method
 - belongs_to :delivery_burden_fee
 - belongs_to :delivery_day
-- belong_to :size
-- belong_to :status
+- belongs_to :size
+- belongs_to :status
 
 
 <!-- 商品サイズ -->
@@ -139,7 +139,6 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |size|string|null: false|
-|item_id|intger|null: false, foreign_key: true|
 
 ### Association
 - has_many :items
@@ -210,7 +209,6 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|item_id|integer|null: false|
 |middle_layer_category_id|integer|null: false, foreign_key: true|
 
 ### Association
