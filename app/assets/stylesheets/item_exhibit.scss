@@ -6,14 +6,23 @@
   background-color: #f5f5f5;
   padding-bottom: 220px;
   position: relative;
+  .form__require{
+    background: red;
+    color: white;
+    display: inline;
+    padding: 3px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
 
   .header{
-    height: 130px;
+    text-align: center;
     &__logo{
-      position: relative;
-      text-align: center;
+      width: 200px;
       display: inline-block;
-      margin: 40px 50% 0 50%;
+      .header__btn{
+        margin: 40px 0;
+      }
     }
   }
 
@@ -35,7 +44,7 @@
           border-bottom: solid 1px #f5f5f5;
           padding: 40px;
           .image__title{
-
+            padding-bottom: 5px;
           }
           .image__drop{
             width: 620px;
@@ -78,14 +87,14 @@
           .item__description{
             margin-top: 40px;
             .item__description__title{
-
+              padding-bottom: 5px;
             }
 
             .item__description__form{
               .description__form__text{
                 height: 145px;
-                width: 620px;
                 border:solid 1px #cccccc;
+                padding: 10px;
               }
             }
           }
@@ -93,8 +102,8 @@
         .form__details{
           border-bottom: solid 1px #f5f5f5;
           padding: 40px;
+          overflow: hidden;
           .form__details__title{
-            display: block;
             float: left;
           }
           .details__right{
@@ -102,16 +111,19 @@
             float: right;
             .form__group{
               .details__title{
-
+                padding-bottom: 5px;
               }
               .details__category__menu{
+                border-radius: 4px;
                 height: 48px;
                 border: solid 1px #cccccc;
+                margin-bottom: 40px;
               }
               .details__title{
 
               }
               .datails__status__menu{
+                border-radius: 4px;
                 height: 48px;
                 border: solid 1px #cccccc;
               }
@@ -121,14 +133,78 @@
         .form__delivery{
           border-bottom: solid 1px #f5f5f5;
           padding: 40px;
+          overflow: hidden;
+          .form__delivery__title{
+            float: left;
+          }
+          .form__delivery__group{
+            float: right;
+            width: 400px;
+            .form__group{
+              .delivery__title{
+                padding-bottom: 5px;
+              }
+              .delivery__menu{
+                border-radius: 4px;
+                height: 48px;
+                border: solid 1px #cccccc;
+                margin-bottom: 40px;
+              }
+            }
+          }
         }
         .form__sale{
           border-bottom: solid 1px #f5f5f5;
           padding: 40px;
+          overflow: hidden;
+          .form__sale__title{
+            float: left;
+          }
+          .form__group{
+            float: right;
+            .sale__group__content{
+              width: 400px;
+              .sale__title{
+                margin-bottom: 25px;
+                display: flex;
+                height: 50px;
+                .sale__title__price{
+                  display: inline-block;
+                  line-height: 50px;
+                  text-align: center;
+                }
+                .sale__title__box{
+                  display: inline-block;
+                  width: 200px;
+                  height: 50px;
+                  margin: 0 0 0 auto;
+                  .price__input{
+                    width: 160px;
+                    height: 50px;
+                    margin: 0 0 0 auto;
+                    text-align: right;
+                    line-height: 50px;
+                    border-radius: 4px;
+                    padding-right: 10px;
+                    border: solid 1px #cccccc;
+                  }
+                }
+              }
+              .sale__commission{
+                padding: 25px 0;
+                border-top: solid 1px #cccccc;
+              }
+              .sale__menu{
+                padding: 25px 0;
+                border-top: solid 1px #cccccc;
+              }
+            }
+          }
         }
         .form__exhibit{
           border-bottom: solid 1px #f5f5f5;
           padding:40px;
+          overflow: hidden;
           .exhibit__sell{
             background-color: red;
             color: white;
@@ -159,7 +235,11 @@
     &__container{
       text-align: center;
       &--nav{
-
+        display: inline-block;
+        .li{
+          display: inline-block;
+          margin: 0 15px;
+        }
       }
       &--logo{
         width: 80px;
