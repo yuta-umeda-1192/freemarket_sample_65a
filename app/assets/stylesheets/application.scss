@@ -1,4 +1,4 @@
-@import "reset";
+@import "./reset";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "slick-theme";
@@ -6,6 +6,14 @@
 @import "top1";
 @import "top2";
 @import "footer-top";
+@import "users/index";
+@import "users/new1";
+@import "users/new2";
+@import "users/new3";
+@import "users/new4";
+@import "users/new5";
+@import "users/new6";
+@import "users/new7";
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
