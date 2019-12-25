@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'item_details#index'
+  root to: 'top#index'
+  resources :users, only: [:index, :new, :registration]
 end
+
