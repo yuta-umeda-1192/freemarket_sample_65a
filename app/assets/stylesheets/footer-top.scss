@@ -1,0 +1,43 @@
+.mercari{
+  height: 80px;
+  cursor: pointer;
+}
+.apple{
+  cursor: pointer;
+}
+.google{
+  cursor: pointer;
+}
+
+.footer-top{
+  background-image: url(https://web-jp-assets.mercdn.net/_next/static/images/download_app_bg-b57d6f1a32f2aebd89cf6f43bc2e4b39.jpg);
+  width: 100%;
+  &__all{
+    display: flex;
+    width: 850px;
+    justify-content: space-between;
+    margin: 0 auto;
+    &__left{
+      padding: 50px 0;
+      &__1{
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      &__2{
+        color: rgb(255, 255, 255);
+        font-size: 35px;
+        margin-bottom: 20px;
+      }
+      &__3{
+        justify-content: space-between;
+        display: flex;
+      }
+      
+    }
+    &__right{
+      
+    }
+  }
+}
