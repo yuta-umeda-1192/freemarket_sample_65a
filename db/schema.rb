@@ -41,6 +41,32 @@ ActiveRecord::Schema.define(version: 2019_12_25_080621) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    
+  create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.bigint "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_images_on_item_id"
+  end
+
+  create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "prefeture"
+    t.string "discription"
+    t.string "delivery_day"
+    t.string "delively_method"
+    t.string "delivery_burden_fee"
+    t.string "item_category"
+    t.integer "price"
+    t.bigint "brand_id"
+    t.bigint "user_id"
+    t.bigint "buyer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brand_id"], name: "index_items_on_brand_id"
+    t.index ["buyer_id"], name: "index_items_on_buyer_id"
+    t.index ["user_id"], name: "index_items_on_user_id"
   end
 
 end
