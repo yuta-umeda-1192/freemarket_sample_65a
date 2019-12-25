@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'testtop#index'
+  root to: 'top#index'
   resources :users, only: [:index, :new, :registration]
 end
