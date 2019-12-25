@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'item_exhibit#index'
+  root to: 'top#index'
+  resources :item_exhibit, only: [:index, :create]
 end
