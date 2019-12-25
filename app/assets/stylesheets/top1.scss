@@ -1,0 +1,345 @@
+.toppage__header{
+  width: 700px;
+  margin: 0px auto;
+  padding: 8px 0px 0px;
+  height:60px;
+  padding-right:60px;
+  &__top{
+    height: 90px;
+    display:flex;
+    .toppage__header__logo{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .img{
+        height: 40px;
+        width: 134px;
+        -webkit-box-align: center;
+        cursor: pointer;
+      }
+    }
+    .toppage__header__search {
+      display:flex;
+      position: relative;
+       &__form{
+        width:600px;
+        background-color: rgb(245, 245, 245);
+        font-size: 16px;
+        height: 40px;
+        line-height: 1.4em;
+        -webkit-appearance: none;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(204, 204, 204);
+        border-image: initial;
+        border-radius: 4px;
+        outline: none;
+        padding: 0px 50px 0px 10px;
+        transition: all 0.3s ease-out 0s;
+        cursor: pointer;      
+      }
+    
+      &__button{
+        width: 40px;
+        height: 40px;
+        line-height: 1.4em;
+        cursor: pointer;
+        right: 0px;
+        top: 0px;
+        -webkit-appearance: none;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        border-radius: 0px 4px 4px 0px;
+        padding: 0px;
+    }
+    .fa-search{
+      position: absolute;
+      padding-left:600px;
+      top: 15px;
+    }
+  } 
+}
+} 
+
+.choice{
+  display:flex;
+  font-size: 16px;
+  font-weight: 60px;
+  line-height: 36px;
+  margin-top:1px;
+  cursor: pointer;
+  &__category{
+    display:flex;
+    margin-left:200px ;
+    color: inherit;
+    text-decoration :none;
+  }
+  &__brand{
+    margin-left:30px;
+    color: inherit;
+  }
+
+  &__management{
+    display:flex;
+    margin-left: 140px;
+    &__good{
+    color: inherit;
+    }
+    &__information{
+    margin-left: 50px;
+    color: inherit;
+    }
+    &__todolist{
+    margin-left: 50px;
+    color: inherit;
+    }
+    &__mypage{
+    margin-left: 50px;
+    color: inherit;
+    }
+    }
+  }
+
+.choice__category__icon{
+  margin-top:10px;
+}
+
+.picture1{
+  &__scroll{
+    display:flex;
+    &__scroll1{
+      background-image:url(2016okazari.jpg);
+      background-size: cover;
+      height: 500px;
+      font-family: 'Courier New', Courier, monospace;
+      .div1{
+        margin-top:20px;
+        padding-left: 1000px;
+        font-size: 40px;
+       }
+      .div2{
+        padding-left: 1000px;
+        font-size: 40px;
+      }
+      .div3{
+        margin-top: 20px; 
+        padding-left: 1000px;
+        font-size: 20px;
+      }
+      .div4{
+        padding-left: 1000px;
+        font-size: 20px;
+      }
+      .div5{
+        padding-left: 1000px;
+        display:flex;
+        margin-top: 20px;
+        &__class1{
+          cursor: pointer;
+        }
+        &__class2{
+          cursor: pointer;
+          padding-left:30px;
+        }
+      }
+    }
+    &__scroll2{
+      background-image:url(og.jpg);
+      background-size: cover;
+      height: 500px;
+    }
+    
+  }
+
+  
+
+
+  &__body{
+    display:flex;
+    height: 100%;
+    position: relative;
+    margin: 0px auto;
+    &__middle{
+      position: relative;
+      width: 100%;
+      padding: 20px 40px;
+    }
+}
+}
+
+.major-choice{
+  text-align: center;
+  padding: 56px 0px 30px;
+  h1 {
+    font-size: 28px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+
+.major-category{
+  display:flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin: -10px 0px 0px -10px;
+  padding-bottom: 20px;
+  .major__women{
+    color: inherit;
+    text-decoration: none;
+    padding-right:30px;
+    background-color:gray;
+    cursor: pointer;
+    display:inline-block;
+    font-size:14px;
+    font-weight: 600px;
+    border-radius: 15px;
+    padding: 8px 16px;
+
+  }
+  .major__men{
+    color: inherit;
+    text-decoration: none;
+    padding-right:30px;
+    background-color:gray;
+    cursor: pointer;
+    display:inline-block;
+    font-size:14px;
+    font-weight: 600px;
+    border-radius: 15px;
+    padding: 8px 16px;
+
+  }
+
+  .major__home{
+    color: inherit;
+    text-decoration: none;
+    padding-right:35px;
+    background-color:gray;
+    cursor: pointer;
+    display:inline-block;
+    font-size:14px;
+    font-weight: 600px;
+    border-radius: 15px;
+    padding: 8px 16px;
+
+  }
+  .major__hobby{
+    color: inherit;
+    text-decoration: none;
+    padding-right:30px;
+    background-color:gray;
+    cursor: pointer;
+    display:inline-block;
+    font-size:14px;
+    font-weight: 600px;
+    border-radius: 15px;
+    padding: 8px 16px;
+
+  }
+}
+
+.new_item__category {
+  background-color:whitesmoke;
+  height:1000px;
+  &__women{
+
+  }
+  &__men{
+
+  }
+  &__home{
+
+  }
+  &__hobby{
+
+  }
+}
+
+.major-brand{
+  text-align: center;
+  padding: 56px 0px 30px;
+  h1 {
+    font-size: 28px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.brand-category{
+  display:flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin: -10px 0px 0px -10px;
+  padding-bottom: 20px;
+  .brand__chanel{
+    color: inherit;
+    text-decoration: none;
+    padding-right:30px;
+    background-color:gray;
+    cursor: pointer;
+    display:inline-block;
+    font-size:14px;
+    font-weight: 600px;
+    border-radius: 15px;
+    padding: 8px 16px;
+
+  }
+  .brand__vuitton{
+    color: inherit;
+    text-decoration: none;
+    padding-right:30px;
+    background-color:gray;
+    cursor: pointer;
+    display:inline-block;
+    font-size:14px;
+    font-weight: 600px;
+    border-radius: 15px;
+    padding: 8px 16px;
+
+  }
+
+  .brand__supreme{
+    color: inherit;
+    text-decoration: none;
+    padding-right:35px;
+    background-color:gray;
+    cursor: pointer;
+    display:inline-block;
+    font-size:14px;
+    font-weight: 600px;
+    border-radius: 15px;
+    padding: 8px 16px;
+
+  }
+  .brand__nike{
+    color: inherit;
+    text-decoration: none;
+    padding-right:30px;
+    background-color:gray;
+    cursor: pointer;
+    display:inline-block;
+    font-size:14px;
+    font-weight: 600px;
+    border-radius: 15px;
+    padding: 8px 16px;
+
+  }
+}
+
+.new_major__category {
+  background-color:whitesmoke;
+  height:1000px;
+  &_chanel__itme{
+
+  }
+  &_vitton__item{
+
+  }
+  &supreme__item{
+
+  }
+  &nike__item{
+
+  }
+}

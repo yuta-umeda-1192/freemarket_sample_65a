@@ -1,0 +1,85 @@
+%header.toppage__header
+  .toppage__header
+    .toppage__header__top
+      .toppage__header__logo
+        = image_tag("fmarket_logo_red.svg", class: "img", size: "100×100", alt: "mercari")
+      .toppage__header__search
+        %input{ name: '', class: 'toppage__header__search__form',placeholder: '何かお探しですか？' }
+        = icon('fas', 'search', alt: 'search-icon',class: 'topppage__header__search__button')
+      
+
+.choice
+  .choice__category
+    = icon('fas', 'list-ul ', style: 'color:red',class: 'choice__category__icon')
+    カテゴリーから探す
+  .choice__brand
+    = icon('fas', 'tag ',style: 'color:red', class: 'choice__brand__icon')
+    ブランドから探す
+  .choice__management
+    .choice__management__good
+      = icon('far', 'heart ',style: 'color:gray', class: 'choice__good__icon')
+      いいね！一覧
+    .choice__management__information
+      = icon('far', 'bell',style: 'color:gray', class: 'choice__infomation__icon')
+      お知らせ
+    .choice__management__todolist
+      = icon('fas', 'check',style: 'color:gray', class: 'choice__todolist__icon')
+      やることリスト
+    .choice__management__mypage
+      = icon('fas', 'user', style: 'color:gray', class: 'choice__mypsge__icon')
+      マイページ
+
+.picture1__scroll
+  .picture1__scroll__scroll1
+    .div1 スマホでかんたん
+    .div2 フリマアプリ
+    .div3 メルカリはスマホカメラからすぐ出品できる
+    .div4 購入時も安心な独自システムのアプリです
+    .div5
+      .div5__class1
+        = image_tag("app-store-a5c17948c6fd6d5b60b13d421cd60b35.svg", class: "apple")
+      .div5__class2
+        = image_tag("google-play-495575abb895b405aa6336b2a4304958.svg", class: "google")
+  .picture1__scroll__scroll2
+.picture1__body
+  .picture1__body__middle
+      
+
+.major-choice
+  %h1 人気のカテゴリー
+
+.major-category
+  .major__women
+    レディース
+  .major__men
+    メンズ
+  .major__home
+    家電・スマホ・カメラ
+  .major__hobby
+    おもちゃ・ホビー・グッズ
+
+.new_item__category
+  
+  .new_item__women
+  .new_item__men
+  .new_item__home
+  .new_item__hobby
+
+.major-brand
+  %h1 人気のブランド
+
+.brand-category
+  .brand__chanel
+    シャネル
+  .brand__vuitton
+    ルイヴィトン
+  .brand__supreme
+    シュプリーム
+  .brand__nike
+    ナイキ
+
+.new_major__category
+  .new_chanel_item
+  .new_vuiiton_item
+  .new_supreme_item
+  .new_nike__item
