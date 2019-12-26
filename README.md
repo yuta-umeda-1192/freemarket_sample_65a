@@ -161,6 +161,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
+|image|string||
 |item_id|integer|null: false, foreign_key: true|
 
 ### Association
