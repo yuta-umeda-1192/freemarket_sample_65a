@@ -11,7 +11,7 @@
       .container__title
         商品の情報を入力
 
-      .form__container
+      = form_with model: @item, class: :form__container, local: true do |f|
         .form__image
           .image__title
             出品画像
@@ -19,10 +19,9 @@
               必須
             %p 最大10枚までアップロードできます
           .image__drop
-            .drop__text
-              .drop__text--sentence
-                %p ドラッグアンドドロップ
-                %p またはクリックしてファイルをダンロード
+            -# = f.label :text, class: 'drop__text' do
+              = f.file_field :image, class: 'drop__text--sentence', placeholder: '%p ドラッグアンドドロップ
+                %p またはクリックしてファイルをダンロード'
 
         .form__content
           .item__name
@@ -30,9 +29,8 @@
               商品名
               .form__require
                 必須
-            .item__name--form
+            = f.text_field :name, class: 'item__name--form', placeholder: '商品名（最大40字以内)' do
               .form__text
-                商品名（最大40字以内)
 
           .item__description
             .item__description__title
@@ -40,9 +38,8 @@
                 商品の説明
                 .form__require
                   必須
-            .item__description__form
+            = f.text_area :text, rows: "5", class: 'item__description__form', placeholder: '商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。' do
               .description__form__text
-                商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。
 
         .form__details
           .form__details__title
@@ -89,9 +86,9 @@
                   価格
                   .form__require
                     必須
-                .sale__title__box
+                = f.text_field :text, class: 'sale__title__box', placeholder: '例) 100' do
                   .price__input
-                    例）100
+
               .sale__commission
                 手数料
               .sale__menu
@@ -103,10 +100,8 @@
           %p またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
           %p また、出品をもちまして加盟店規約に同意したことになります。
 
-          .exhibit__sell
-            出品する
-          .exhibit__back
-            もどる
+          = f.submit "出品する", class: 'exhibit__sell'
+          = link_to "もどる", root_path, class: 'exhibit__back'
 
   .footer
     .footer__container
