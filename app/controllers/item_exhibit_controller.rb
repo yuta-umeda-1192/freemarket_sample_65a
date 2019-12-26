@@ -1,7 +1,5 @@
 class ItemExhibitController < ApplicationController
-  def inde
-    @itemex
-
+  def index
   end
 
   def create
