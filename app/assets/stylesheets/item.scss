@@ -115,6 +115,8 @@
                 padding-bottom: 5px;
               }
               .details__category__menu{
+                width: 100%;
+                background-color: white;
                 border-radius: 4px;
                 height: 48px;
                 border: solid 1px #cccccc;
@@ -124,6 +126,8 @@
 
               }
               .datails__status__menu{
+                width: 100%;
+                background-color: white;
                 border-radius: 4px;
                 height: 48px;
                 border: solid 1px #cccccc;
@@ -146,10 +150,12 @@
                 padding-bottom: 5px;
               }
               .delivery__menu{
+                background-color: white;
                 border-radius: 4px;
                 height: 48px;
                 border: solid 1px #cccccc;
                 margin-bottom: 40px;
+                width: 100%;
               }
             }
           }

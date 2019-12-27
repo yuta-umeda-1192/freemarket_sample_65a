@@ -48,12 +48,14 @@
             .form__group
               .details__title
                 カテゴリー
-              .details__category__menu
+              -# = f.select :delivery_day, Item.delivery_days.keys, {}, {class: 'details__category__menu'} do
+              -# = f.collection_select :category_ids, @parents, :id, :name,{prompt: "---"}, class: "select-default", id: "parent-form", name: 'item[category_ids][]'
                 プルダウン
+
             .form__group
               .details__title
                 商品の状態
-              .datails__status__menu
+              = f.select :delivery_day, Item.delivery_days.keys, {}, {class: 'datails__status__menu'} do
                 プルダウン
 
         .form__delivery
@@ -63,22 +65,24 @@
             .form__group
               .delivery__title
                 配送料の負担
-              .delivery__menu
-                プルダウン
+              = f.select :delivery_day, Item.delivery_days.keys, {}, {class: 'delivery__menu'} do
+                .delivery__menu__form
+
             .form__group
               .delivery__title
                 配送元の地域
-              .delivery__menu
+              = f.select :delivery__day, Item.delivery_days.keys, {}, {class: 'delivery__menu'} do
                 プルダウン
+
             .form__group
               .delivery__title
                 配送までの日数
-              .delivery__menu
+              = f.select :delivery__day, Item.delivery_days.keys, {}, {class: 'delivery__menu'} do
                 プルダウン
 
         .form__sale
           .form__sale__title
-            販売価格
+            販売価格(300〜9,999,999)
           .form__group
             .sale__group__content
               .sale__title

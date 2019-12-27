@@ -4,7 +4,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :prefeture
       t.string :discription
-      t.string :delivery_day
+      t.integer :delivery_day, default: 0
       t.string :delively_method
       t.string :delivery_burden_fee
       t.string :item_category

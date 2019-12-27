@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2019_12_25_080621) do
     t.string "name"
     t.string "prefeture"
     t.string "discription"
-    t.string "delivery_day"
+    t.integer "delivery_day", default: 0
     t.string "delively_method"
     t.string "delivery_burden_fee"
     t.string "item_category"
