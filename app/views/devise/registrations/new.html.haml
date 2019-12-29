@@ -1,0 +1,110 @@
+.user-new-registration
+  .user-new-registration__user-infomation__header
+    = image_tag("fmarket_logo_red.svg", class: ".user-new-registration__header__logo", size: "185x45", alt: "logo")
+    .user-new-registration__user-infomation__header__navi
+      .user-new-registration__user-infomation__header__navi__charts
+        .user-new-registration__user-infomation__header__navi__charts__info
+          会員情報
+        .user-new-registration__user-infomation__header__navi__charts__tele
+          電話番号認証
+        .user-new-registration__user-infomation__header__navi__charts__address
+          お届け先住所入力
+        .user-new-registration__user-infomation__header__navi__charts__pay
+          支払い方法
+        .user-new-registration__user-infomation__header__navi__charts__end
+          完了
+      .user-new-registration__user-infomation__header__navi__arrow
+        .user-new-registration__user-infomation__header__navi__arrow__info
+          ●
+        .user-new-registration__user-infomation__header__navi__arrow__info-line
+          %hr
+        .user-new-registration__user-infomation__header__navi__arrow__tele
+          ●
+        .user-new-registration__user-infomation__header__navi__arrow__tele-line
+          %hr
+        .user-new-registration__user-infomation__header__navi__arrow__address
+          ●
+        .user-new-registration__user-infomation__header__navi__arrow__address-line
+          %hr
+        .user-new-registration__user-infomation__header__navi__arrow__pay
+          ●
+        .user-new-registration__user-infomation__header__navi__arrow__pay-line
+          %hr
+        .user-new-registration__user-infomation__header__navi__arrow__end
+          ●
+
+  .user-new-registration__user-infomation__forms
+    .user-new-registration__user-infomation__forms__header
+      会員情報入力
+    .user-new-registration__user-infomation__forms__menus
+      = form_for(@user, url: user_registration_path(resource_name)) do |f|
+        = render "devise/shared/error_messages", resource: @user
+        .user-new-registration__user-infomation__forms__menus__field
+          = f.label :nickname, "ニックネーム"
+          = f.label :must, "必須", id: "must"
+          %br/
+          = f.text_field :nickname, placeholder: "例）メルカリ太郎"
+        .user-new-registration__user-infomation__forms__menus__field
+          = f.label :email, "メールアドレス"
+          = f.label :must, "必須", id: "must"
+          %br/
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "PC・携帯どちらでも可"
+        .user-new-registration__user-infomation__forms__menus__field
+          = f.label :password, "パスワード"
+          = f.label :must, "必須", id: "must"
+          %br/
+          = f.password_field :password, autocomplete: "new-password", placeholder: "7文字以上の半角英数字"
+          ※英字と数字の両方を含めて設定してください。
+
+        .user-new-registration__user-infomation__forms__menus__conform
+          .user-new-registration__user-infomation__forms__menus__conform__title
+            本人確認
+          .user-new-registration__user-infomation__forms__menus__conform__content
+            安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開させることはありません。
+
+        .user-new-registration__user-infomation__forms__menus__field
+          = f.label :family_name, "お名前（全角）"
+          = f.label :must, "必須", id: "must"
+          %br/
+          = f.text_field :family_name, placeholder: "例）山田"
+          = f.text_field :first_name, placeholder: "例）彩"
+        .user-new-registration__user-infomation__forms__menus__field
+          = f.label :family_name_kana, "お名前（カナ）"
+          = f.label :must, "必須", id: "must"
+          %br/
+          = f.text_field :family_name_kana, placeholder: "例）ヤマダ"
+          = f.text_field :first_name_kana, placeholder: "例）アヤ"
+        .user-new-registration__user-infomation__forms__menus__field
+          = f.label :birthday, "生年月日"
+          = f.label :must, "必須", id: "must"
+          %br/
+          = f.number_field :year, placeholder: "--"
+          年
+          = f.number_field :month, placeholder: "--"
+          月
+          = f.number_field :day, placeholder: "--"
+          日
+        .user-new-registration__user-infomation__forms__menus__actions
+          = f.submit "次へ進む", id: "btn"
+
+      .user-new-registration__user-infomation__forms__menus__agreement
+        「次へ進む」のボタンを押すことにより、利用規約に同意したものとみなします
+
+      .user-new-registration__user-infomation__forms__menus__about
+        本人情報の登録について＞
+
+      .user-new-registration__user-infomation__forms__menus__add-agreement
+        This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+
+  .user-new-registration__footer
+    .user-new-registration__footer__links
+      .user-new-registration__footer__links__policy
+        プライバシーポリシー
+      .user-new-registration__footer__links__terms
+        メルカリ利用規約
+      .user-new-registration__footer__links__commerce
+        特定商取引に関する表記
+    .user-new-registration__footer__mercari
+      = image_tag("logo_gray.svg", class: ".user-new-registration__footer__mercari__logo", size: "80x65", alt: "logo")
+      .user-new-registration__footer__mercari__copyright
+        ©️ Mercari, Inc.

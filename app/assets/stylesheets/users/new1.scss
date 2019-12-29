@@ -34,6 +34,10 @@
         line-height: 42px;
         margin: 0 auto;
         font-size: 14px;
+        a{
+          text-decoration: none;
+          color: white
+        }
       }
     }
 
@@ -42,6 +46,25 @@
       display: flex;
       flex-direction: column;
       padding: 24px 16px 40px;
+
+      input{
+        width: 328px;
+        height: 50px;
+        margin-top: 20px;
+      }
+
+      #btn{
+        background-color:#EA352D;
+        color: white;
+        display: block;
+        width: 328px;
+        height: 50px;
+        line-height: 50px;
+        margin: 20px auto;
+        border-radius: 4px;
+        font-size: 14px;
+
+      }
 
       &__facebook{
         background-color:#385185;
@@ -63,6 +86,7 @@
         margin: 0 auto;
         border: 1px solid #979797;
         font-size: 14px;
+        margin-bottom:50px;
       }
       &__mailaddress {
         background-color: white;
@@ -104,6 +128,7 @@
         border: 1px solid #979797;
         border-radius: 4px;
         font-size: 14px;
+        margin-top: 25px;
         margin-bottom: 25px;
         text-align: left;
       }
