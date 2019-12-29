@@ -1,22 +1,3 @@
--# %h2 Log in
--# = form_for(@user, url: user_session_path) do |f|
--#   .field
--#     = f.label :email
--#     %br/
--#     = f.email_field :email, autofocus: true, autocomplete: "email"
--#   .field
--#     = f.label :password
--#     %br/
--#     = f.password_field :password, autocomplete: "current-password"
--#   - if devise_mapping.rememberable?
--#     .field
--#       = f.check_box :remember_me
--#       = f.label :remember_me
--#   .actions
--#     = f.submit "Log in"
--# = render "devise/shared/links"
-
-
 .user-new-session
   .user-new-session__header
     = image_tag("fmarket_logo_red.svg", class: ".user-new-registration__header__logo", size: "185x45", alt: "logo")
@@ -42,9 +23,6 @@
         = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード"
         %br/
         = f.submit "ログイン", id: "btn"
-      -# .user-new-session__contents__menus__robot-check
-      -#   .user-new-session__contents__menus__robot-check__text
-      -#     □私はロボットではありません
       .user-new-session__contents__menus__password-remainder
         パスワードをお忘れの方
 
