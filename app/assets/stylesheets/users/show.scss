@@ -1,0 +1,280 @@
+.wrapper{
+  display: flex;
+  justify-content: flex-start;
+  background-color: #F5F5F5;
+  height: 100%;
+}
+
+.side{
+  background-color: #F5F5F5;
+  width: 300px;
+  height: 100%;
+  margin-left: 100px;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  &__contents__main{
+    background-color: white;
+    height:100%;
+    margin: 50px auto;
+    &__menu{
+      height: 30px;
+      padding: 10px 10px;
+      border-bottom: 1px solid #F5F5F5;
+      &:hover{
+        background-color: #F5F5F5;
+        font-weight: bold;
+      }
+      &__content{
+        float:left;
+      }
+      &__arrow{
+        float: right;
+      }
+
+    }
+  }
+  &__contents{
+    &__merpay{
+      background-color: white;
+      height: 100%;
+      margin-bottom: 50px;
+      &__menu{
+        height: 30px;
+        padding: 10px 10px;
+        border-bottom: 1px solid #F5F5F5;
+        &:hover{
+          background-color: #F5F5F5;
+          font-weight: bold;
+        }
+        &__content{
+          float:left;
+        }
+        &__arrow{
+          float: right;
+        }
+      }
+    }
+  }
+  &__contents__configuration{
+    background-color: white;
+    height:100%;
+    margin-bottom: 50px;
+    &__menu{
+      height: 30px;
+      padding: 10px 10px;
+      border-bottom: 1px solid #F5F5F5;
+      &:hover{
+        background-color: #F5F5F5;
+        font-weight: bold;
+      }
+      &__content{
+        float:left;
+      }
+      &__arrow{
+        float: right;
+      }
+    }
+  }
+}
+
+
+.identification{
+  margin: 50px 10px 50px 50px;
+  width: 750px;
+  &__user-address{
+  background-color: #F5F5F5;
+  height: 100%;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+
+  &__forms {
+    background-color: white;
+    width: 750px;
+    height: 1300px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    &__header{
+      color: #333333;
+      font-size: 24px;
+      font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      border-bottom: 1px solid #F5F5F5;
+      font-weight: bold;
+    }
+    &__menus{
+      display: flex;
+      flex-direction: column;
+      font-size: 15px;
+      font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+      margin: 0 auto;
+      width: 80%;
+      padding: 80px 16px 40px;
+      &__upload{
+        text-align: right;
+        color:#0099E8;
+        margin-top: 10px;
+      }
+      &__namae-kanji{
+        margin-top: 30px;
+        &__title{
+          font-weight: bold;
+        }
+        &__content{
+        }
+        input {
+          width: 343px;
+          height: 48px;
+        }
+      }
+
+        &__namae-kana{
+          margin-top: 30px;
+          &__title{
+            font-weight: bold;
+          }
+          &__content{
+          }
+          input {
+            width: 343px;
+            height: 48px;
+          }
+        }
+
+        &__birthday{
+          margin-top: 30px;
+          &__title{
+            font-weight: bold;
+          }
+          &__content{
+          }
+          input {
+            width: 343px;
+            height: 48px;
+          }
+        }
+
+        &__zip-code{
+          margin-top: 30px;
+          margin-bottom: 30px;
+          &__label{
+            display: flex;
+            justify-content: flex-start;
+            padding-bottom: 5px;
+            &__title{
+              font-weight: bold;
+            }
+            &__must{
+              background-color: #CCCCCC;
+              color: white;
+              margin-left: 10px;
+            }
+          }
+          input {
+            width: 100%;
+            height: 48px;
+          }
+        }
+
+        &__prefectures{
+          margin-bottom: 30px;
+          &__label{
+            display: flex;
+            justify-content: flex-start;
+            padding-bottom: 5px;
+            &__title{
+              font-weight: bold;
+            }
+            &__must{
+              background-color:  #CCCCCC;
+              color: white;
+              margin-left: 10px;
+            }
+          }
+          input {
+            width: 100%;
+            height: 48px;
+          }
+        }
+      
+        &__municipalities{
+          margin-bottom: 30px;
+          &__label{
+            display: flex;
+            justify-content: flex-start;
+            padding-bottom: 5px;
+            &__title{
+              font-weight: bold;
+            }
+            &__must{
+              background-color:   #CCCCCC;
+              color: white;
+              margin-left: 10px;
+            }
+          }
+          input {
+            width: 100%;
+            height: 48px;
+          }
+        }
+
+        &__address{
+          margin-bottom: 30px;
+          &__label{
+            display: flex;
+            justify-content: flex-start;
+            padding-bottom: 5px;
+            &__title{
+              font-weight: bold;
+            }
+            &__must{
+              background-color:    #CCCCCC;
+              color: white;
+              margin-left: 10px;
+            }
+          }
+          input {
+            width: 100%;
+            height: 48px;
+          }
+        }
+
+        &__building{
+          margin-bottom: 50px;
+          &__label{
+            display: flex;
+            justify-content: flex-start;
+            padding-bottom: 5px;
+            &__title{
+              font-weight: bold;
+            }
+            &__must{
+              background-color:  #CCCCCC;
+              color: white;
+              margin-left: 10px;
+            }
+          }
+          input {
+            width: 100%;
+            height: 48px;
+          }
+        }
+
+        &__next{
+          background-color:#EA352D;
+          color: white;
+          width: 100%;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          font-size: 14px;
+        }
+
+        &__about{
+          text-align: right;
+          color:#0099E8;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

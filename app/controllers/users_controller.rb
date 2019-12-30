@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   def new
   end
 
-  def registration
+  def show
   end
 
 end

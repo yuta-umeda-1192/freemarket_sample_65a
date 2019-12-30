@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   end
   root to: 'top#index'
   resources :items, only: [:new, :create]
-  resources :users, only: [:index, :new, :registration]
+  resources :users, only: [:index, :new, :show]
   resources :item_details, only: [:index, :show]
 end
