@@ -11,17 +11,20 @@
       .container__title
         商品の情報を入力
 
+      = render partial: 'form'
+      = link_to "削除", new_item_path(@item)
+
       = form_with model: @item, class: :form__container, local: true do |f|
-        .form__image
-          .image__title
-            出品画像
-            .form__require
-              必須
-            %p 最大10枚までアップロードできます
-          .image__drop
-            -# = f.label :text, class: 'drop__text' do
-              = f.file_field :image, class: 'drop__text--sentence', placeholder: '%p ドラッグアンドドロップ
-                %p またはクリックしてファイルをダンロード'
+        -# .form__image
+        -#   .image__title
+        -#     出品画像
+        -#     .form__require
+        -#       必須
+        -#     %p 最大10枚までアップロードできます
+        -#   .image__drop
+        -#     = f.label :text, class: 'drop__text' do
+        -#       = f.file_field :image, class: 'drop__text--sentence', placeholder: '%p ドラッグアンドドロップ
+        -#         %p またはクリックしてファイルをダンロード'
 
         .form__content
           .item__name
@@ -41,43 +44,42 @@
             = f.text_area :discription, rows: "5", class: 'item__description__form', placeholder: '商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。' do
               .description__form__text
 
-        .form__details
+        -# .form__details
           .form__details__title
             商品の詳細
           .details__right
             .form__group
               .details__title
                 カテゴリー
-              -# = f.select :delivery_day, Item.delivery_days.keys, {}, {class: 'details__category__menu'} do
-              -# = f.collection_select :category_ids, @parents, :id, :name,{prompt: "---"}, class: "select-default", id: "parent-form", name: 'item[category_ids][]'
+              = f.collection_select :item_category_ids, @parents, :id, :name,{prompt: "---"}, class: "details__category__menu", id: "parent-form", name: 'item[item_category_ids][]' do
                 プルダウン
 
             .form__group
               .details__title
                 商品の状態
-              = f.select :delivery_day, Item.delivery_days.keys, {}, {class: 'datails__status__menu'} do
-                プルダウン
+              -# = f.select :delivery_day, Item.delivery_days.keys, {}, {class: 'datails__status__menu'} do
+              -#   プルダウン
 
-        .form__delivery
+        -# .form__delivery
           .form__delivery__title
             配送について
           .form__delivery__group
             .form__group
               .delivery__title
                 配送料の負担
-              = f.select :delivery_day, Item.delivery_days.keys, {}, {class: 'delivery__menu'} do
+              -# = f.select :delivery_burden_fee, Item.delivery_burden_fees.keys,{},{class: 'delivery__menu'} do
                 .delivery__menu__form
 
             .form__group
               .delivery__title
                 配送元の地域
-              = f.select :delivery__day, Item.delivery_days.keys, {}, {class: 'delivery__menu'} do
+              = f.select :delivery_area, DeliveryArea.delivery_areas.keys, {}, {class: 'delivery__menu'} do
                 プルダウン
 
             .form__group
               .delivery__title
                 配送までの日数
-              = f.select :delivery__day, Item.delivery_days.keys, {}, {class: 'delivery__menu'} do
+              = f.select :delivery_day, Item.delivery_days.keys, {}, {class: 'delivery__menu'} do
                 プルダウン
 
         .form__sale
@@ -93,10 +95,10 @@
                 = f.text_field :price, class: 'sale__title__box', placeholder: '例) 100' do
                   .price__input
 
-              .sale__commission
-                手数料
-              .sale__menu
-                販売利益
+              -# .sale__commission
+              -#   手数料
+              -# .sale__menu
+              -#   販売利益
 
         .form__exhibit
           .exhibit__description

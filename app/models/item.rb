@@ -1,9 +1,20 @@
 class Item < ApplicationRecord
+  has_many :images
+  accepts_nested_attributes_for :images, allow_destroy: true
+  has_many :images, dependent: :destroy
+  # belongs_to :delivery_area
+  # belongs_to :size
+  # belongs_to :item_status
+  # belongs_to :brand
+  # belongs_to :user
+  # belongs_to :buyer
+  # belongs_to :delivery_area
+  # belongs_to :item_category
   # validates :all, presence: true
-  enum delivery_day: {
-    "---":0,
-    day1:1,
-    day2:2,
-    day3:3
-  }
+
+  # enum delivery_burden_fee:{
+  #   '---': 0,
+  #   no1: 1,
+  #   no2: 2
+  # }
 end

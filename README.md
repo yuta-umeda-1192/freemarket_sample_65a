@@ -115,10 +115,11 @@ Things you may want to cover:
 |delivery_day|string|null: false|
 |delively_method|string|null: false|
 |delivery_burden_fee|string|null: false|
-|item_category|string|null: false|
-|brand_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
-|buyer_id|integer|null: false, foreign_key: true|
+|delivery_area_id|references|null: false, foreign_key: true|
+|item_category_id|references|null: false, foreign_key: true|
+|brand_id|references|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|buyer_id|references|null: false, foreign_key: true|
 
 
 ### Association
@@ -129,8 +130,19 @@ Things you may want to cover:
 - belongs_to :delivery_method
 - belongs_to :delivery_burden_fee
 - belongs_to :delivery_day
+- belongs_to :delivery_area
 - belongs_to :size
-- belongs_to :status
+- belongs_to :item_status
+
+<!-- 発送元の地域 -->
+## delivery_areaテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+
+### Association
+- has_many :items
 
 
 <!-- 商品サイズ -->
