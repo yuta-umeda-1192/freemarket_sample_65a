@@ -12,7 +12,6 @@
         商品の情報を入力
 
       = render partial: 'form'
-      = link_to "削除", new_item_path(@item)
 
       = form_with model: @item, class: :form__container, local: true do |f|
         -# .form__image
