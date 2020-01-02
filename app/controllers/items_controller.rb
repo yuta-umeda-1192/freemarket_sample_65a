@@ -10,9 +10,8 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.create(item_params)
-    if @item.save
-      redirect_to new_item_path
-    end
+    @item.save
+    redirect_to new_item_path
   end
 
   def destroy

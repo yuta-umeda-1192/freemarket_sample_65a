@@ -3,6 +3,6 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
   }
   root to: 'top#index'
-  resources :items, only: [:new, :create]
+  resources :items, only: [:new, :create, :destroy]
   resources :users, only: [:index, :new, :registration]
 end
