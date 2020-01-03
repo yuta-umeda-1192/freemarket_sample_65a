@@ -4,16 +4,18 @@
   .user-new-registration__contents
     .user-new-registration__contents__header
       新規会員登録
+      -# = link_to “ログイン“, new_user_session_path
+      -# = link_to “ログアウト“, destroy_user_session_path, method: :delete
     .user-new-registration__contents__menus
       .user-new-registration__contents__menus__mail
         %i.far.fa-envelope
         メールアドレスで登録する
       .user-new-registration__contents__menus__facebook
         %i.fab.fa-facebook-square
-        Facebookで登録する
+          = link_to 'Facebookで登録', user_facebook_omniauth_authorize_path, method: :post
       .user-new-registration__contents__menus__google
         %i.fab.fa-google
-        Googleで登録する
+          = link_to 'Googleで登録', user_google_oauth2_omniauth_authorize_path, method: :post
   .user-new-registration__footer
     .user-new-registration__footer__links
       .user-new-registration__footer__links__policy

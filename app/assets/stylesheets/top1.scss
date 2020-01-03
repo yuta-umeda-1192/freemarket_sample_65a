@@ -63,19 +63,42 @@
 }
 } 
 
+//  .fas{
+//    margin-left:160px ;
+// }
+
 .choice{
   display:flex;
   font-size: 16px;
   font-weight: 60px;
   line-height: 36px;
   margin-top:1px;
-  cursor: pointer;
+
+  cursor: pointer;  
   &__category{
     display:flex;
-    margin-left:200px ;
     color: inherit;
     text-decoration :none;
+    height: 2rem;
+    margin: 0 auto;
+    width: 1000px;
+    &__large{
+      width: 25%;
+      &__medium{
+
+        &__small{
+
+        }
+      }
+    }
   }
+
+
+
+
+
+
+
   &__brand{
     margin-left:30px;
     color: inherit;
@@ -151,9 +174,7 @@
       height: 500px;
     }
     
-  }
-
-  
+  }  
 
 
   &__body{
@@ -243,18 +264,6 @@
 .new_item__category {
   background-color:whitesmoke;
   height:1000px;
-  &__women{
-
-  }
-  &__men{
-
-  }
-  &__home{
-
-  }
-  &__hobby{
-
-  }
 }
 
 .major-brand{
@@ -330,16 +339,5 @@
 .new_major__category {
   background-color:whitesmoke;
   height:1000px;
-  &_chanel__itme{
-
-  }
-  &_vitton__item{
-
-  }
-  &supreme__item{
-
-  }
-  &nike__item{
-
-  }
 }
+
