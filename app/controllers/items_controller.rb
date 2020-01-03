@@ -4,14 +4,15 @@ class ItemsController < ApplicationController
     @item = Item.new
     @item.images.new
     @items = Item.includes(:images).order('created_at DESC')
-    @parents = ItemCategory.all.order("id ASC").limit(13)
+    # @parents = ItemCategory.all.order("id ASC").limit(13)
     # カテゴリーテーブルのidカラム上から１３行目を@parentに代入せよ
   end
 
   def create
     @item = Item.create(item_params)
-    @item.save
-    redirect_to new_item_path
+    if @item.save
+     redirect_to new_item_path
+    end
   end
 
   def destroy

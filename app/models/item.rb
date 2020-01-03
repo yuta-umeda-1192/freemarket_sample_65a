@@ -2,7 +2,7 @@ class Item < ApplicationRecord
   has_many :images
   accepts_nested_attributes_for :images,  allow_destroy: true
   has_many :images, dependent: :destroy
-  validates :name, presence: true, length: { maximum: 20 }
+  # validates :name, presence: true, length: { maximum: 20 }
   # belongs_to :delivery_area
   # belongs_to :size
   # belongs_to :item_status
