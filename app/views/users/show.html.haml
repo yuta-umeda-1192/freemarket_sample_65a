@@ -1,129 +1,36 @@
-.wrapper
+%header.toppage__header
+  .toppage__header
+    .toppage__header__top
+      .toppage__header__logo
+        = image_tag("fmarket_logo_red.svg", class: "img", size: "100×100", alt: "mercari")
+      .toppage__header__search
+        %input{ name: '', class: 'toppage__header__search__form',placeholder: '何かお探しですか？' }
+        = icon('fas', 'search', alt: 'search-icon',class: 'topppage__header__search__button')
+      
 
-  .side
-    .side__contents
-      .side__contents__main
-        .side__contents__main__menu
-          .side__contents__main__menu__content
-            マイページ
-          .side__contents__main__menu__arrow
-            〉
-        .side__contents__main__menu
-          .side__contents__main__menu__content
-            お知らせ
-          .side__contents__main__menu__arrow
-            〉
-        .side__contents__main__menu
-          .side__contents__main__menu__content
-            やることリスト
-          .side__contents__main__menu__arrow
-            〉
-        .side__contents__main__menu
-          .side__contents__main__menu__content
-            いいね！一覧
-          .side__contents__main__menu__arrow
-            〉
-        .side__contents__main__menu
-          .side__contents__main__menu__content
-            出品する
-          .side__contents__main__menu__arrow
-            〉
-        .side__contents__main__menu
-          .side__contents__main__menu__content
-            出品した商品-出品中
-          .side__contents__main__menu__arrow
-            〉
-        .side__contents__main__menu
-          .side__contents__main__menu__content
-            出品した商品-取引中
-          .side__contents__main__menu__arrow
-            〉
-        .side__contents__main__menu
-          .side__contents__main__menu__content
-            出品した商品-売却済み
-          .side__contents__main__menu__arrow
-            〉
-        .side__contents__main__menu
-          .side__contents__main__menu__content
-            購入した商品-取引中
-          .side__contents__main__menu__arrow
-            〉
-        .side__contents__main__menu
-          .side__contents__main__menu__content
-            購入した商品-過去の取引
-          .side__contents__main__menu__arrow
-            〉
-        .side__contents__main__menu
-          .side__contents__main__menu__content
-            ニュース一覧
-          .side__contents__main__menu__arrow
-            〉
-        .side__contents__main__menu
-          .side__contents__main__menu__content
-            評価一覧
-          .side__contents__main__menu__arrow
-            〉
-        .side__contents__main__menu
-          .side__contents__main__menu__content
-            ガイド
-          .side__contents__main__menu__arrow
-            〉
-        .side__contents__main__menu
-          .side__contents__main__menu__content
-            お問い合わせ
-          .side__contents__main__menu__arrow
-            〉
+.choice
+  .choice__category
+    = icon('fas', 'list-ul ', style: 'color:red',class: 'choice__category__icon')
+    カテゴリーから探す
+  .choice__brand
+    = icon('fas', 'tag ',style: 'color:red', class: 'choice__brand__icon')
+    ブランドから探す
+  .choice__management
+    .choice__management__good
+      = icon('far', 'heart ',style: 'color:gray', class: 'choice__good__icon')
+      いいね！一覧
+    .choice__management__information
+      = icon('far', 'bell',style: 'color:gray', class: 'choice__infomation__icon')
+      お知らせ
+    .choice__management__todolist
+      = icon('fas', 'check',style: 'color:gray', class: 'choice__todolist__icon')
+      やることリスト
+    .choice__management__mypage
+      = icon('fas', 'user', style: 'color:gray', class: 'choice__mypsge__icon')
+      マイページ
 
-      メルペイ
-      .side__contents__merpay
-        .side__contents__merpay__menu
-          .side__contents__merpay__menu__content
-            売上・振込申請
-          .side__contents__merpay__menu__arrow
-            〉
-        .side__contents__merpay__menu
-          .side__contents__merpay__menu__content
-            ポイント
-          .side__contents__merpay__menu__arrow
-            〉
-
-      設定
-      .side__contents__configuration
-        .side__contents__configuration__menu
-          .side__contents__configuration__menu__content
-            プロフィール
-          .side__contents__configuration__menu__arrow
-            〉
-        .side__contents__configuration__menu
-          .side__contents__configuration__menu__content
-            発送元・お届け先住所変更
-          .side__contents__configuration__menu__arrow
-            〉
-        .side__contents__configuration__menu
-          .side__contents__configuration__menu__content
-            支払い方法
-          .side__contents__configuration__menu__arrow
-            〉
-        .side__contents__configuration__menu
-          .side__contents__configuration__menu__content
-            メール/パスワード
-          .side__contents__configuration__menu__arrow
-            〉
-        .side__contents__configuration__menu
-          .side__contents__configuration__menu__content
-            本人情報
-          .side__contents__configuration__menu__arrow
-            〉
-        .side__contents__configuration__menu
-          .side__contents__configuration__menu__content
-            電話番号の確認
-          .side__contents__configuration__menu__arrow
-            〉
-        .side__contents__configuration__menu
-          .side__contents__configuration__menu__content
-            ログアウト
-          .side__contents__configuration__menu__arrow
-            〉
+.user-wrapper
+  = render 'side'
 
   .identification
     .identification__user-address__forms
@@ -198,3 +105,5 @@
 
         .identification__user-address__forms__menus__about
           本人情報の登録について>
+
+= render "top/top2"
