@@ -110,7 +110,7 @@
   &__scroll{
     display:flex;
     &__scroll1{
-      background-image:url(2016okazari.jpg);
+      background-image:image-url("2016okazari.jpg");
       background-size: cover;
       height: 500px;
       font-family: 'Courier New', Courier, monospace;
@@ -146,7 +146,7 @@
       }
     }
     &__scroll2{
-      background-image:url(og.jpg);
+      background-image:image-url("og.jpg");
       background-size: cover;
       height: 500px;
     }
@@ -171,7 +171,7 @@
 
 .major-choice{
   text-align: center;
-  padding: 56px 0px 30px;
+  padding: 0px 0px 30px;
   h1 {
     font-size: 28px;
     font-family:Arial, Helvetica, sans-serif;

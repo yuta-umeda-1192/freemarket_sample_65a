@@ -1,4 +1,7 @@
 class ItemsController < ApplicationController
+  def index
+    @items = Item.order('created_at DESC').page(params[:page]).per(5)
+  end
 
   def new
     @item = Item.new
@@ -18,6 +21,10 @@ class ItemsController < ApplicationController
   def destroy
     @item.destroy
     redirect_to new_item_path
+  end
+
+  def show
+    @item = Item.find(params[:id])
   end
 
   private

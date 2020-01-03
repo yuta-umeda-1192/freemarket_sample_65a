@@ -1,17 +1,40 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.user-new-session
+  .user-new-session__header
+    = image_tag("fmarket_logo_red.svg", class: ".user-new-registration__header__logo", size: "185x45", alt: "logo")
+
+  .user-new-session__contents
+    .user-new-session__contents__header
+      .user-new-session__contents__header__attention
+        アカウントをお持ちでない方はこちら
+      .user-new-session__contents__header__new-registration
+        = link_to "新規会員登録", new_user_registration_path
+
+    .user-new-session__contents__menus
+      .user-new-session__contents__menus__facebook
+        %i.fab.fa-facebook-square
+        Facebookでログイン
+      .user-new-session__contents__menus__google
+        %i.fab.fa-google
+        Googleでログイン
+
+      = form_for(@user, url: user_session_path) do |f|
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス"
+        %br/
+        = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード"
+        %br/
+        = f.submit "ログイン", id: "btn"
+      .user-new-session__contents__menus__password-remainder
+        パスワードをお忘れの方
+
+  .user-new-session__footer
+    .user-new-session__footer__links
+      .user-new-session__footer__links__policy
+        プライバシーポリシー
+      .user-new-session__footer__links__terms
+        メルカリ利用規約
+      .user-new-session__footer__links__commerce
+        特定商取引に関する表記
+    .user-new-session__footer__mercari
+      = image_tag("logo_gray.svg", class: ".user-new-registration__footer__mercari__logo", size: "80x65", alt: "logo")
+      .user-new-session__footer__mercari__copyright
+        ©️ Mercari, Inc.
