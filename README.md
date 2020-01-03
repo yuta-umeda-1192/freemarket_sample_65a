@@ -62,6 +62,23 @@ Things you may want to cover:
 - has_one :address
 
 
+## sns_credentialsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|provider|--|null: false|
+|uid|-------|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|created_at|-|null: false|
+|updated_at|-|null: false|
+
+
+### Asociation
+- belongs_to :user
+
+
+
+
 <!-- 住所テーブル -->
 ## addressテーブル
 
