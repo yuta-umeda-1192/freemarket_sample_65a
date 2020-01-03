@@ -88,3 +88,6 @@ gem 'carrierwave'
 gem 'ransack'
 gem 'mini_magick'
 gem 'jquery-rails'
+
+gem 'ancestry'
+
