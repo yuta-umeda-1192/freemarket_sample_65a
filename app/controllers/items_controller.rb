@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.order('created_at DESC').page(params[:page]).per(5)
+    @items = Item.order('created_at DESC')
   end
 
   def new
