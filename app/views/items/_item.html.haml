@@ -4,15 +4,16 @@
       .item-list__contents__header__title
         新着アイテム
       .item-list__contents__header__more
-        = link_to 'もっと見る ＞'
+        = link_to "もっと見る ＞"
 
     .item-list__contents__items
       - @items.each do |item|
         .item-list__contents__items__item
           = link_to item_path(item) do
             .item-list__contents__items__item__main
-              .item-list__contents__items__item__main__picture
-                = image_tag "IMG_0115.jpeg", size: "180x180", alt: "商品写真"
+              #image-box
+                - item.images.each_with_index do |image|
+                  = image_tag image.src.url, data: { index: 1 }, width: "180", height: '180'
               .item-list__contents__items__item__main__price
                 ¥
                 = item.price
