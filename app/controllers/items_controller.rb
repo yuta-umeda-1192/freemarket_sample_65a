@@ -19,8 +19,12 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item.destroy
+    item = Item.find(params[:id])
+    item.destroy
     redirect_to new_item_path
+  end
+
+  def edit
   end
 
   def show
