@@ -1,4 +1,4 @@
--# 商品出品ページ
+-# 編集ページ
 
 .exhibit
   .header
@@ -13,11 +13,10 @@
 
       = render partial: 'form'
 
-      -# = form_for @item do |f|
-      -#   .form__exhibit__btn
-      -#     = f.submit "出品する", class: 'exhibit__sell'
-      -#     = link_to "もどる", root_path, class: 'exhibit__back'
-
+      .form__exhibit__btn
+        = link_to "編集", edit_item_path(@item.id), class: 'exhibit__sell'
+        = link_to "削除", item_path(@item.id), method: :dastroy, class: 'exhibit__destroy'
+        = link_to "キャンセル", root_path, class: 'exhibit__back'
 
   .footer
     .footer__container
