@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+
   def index
     @items = Item.order('created_at DESC').page(params[:page]).per(5)
   end
@@ -18,10 +19,8 @@ class ItemsController < ApplicationController
     end
   end
 
-  def destroy
+  def show
     @item = Item.find(params[:id])
-    @item.destroy
-    redirect_to root_path
   end
 
   def edit
@@ -30,12 +29,18 @@ class ItemsController < ApplicationController
 
   def update
     item = Item.find(params[:id])
-    item.update(item_params)
-    redirect_to root_path
+    if item.update(item_params)
+      redirect_to root_path
+    else
+      redirect_to edit_item_path
+    end
+
   end
 
-  def show
+  def destroy
     @item = Item.find(params[:id])
+    @item.destroy
+    redirect_to root_path
   end
 
   private
