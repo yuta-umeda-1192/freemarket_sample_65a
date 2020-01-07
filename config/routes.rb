@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   end
 
   root to: 'top#index'
-  resources :items, only: [:index, :new, :create, :destroy, :show]
+  resources :items
   resources :users, only: [:index, :new, :show]
-  resources :item_details, only: [:index, :show]
 end
