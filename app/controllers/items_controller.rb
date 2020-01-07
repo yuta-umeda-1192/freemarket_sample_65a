@@ -12,7 +12,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new(item_params)
+    @item = Item.new(item_params)   
     if @item.save
       redirect_to new_item_path
     end
@@ -25,6 +25,8 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+    @images = @item.images
+    @items = Item.where(user_id: @item.user_id)
   end
 
   private

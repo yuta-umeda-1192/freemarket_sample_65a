@@ -1,75 +1,132 @@
+%header.toppage__header
+  .toppage__header
+    .toppage__header__top
+      .toppage__header__logo
+        = image_tag("fmarket_logo_red.svg", class: "img", size: "100×100", alt: "mercari")
+      .toppage__header__search
+        %input{ name: '', class: 'toppage__header__search__form',placeholder: '何かお探しですか？' }
+        = icon('fas', 'search', alt: 'search-icon',class: 'topppage__header__search__button')
+      
+
+.choice
+  .choice__category
+    = icon('fas', 'list-ul ', style: 'color:red',class: 'choice__category__icon')
+    カテゴリーから探す
+
+  .choice__brand
+    = icon('fas', 'tag ',style: 'color:red', class: 'choice__brand__icon')
+    ブランドから探す
+  .choice__management
+    .choice__management__good
+      = icon('far', 'heart ',style: 'color:gray', class: 'choice__good__icon')
+      いいね！一覧
+    .choice__management__information
+      = icon('far', 'bell',style: 'color:gray', class: 'choice__infomation__icon')
+      お知らせ
+    .choice__management__todolist
+      = icon('fas', 'check',style: 'color:gray', class: 'choice__todolist__icon')
+      やることリスト
+    .choice__management__mypage
+      = icon('fas', 'user', style: 'color:gray', class: 'choice__mypsge__icon')
+      マイページ
+
+
 .container
   .container__item-name
     #{@item.name}
   .container__item
     .details-container
-      #main-image= image_tag src="/assets/sample_img1.jpeg", data: {url: "/assets/sample_img1.jpeg"}, size: "260x260"
+      #main-image= image_tag src="#{@item.images[0].src}", data: {url: "#{@item.images[0].src}"}, size: "260x260"
 
       .thumbnails-frame
-        .thumbnails-frame__thumbnail=image_tag src="/assets/sample_img1.jpeg", data: {url: "/assets/sample_img1.jpeg"}, size: "50x50"
-        .thumbnails-frame__thumbnail=image_tag src="/assets/sample_img2.jpeg", data: {url: "/assets/sample_img2.jpeg"}, size: "50x50"
-        .thumbnails-frame__thumbnail=image_tag src="/assets/sample_img1.jpeg", data: {url: "/assets/sample_img1.jpeg"}, size: "50x50"
-        .thumbnails-frame__thumbnail=image_tag src="/assets/sample_img2.jpeg", data: {url: "/assets/sample_img2.jpeg"}, size: "50x50"
-        .thumbnails-frame__thumbnail=image_tag src="/assets/sample_img1.jpeg", data: {url: "/assets/sample_img1.jpeg"}, size: "50x50"
-        .thumbnails-frame__thumbnail=image_tag src="/assets/sample_img2.jpeg", data: {url: "/assets/sample_img2.jpeg"}, size: "50x50"
+        - @images.each do |image|
+          .thumbnails-frame__thumbnail=image_tag src="#{image.src}", data: {url: "#{image.src}"}, size: "50x50"
 
     %table
       %tr
         %th.widerow 出品者
-        %td #{@item.user_id}
-      %tr
-        %th.widerow カテゴリー
-        %td #{@item.name}
-      %tr
-        %th ブランド
-        %td #{@item.brand_id}
-      %tr
-        %th 商品のサイズ
-        %td #{@item.name}
-      %tr
-        %th 商品の状態
-        %td #{@item.name}
-      %tr
-        %th 配送料の負担
-        %td #{@item.name}
-      %tr
-        %th 配送の方法
-        %td #{@item.name}
-      %tr
-        %th 配送元の地域
-        %td #{@item.name}
-      %tr
-        %th 配送日の目安
-        %td #{@item.name}
+        - @user = User.find_by(id: @item[:user_id])
+        %td 
+          =link_to root_path do
+            #{@user.nickname}
+      -# %tr
+      -#   %th.widerow カテゴリー
+      -#   %td 
+      -# %tr
+      -#   %th ブランド
+      -#   %td 
+      -# %tr
+      -#   %th 商品のサイズ
+      -#   %td 
+      -# %tr
+      -#   %th 商品の状態
+      -#   %td 
+      -# %tr
+      -#   %th 配送料の負担
+      -#   %td
+      -# %tr
+      -#   %th 配送の方法
+      -#   %td 
+      -# %tr
+      -#   %th 配送元の地域
+      -#   %td 
+      -# %tr
+      -#   %th 配送日の目安
+      -#   %td 
 
   .price-frame
-    .price-frame__price 300000
+    .price-frame__price ¥#{@item.price.to_s(:delimited, delimiter: ',')}円
     .price-frame__text (税込)
-    .price-frame__delivery-burden 送料込み
+    .price-frame__delivery-burden
+
+  = link_to root_path do
+    .buy-btn
+      .buy-btn__text
+        商品を購入する
+
+  .description 
+    = simple_format(@item.discription)
   
-  .buy-btn
-    .buy-btn__text
-      商品を購入する
+  -# .item-footer
+  -#   .item-footer__btns
+  -#     = link_to "#" do
+  -#       .radius
+  -#         □
+  -#         いいね！
+  -#         3
+  -#       .radius
+  -#         □
+  -#     .item-footer__link
+  -#     □
+  -#     あんしん・あんぜんへの取り組み
 
-  .description #{@item.discription}
-  
-  .item-footer
-    .item-footer__btns
-      .radius
-        □
-        いいね！
-        3
-      .radius
-        □
-        不適切な商品の報告
-    .item-footer__link
-      □
-      あんしん・あんぜんへの取り組み
+-# .link-frame
+-#   %a 前の商品
+-#   %a 次の商品
 
-.link-frame
-  %a 前の商品
-  %a 次の商品
+  -# %i.fab.fa-facebook-square.fa-3x
+  -# %i.fab.fa-twitter-square.fa-3x
 
-.container
-  %i.fab.fa-facebook-square.fa-3x
-  %i.fab.fa-twitter-square.fa-3x
+
+.link-lightblue
+  = link_to "#" do
+    #{@user.nickname}さんのその他の出品
+
+.details-item-list
+  - items_list = @items.limit(6)
+  - items_list.each do |item|
+  - image = item.images[0]
+    .details-item-list__items__item
+      = link_to item_path(item) do
+        .details-item-list__items__item__main
+          #image-box
+            = image_tag image.src.url, width: '180', height: '180'
+          .details-item-list__items__item__main__price
+            ¥
+            = item.price
+        .details-item-list__items__item__name
+          = item.name
+
+.wrapper
+  = render "top/footer-top"
+  = render "top/top2" 
