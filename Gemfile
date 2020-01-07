@@ -85,4 +85,9 @@ gem 'carrierwave'
 gem 'ransack'
 gem 'mini_magick'
 gem 'jquery-rails'
+
 gem 'ancestry'
+gem 'fog-aws'
+gem "omniauth-rails_csrf_protection"
+gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'

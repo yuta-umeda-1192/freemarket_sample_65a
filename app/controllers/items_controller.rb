@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :destroy]
 
   def index
-    @items = Item.order('created_at DESC').page(params[:page]).per(5)
+    @items = Item.order('created_at DESC')
   end
 
   def new
@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if @item.save
-     redirect_to new_item_path
+      redirect_to new_item_path
     end
   end
 

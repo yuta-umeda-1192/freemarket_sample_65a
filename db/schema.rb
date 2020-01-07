@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2019_12_30_051352) do
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "src", null: false
+    t.string "src"
     t.bigint "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -57,15 +57,14 @@ ActiveRecord::Schema.define(version: 2019_12_30_051352) do
   end
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "name"
     t.string "prefeture"
-    t.string "discription", null: false
-    t.integer "delivery_day", default: 0
+    t.string "discription"
+    t.string "delivery_day"
     t.string "delively_method"
-    t.integer "delivery_burden_fee", default: 0
-    t.bigint "delivery_area_id"
-    t.bigint "item_category_id"
-    t.integer "price", null: false
+    t.string "delivery_burden_fee"
+    t.string "item_category"
+    t.integer "price"
     t.bigint "brand_id"
     t.bigint "user_id"
     t.bigint "buyer_id"
@@ -73,8 +72,6 @@ ActiveRecord::Schema.define(version: 2019_12_30_051352) do
     t.datetime "updated_at", null: false
     t.index ["brand_id"], name: "index_items_on_brand_id"
     t.index ["buyer_id"], name: "index_items_on_buyer_id"
-    t.index ["delivery_area_id"], name: "index_items_on_delivery_area_id"
-    t.index ["item_category_id"], name: "index_items_on_item_category_id"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
@@ -82,6 +79,15 @@ ActiveRecord::Schema.define(version: 2019_12_30_051352) do
     t.string "size", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "sns_credentials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "provider"
+    t.string "uid"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_sns_credentials_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -104,4 +110,5 @@ ActiveRecord::Schema.define(version: 2019_12_30_051352) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "sns_credentials", "users"
 end

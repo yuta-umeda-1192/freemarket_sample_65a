@@ -46,19 +46,19 @@
           .identification__user-address__forms__menus__namae-kanji__title
             お名前
           .identification__user-address__forms__menus__namae-kanji__content
-            寺田 和之
+            = @user.family_name + @user.first_name
 
         .identification__user-address__forms__menus__namae-kana
           .identification__user-address__forms__menus__namae-kana__title
             お名前カナ
           .identification__user-address__forms__menus__namae-kana__content
-            テラダ カズユキ
+            = @user.family_name_kana + @user.first_name_kana
 
         .identification__user-address__forms__menus__birthday
           .identification__user-address__forms__menus__birthday__title
             生年月日
           .identification__user-address__forms__menus__birthday__content
-            1976/03/22
+            = @user.year+@user.month+@user.day
 
         .identification__user-address__forms__menus__zip-code
           .identification__user-address__forms__menus__zip-code__label

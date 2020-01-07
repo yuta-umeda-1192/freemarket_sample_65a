@@ -1,3 +1,3 @@
 class ItemCategoryController < ApplicationController
-  has_ancestry
+  # has_ancestry
 end
