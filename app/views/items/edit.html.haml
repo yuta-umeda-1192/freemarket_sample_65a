@@ -1,4 +1,4 @@
--# 編集ページ
+-# 商品編集ページ
 
 .exhibit
   .header
@@ -12,11 +12,6 @@
         商品の情報を入力
 
       = render partial: 'form'
-
-      .form__exhibit__btn
-        = link_to "編集", edit_item_path(@item.id), class: 'exhibit__sell'
-        = link_to "削除", item_path(@item.id), method: :dastroy, class: 'exhibit__destroy'
-        = link_to "キャンセル", root_path, class: 'exhibit__back'
 
   .footer
     .footer__container
