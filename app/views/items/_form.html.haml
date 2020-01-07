@@ -102,5 +102,5 @@
 
     .form__exhibit__btn
       = f.submit "出品する", class: 'exhibit__sell'
-      = link_to "削除", item_path(@item.id), method: :model, class: 'exhibit__sell'
+      = link_to "削除", item_path(@item.id), method: :delete, class: 'exhibit__sell'
       = link_to "もどる", root_path, class: 'exhibit__back'
