@@ -49,6 +49,9 @@
         %td 
           =link_to root_path do
             #{@user.nickname}
+
+      -# 以下は登録できる情報が増え次第表示させる予定なので、残してあります。
+
       -# %tr
       -#   %th.widerow カテゴリー
       -#   %td 
@@ -86,7 +89,10 @@
 
   .description 
     = simple_format(@item.discription)
-  
+
+
+-# 以下は機能が実装された場合に備えて、残してあります。
+
   -# .item-footer
   -#   .item-footer__btns
   -#     = link_to "#" do
