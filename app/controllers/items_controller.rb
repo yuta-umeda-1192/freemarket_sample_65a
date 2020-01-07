@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
+
   def index
     @items = Item.order('created_at DESC')
   end
@@ -18,22 +20,35 @@ class ItemsController < ApplicationController
     end
   end
 
-  def destroy
-    item = Item.find(params[:id])
-    item.destroy
-    redirect_to new_item_path
+  def show
   end
 
   def edit
   end
 
-  def show
-    @item = Item.find(params[:id])
+  def update
+    if @item.update(item_params)
+      redirect_to root_path
+    else
+      redirect_to edit_item_path
+    end
+  end
+
+  def destroy
+    if @item.destroy
+      redirect_to root_path
+    else
+      redirect_to edit_item_path
+    end
   end
 
   private
   def item_params
-    params.require(:item).permit(:name, :price, :discription, images_attributes: [:src])
+    params.require(:item).permit(:name, :price, :discription, images_attributes: [:id, :src])
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 
 end
