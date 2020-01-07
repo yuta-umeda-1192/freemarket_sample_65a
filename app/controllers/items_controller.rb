@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
+
   def index
     @items = Item.order('created_at DESC')
   end
@@ -18,20 +20,37 @@ class ItemsController < ApplicationController
     end
   end
 
-  def destroy
-    @item.destroy
-    redirect_to new_item_path
-  end
-
   def show
     @item = Item.find(params[:id])
     @images = @item.images
     @items = Item.where(user_id: @item.user_id)
   end
+  
+  def edit
+  end
+
+  def update
+    if @item.update(item_params)
+      redirect_to root_path
+    else
+      redirect_to edit_item_path
+    end
+  end
+
+  def destroy
+    if @item.destroy
+      redirect_to root_path
+    else
+      redirect_to edit_item_path
+    end
 
   private
   def item_params
-    params.require(:item).permit(:name, :price, :discription, images_attributes: [:src])
+    params.require(:item).permit(:name, :price, :discription, images_attributes: [:id, :src])
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 
 end
