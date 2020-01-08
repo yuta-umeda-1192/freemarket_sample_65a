@@ -5,7 +5,7 @@
   height:60px;
   padding-right:60px;
   &__top{
-    height: 90px;
+    height: 50px;
     display:flex;
     .toppage__header__logo{
       display: flex;
@@ -67,58 +67,103 @@
 //    margin-left:160px ;
 // }
 
-.choice{
+.toppage__choice{
   display:flex;
   justify-content: space-between;
   font-size: 13px;
   font-weight: 60px;
   line-height: 36px;
-  margin-top:1px;
-  width: 1000px;
-  margin:0 auto;
+  margin-top:3px;
+  margin-bottom:10px;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
 
-  cursor: pointer;  
-  &__category{
-    display:flex;
-    color: inherit;
-    text-decoration :none;
-    height: 2rem;
-    margin: 0 auto;
-    // width: 1000px;
-    &__large{
-      width: 25%;
-      &__medium{
+  cursor: pointer;
+  &__left{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 100px;
+    &__category{
+      color: inherit;
+      height: 2rem;
+      margin-right: 30px;
+      font-weight: bold;
+    }
+    &__brand{
+      color: inherit;
+      height: 2rem;
+      margin-right: 30px;
+      font-weight: bold;
+    }
+  }
 
-        &__small{
-
+  &__right{
+    margin-right: 100px;
+    &__management{
+      display:flex;
+      justify-content: flex-start;
+      &__good{
+        color: inherit;
+        font-weight: bold;
+      }
+      &__information{
+        color: inherit;
+        margin-left: 30px;
+        font-weight: bold;
+      }
+      &__todolist{
+        color: inherit;
+        margin-left: 30px;
+        font-weight: bold;
+      }
+      &__mypage{
+        color: inherit;
+        margin-left: 30px;
+        font-weight: bold;
+        a{
+          color: inherit;
+          text-decoration: none;
         }
       }
-    }
-  }
-
-  &__brand{
-    margin-left:30px;
-    color: inherit;
-  }
-
-  &__management{
-    display:flex;
-    justify-content: flex-end;
-    margin-left: 140px;
-    &__good{
-    color: inherit;
-    }
-    &__information{
-    margin-left: 50px;
-    color: inherit;
-    }
-    &__todolist{
-    margin-left: 50px;
-    color: inherit;
-    }
-    &__mypage{
-    margin-left: 50px;
-    color: inherit;
+      &__logout{
+        color: inherit;
+        margin-left: 10px;
+        font-weight: bold;
+        a{
+          color: inherit;
+          text-decoration: none;
+          color:#0099E8;
+          border: 1px solid;
+          border-radius: 10%;
+          padding: 5px;
+        }
+      }
+      &__registration{
+        color: inherit;
+        margin-left: 30px;
+        font-weight: bold;
+        a{
+          color: inherit;
+          text-decoration: none;
+          color:white;
+          background-color:#EA352D;
+          border: 1px solid;
+          border-radius: 10%;
+          padding: 10px;
+        }
+      }
+      &__login{
+        color: inherit;
+        margin-left: 10px;
+        font-weight: bold;
+        a{
+          color: inherit;
+          text-decoration: none;
+          color:#0099E8;
+          border: 1px solid;
+          border-radius: 10%;
+          padding: 10px;
+        }
+      }
     }
   }
 }
@@ -330,7 +375,6 @@
     font-weight: 600px;
     border-radius: 15px;
     padding: 8px 16px;
-
   }
 }
 
