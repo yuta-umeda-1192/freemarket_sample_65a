@@ -6,7 +6,6 @@
       .toppage__header__search
         %input{ name: '', class: 'toppage__header__search__form',placeholder: '何かお探しですか？' }
         = icon('fas', 'search', alt: 'search-icon',class: 'topppage__header__search__button')
-      
 
 .choice
   .choice__category
@@ -32,23 +31,23 @@
 .user-wrapper
   = render 'side'
 
-  .identification
-    .identification__user-address__forms
-      .identification__user-address__forms__header
+  .itembuy
+    .itembuy__user-address__forms
+      .itembuy__user-address__forms__header
         プロフィール
-      .identification__user-address__forms__menus
-        .identification__user-address__forms__menus__zip-code
-          .identification__user-address__forms__menus__zip-code__label
-            .identification__user-address__forms__menus__zip-code__label__nickname
+      .itembuy__user-address__forms__menus
+        .itembuy__user-address__forms__menus__zip-code
+          .itembuy__user-address__forms__menus__zip-code__label
+            .itembuy__user-address__forms__menus__zip-code__label__nickname
               ニックネーム：テスト
-          .identification__user-address__forms__menus__zip-code__form
+          .itembuy__user-address__forms__menus__zip-code__form
             %p ここは自己紹介ページ
             %p 年齢
             %p 職業
             %p 住所
             %p 趣味
 
-        .identification__user-address__forms__menus__next
+        .itembuy__user-address__forms__menus__next
           変更する
 
 = render "top/top2"
