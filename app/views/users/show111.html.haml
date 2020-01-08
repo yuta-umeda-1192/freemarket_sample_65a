@@ -1,0 +1,108 @@
+%header.toppage__header
+  .toppage__header
+    .toppage__header__top
+      .toppage__header__logo
+        = image_tag("fmarket_logo_red.svg", class: "img", size: "100×100", alt: "mercari")
+      .toppage__header__search
+        %input{ name: '', class: 'toppage__header__search__form',placeholder: '何かお探しですか？' }
+        = icon('fas', 'search', alt: 'search-icon',class: 'topppage__header__search__button')
+
+.choice
+  .choice__category
+    = icon('fas', 'list-ul ', style: 'color:red',class: 'choice__category__icon')
+    カテゴリーから探す
+  .choice__brand
+    = icon('fas', 'tag ',style: 'color:red', class: 'choice__brand__icon')
+    ブランドから探す
+  .choice__management
+    .choice__management__good
+      = icon('far', 'heart ',style: 'color:gray', class: 'choice__good__icon')
+      いいね！一覧
+    .choice__management__information
+      = icon('far', 'bell',style: 'color:gray', class: 'choice__infomation__icon')
+      お知らせ
+    .choice__management__todolist
+      = icon('fas', 'check',style: 'color:gray', class: 'choice__todolist__icon')
+      やることリスト
+    .choice__management__mypage
+      = icon('fas', 'user', style: 'color:gray', class: 'choice__mypsge__icon')
+      マイページ
+
+.user-wrapper
+  = render 'side'
+
+  .identification
+    .identification__user-address__forms
+      .identification__user-address__forms__header
+        本人情報の登録
+      .identification__user-address__forms__menus
+        お客さまの本人情報をご登録ください。
+        %br
+        登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+        .identification__user-address__forms__menus__upload
+          本人確認書類のアップロードについて>
+        .identification__user-address__forms__menus__namae-kanji
+          .identification__user-address__forms__menus__namae-kanji__title
+            お名前
+          .identification__user-address__forms__menus__namae-kanji__content
+            -# = @user.family_name + @user.first_name
+
+        .identification__user-address__forms__menus__namae-kana
+          .identification__user-address__forms__menus__namae-kana__title
+            お名前カナ
+          .identification__user-address__forms__menus__namae-kana__content
+            -# = @user.family_name_kana + @user.first_name_kana
+
+        .identification__user-address__forms__menus__birthday
+          .identification__user-address__forms__menus__birthday__title
+            生年月日
+          .identification__user-address__forms__menus__birthday__content
+            -# = @user.year+@user.month+@user.day
+
+        .identification__user-address__forms__menus__zip-code
+          .identification__user-address__forms__menus__zip-code__label
+            .identification__user-address__forms__menus__zip-code__label__title
+              郵便番号
+            .identification__user-address__forms__menus__zip-code__label__must
+              任意
+          %input.identification__user-address__forms__menu__zip-code__form{name: "zip-code", placeholder: "　例）123-4567", type: "password"}
+
+        .identification__user-address__forms__menus__prefectures
+          .identification__user-address__forms__menus__prefectures__label
+            .identification__user-address__forms__menus__prefectures__label__title
+              都道府県
+            .identification__user-address__forms__menus__prefectures__label__must
+              任意
+          %input.identification__user-address__forms__menu__prefectures__form{name: "prefectures", placeholder: "　--", type: "password"}
+
+        .identification__user-address__forms__menus__municipalities
+          .identification__user-address__forms__menus__municipalities__label
+            .identification__user-address__forms__menus__municipalities__label__title
+              市区町村
+            .identification__user-address__forms__menus__municipalities__label__must
+              任意
+          %input.identification_user-address__forms__menu__municipalities__form{name: "municipalities", placeholder: "　例）横浜市緑区", type: "password"}
+
+        .identification__user-address__forms__menus__address
+          .identification__user-address__forms__menus__address__label
+            .identification__user-address__forms__menus__address__label__title
+              番地
+            .identification__user-address__forms__menus__address__label__must
+              任意
+          %input.identification__user-address__forms__menu__address__form{name: "address", placeholder: "　例）青山1-1-1", type: "password"}
+
+        .identification__user-address__forms__menus__building
+          .identification__user-address__forms__menus__building__label
+            .identification__user-address__forms__menus__building__label__title
+              建物名
+            .identification__user-address__forms__menus__building__label__must
+              任意
+          %input.identification__user-address__forms__menu__building__form{name: "building", placeholder: "　例）柳ビル103", type: "password"}
+
+        .identification__user-address__forms__menus__next
+          登録する
+
+        .identification__user-address__forms__menus__about
+          本人情報の登録について>
+
+= render "top/top2"
