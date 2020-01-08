@@ -1,5 +1,5 @@
 .toppage__header{
-  width: 700px;
+  width: 1000px;
   margin: 0px auto;
   padding: 8px 0px 0px;
   height:60px;
@@ -22,7 +22,7 @@
       display:flex;
       position: relative;
        &__form{
-        width:600px;
+        width:800px;
         background-color: rgb(245, 245, 245);
         font-size: 16px;
         height: 40px;
@@ -56,7 +56,7 @@
     }
     .fa-search{
       position: absolute;
-      padding-left:600px;
+      padding-left:800px;
       top: 15px;
     }
   } 
@@ -69,10 +69,13 @@
 
 .choice{
   display:flex;
-  font-size: 16px;
+  justify-content: space-between;
+  font-size: 13px;
   font-weight: 60px;
   line-height: 36px;
   margin-top:1px;
+  width: 1000px;
+  margin:0 auto;
 
   cursor: pointer;  
   &__category{
@@ -81,7 +84,7 @@
     text-decoration :none;
     height: 2rem;
     margin: 0 auto;
-    width: 1000px;
+    // width: 1000px;
     &__large{
       width: 25%;
       &__medium{
@@ -93,12 +96,6 @@
     }
   }
 
-
-
-
-
-
-
   &__brand{
     margin-left:30px;
     color: inherit;
@@ -106,6 +103,7 @@
 
   &__management{
     display:flex;
+    justify-content: flex-end;
     margin-left: 140px;
     &__good{
     color: inherit;
@@ -122,8 +120,8 @@
     margin-left: 50px;
     color: inherit;
     }
-    }
   }
+}
 
 .choice__category__icon{
   margin-top:10px;
@@ -341,3 +339,10 @@
   height:1000px;
 }
 
+.itembutton{
+  z-index: 1;
+  position: absolute;
+  position:fixed;
+  bottom: 5px;
+  right: 5px;
+}
