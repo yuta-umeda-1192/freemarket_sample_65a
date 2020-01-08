@@ -1,46 +1,11 @@
 = render "top/header-top"
 
--# .choice
--#   .choice__category
--#     = icon('fas', 'list-ul ', style: 'color:red',class: 'choice__category__icon')
--#     カテゴリーから探す
--#   .choice__brand
--#     = icon('fas', 'tag ',style: 'color:red', class: 'choice__brand__icon')
--#     ブランドから探す
--#   .choice__management
--#     .choice__management__good
--#       = icon('far', 'heart ',style: 'color:gray', class: 'choice__good__icon')
--#       いいね！一覧
--#     .choice__management__information
--#       = icon('far', 'bell',style: 'color:gray', class: 'choice__infomation__icon')
--#       お知らせ
--#     .choice__management__todolist
--#       = icon('fas', 'check',style: 'color:gray', class: 'choice__todolist__icon')
--#       やることリスト
--#     .choice__management__mypage
--#       = icon('fas', 'user', style: 'color:gray', class: 'choice__mypsge__icon')
--#       マイページ
-
 .user-wrapper
   = render 'side'
 
-  .itembuy
-    .itembuy__user-address__forms
-      .itembuy__user-address__forms__header
-        プロフィール
-      .itembuy__user-address__forms__menus
-        .itembuy__user-address__forms__menus__zip-code
-          .itembuy__user-address__forms__menus__zip-code__label
-            .itembuy__user-address__forms__menus__zip-code__label__nickname
-              ニックネーム：テスト
-          .itembuy__user-address__forms__menus__zip-code__form
-            %p ここは自己紹介ページ
-            %p 年齢
-            %p 職業
-            %p 住所
-            %p 趣味
-
-        .itembuy__user-address__forms__menus__next
-          変更する
+  .logout
+    .logout__contents
+      .logout__contents__btn
+        = link_to "ログアウト", destroy_user_session_path, method: :delete
 
 = render "top/top2"
