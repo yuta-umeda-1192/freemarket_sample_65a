@@ -42,6 +42,7 @@ class ItemsController < ApplicationController
     else
       redirect_to edit_item_path
     end
+  end
 
   private
   def item_params

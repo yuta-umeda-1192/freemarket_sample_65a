@@ -47,8 +47,8 @@
         %th.widerow 出品者
         - @user = User.find_by(id: @item[:user_id])
         %td 
-          =link_to root_path do
-            #{@user.nickname}
+          -# =link_to root_path do
+          -#   #{@user.nickname}
 
       -# 以下は登録できる情報が増え次第表示させる予定なので、残してあります。
 
@@ -115,8 +115,8 @@
 
 
 .link-lightblue
-  = link_to "#" do
-    #{@user.nickname}さんのその他の出品
+  -# = link_to "#" do
+  -#   #{@user.nickname}さんのその他の出品
 
 .details-item-list
   - items_list = @items.limit(6)
@@ -125,8 +125,8 @@
     .details-item-list__items__item
       = link_to item_path(item) do
         .details-item-list__items__item__main
-          #image-box
-            = image_tag image.src.url, width: '180', height: '180'
+          -# #image-box
+          -#   = image_tag image.src.url, width: '180', height: '180'
           .details-item-list__items__item__main__price
             ¥
             = item.price
