@@ -3,7 +3,7 @@
     .side__contents__main
       .side__contents__main__menu
         .side__contents__main__menu__content
-          マイページ
+          =link_to 'マイページ', mypage_users_path
         .side__contents__main__menu__arrow
           〉
       .side__contents__main__menu
@@ -89,7 +89,7 @@
     .side__contents__configuration
       .side__contents__configuration__menu
         .side__contents__configuration__menu__content
-          プロフィール
+          =link_to 'プロフィール', mypage_profile_users_path
         .side__contents__configuration__menu__arrow
           〉
       .side__contents__configuration__menu
@@ -109,7 +109,7 @@
           〉
       .side__contents__configuration__menu
         .side__contents__configuration__menu__content
-          本人情報
+          =link_to '本人情報', mypage_idenfication_users_path
         .side__contents__configuration__menu__arrow
           〉
       .side__contents__configuration__menu
@@ -119,6 +119,6 @@
           〉
       .side__contents__configuration__menu
         .side__contents__configuration__menu__content
-          ログアウト
+          =link_to 'ログアウト', mypage_logout_users_path
         .side__contents__configuration__menu__arrow
           〉
