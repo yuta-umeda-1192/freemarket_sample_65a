@@ -8,12 +8,12 @@
 
     .item-list__contents__items
       - @items.each do |item|
+      - image = item.images[0]
         .item-list__contents__items__item
           = link_to item_path(item) do
             .item-list__contents__items__item__main
               #image-box
-                - item.images.each_with_index do |image|
-                  = image_tag image.src.url, data: { index: 1 }, width: "180", height: '180'
+                = image_tag image.src.url, width: '180', height: '180'
               .item-list__contents__items__item__main__price
                 ¥
                 = item.price
