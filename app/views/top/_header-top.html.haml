@@ -30,7 +30,7 @@
           やることリスト
         .toppage__choice__right__management__mypage
           = icon('fas', 'user', style: 'color:gray', class: 'choice__mypsge__icon')
-          = link_to "マイページ", user_path(current_user)
+          =link_to 'マイページ', mypage_users_path
         .toppage__choice__right__management__logout
           = link_to "ログアウト", destroy_user_session_path, method: :delete
 
