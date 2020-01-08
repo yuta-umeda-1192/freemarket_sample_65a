@@ -10,7 +10,7 @@ class Item < ApplicationRecord
   # belongs_to :size
   # belongs_to :item_status
   # belongs_to :brand
-  # belongs_to :user
+  belongs_to :user
   # belongs_to :buyer
   # belongs_to :delivery_area
   # belongs_to :item_category

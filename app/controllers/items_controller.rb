@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
 
   def show
     @images = @item.images
-    @items = Item.where(user_id: @item.user_id)
+    @items = Item.where(user_id: @item.user_id).order('created_at DESC')
   end
   
   def edit
@@ -48,7 +48,7 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name, :price, :discription, images_attributes: [:id, :src])
+    params.require(:item).permit(:name, :price, :discription, images_attributes: [:id, :src]).merge(user_id: current_user.id)
   end
 
   def set_item
