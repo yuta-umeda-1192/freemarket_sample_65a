@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+    
   devise_for :users, controllers: {
   omniauth_callbacks: 'users/omniauth_callbacks',
   sessions: 'users/sessions',
@@ -11,7 +12,10 @@ Rails.application.routes.draw do
   end
 
   root to: 'top#index'
-  resources :items
+  resources :items do
+    resources :card_buy, only: [:show, :create] do 
+    end
+  end
   resources :users, only: [:index, :new, :show] do
     collection do
       get 'mypage'

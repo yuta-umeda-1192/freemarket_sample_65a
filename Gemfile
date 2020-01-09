@@ -85,6 +85,11 @@ gem 'carrierwave'
 gem 'ransack'
 gem 'mini_magick'
 gem 'jquery-rails'
+gem 'payjp'
+gem 'rspec-rails'
+gem 'jquery-turbolinks'
+
+gem 'pry-rails'
 
 gem 'ancestry'
 gem 'fog-aws'
