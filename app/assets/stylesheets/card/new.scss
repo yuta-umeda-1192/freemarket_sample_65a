@@ -1,0 +1,147 @@
+.credit__body__all{
+    background-color:lightgray;
+  .credit__header__top{
+    &__logo{
+    padding-top: 50px;
+    padding-bottom: 30px;
+    width: 200px;
+    margin-left: 630px;
+    }
+  }
+  .credit__title{
+    display: block;
+    background-color:white;
+    margin-left: 380px;
+    margin-right: 380px;
+    border-style: solid;
+    border-width: 0;
+    height:600px;
+    h2{
+      text-align: center;
+      font-size: 22px;
+      font-family: 'Courier New', Courier, monospace;
+      border-bottom:1px solid lightgrey;
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+  }
+    .credit-cards{
+      padding-top: 30px;
+      padding-left: 190px;
+      .credit-cards__inner{
+        margin-top: 20px;
+        .cards-number{
+          font-family: 'Courier New', Courier, monospace;
+        }
+        .require{
+          background-color: #EA352D; 
+          color: white;
+          display: block;
+          width: 35px;
+          font-size: 13px;
+          text-align: center;
+          line-height: 18px;
+          padding-top:4px;
+          border-radius: 5px;
+        }
+        .input-number{
+          width:350px;
+          height: 40px; 
+          border-radius: 5px;
+        }
+        .cards-expire{
+          padding-top:20px;
+          .limited{
+            font-family: 'Courier New', Courier, monospace;
+          }
+          .require2{
+            background-color: #EA352D;
+            color: white; 
+            display: block;
+            width: 35px;
+            font-size: 13px;
+            text-align: center;
+            line-height: 18px;
+            padding-top:4px;
+            border-radius: 5px;
+          }
+            .cards-expire__month{
+              .input-expire{
+              }
+              .expire-text{
+              font-family: 'Courier New', Courier, monospace;
+              }
+            }
+            .cards-expire__year{
+              .input-expire{
+
+              }
+              .expire-text2{
+              font-family: 'Courier New', Courier, monospace;
+              }
+            }
+            .cards-expire-security{
+              padding-top:20px;
+              .code{
+              font-family: 'Courier New', Courier, monospace;
+              }
+              .require3{
+              background-color: #EA352D;
+              color: white; 
+              display: block;
+              width: 35px;
+              font-size: 13px;
+              text-align: center;
+              line-height: 18px;
+              padding-top:4px;
+              border-radius: 5px;
+              }
+    
+              .input-number2{
+                width:350px;
+                height: 40px; 
+                border-radius: 5px;
+             }
+            }
+            .cards-bottom{
+              #token_submit{
+              color:white;
+              background-color:red;
+              width:350px;
+              height: 40px;
+              border-radius: 5px;
+              margin-top:30px;
+              }
+            }
+          }
+        }
+}
+  .credit__footer{
+    margin-left:520px;
+    &__body{
+    display:flex;
+    font-size:12px;
+    line-height: 1.4em;
+    opacity: 0.7;
+    color: rgb(255,255,255);
+    text-decoration: none;
+    padding-top:30px;
+      .text{
+      cursor: pointer;
+      padding-right:20px;
+      }
+      .text2{
+      cursor: pointer;
+      padding-right:20px;
+      }
+      .text3{
+      cursor: pointer;
+      padding-right:20px;
+      }
+  }
+}
+  .credit__footer__body__logo{
+    width: 100px;
+    margin-left: 650px;
+    }
+ }

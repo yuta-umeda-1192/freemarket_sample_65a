@@ -1,0 +1,64 @@
+.buy__body__all
+  .buy__header__top
+    .buy__header__top__logo
+      = image_tag("fmarket_logo_red.svg", class: "buy-img", size: "100×100", alt: "mercari")
+  .buy__body__header
+    .buy__body__header__top
+      %h2.buy__body__header__text 購入内容の画面
+      .buy__product
+
+        .buy__product__inner
+
+          .buy__product__inner__body
+            
+            .buy__product__image
+              
+              .buy__product__image__item
+                
+                .buy__product__image__item__name
+                  = @items.name
+                .buy__product__image__item__price
+                  = @items.price
+                  %span （税込)送料込み
+    .buy__body__under
+      .buy__body__under__inner
+        %form  
+          %ul.inner
+            %li.inner
+              %div.payprice
+                %h3.paypricetext 支払い金額
+              %div.inner
+                %span.data
+              %i.inner
+              %label.have
+                ポイントを使用（所持ポイント: P0）
+          .buy__body__under__inner__way
+            .way
+              %h3 お支払い方法
+              .way2
+                %i.add
+                  +
+                .register1
+                  = link_to "登録してください", new_card_path, class: "button"
+          .buy__body__under__inner__place
+            .place
+              %h3 配送先
+              .place2
+                %i.add2
+                  +
+                .register2
+                  = link_to "登録してください", new_user_path, class: "button"
+          .buy_push
+            %button.push_btn
+              = link_to "購入する", item_card_buy_index_path(@items.id), method: :post, class: "buy_button"
+  .buy__footer
+    .buy__footer__body
+      %div.text  
+        = link_to 'プライバシーポリシー',"https://www.mercari.com/jp/privacy/"
+      %div.text2  
+        = link_to 'メルカリ利用規約',"https://www.mercari.com/jp/tos/"
+      %div.text3  
+        = link_to '特定商取引に関する表記',"https://www.mercari.com/jp/tokutei/"
+
+  .buy__footer__body__logo
+    = image_tag("logo_gray.svg", class: "fmarket-gray1")

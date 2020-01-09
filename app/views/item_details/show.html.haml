@@ -1,7 +1,8 @@
 .header
 
 .container
-  .container__item-name 商品名
+  .container__item-name
+    #{@item.name}
   .container__item
     .details-container
       #main-image= image_tag src="/assets/sample_img1.jpeg", data: {url: "/assets/sample_img1.jpeg"}, size: "260x260"
@@ -17,31 +18,31 @@
     %table
       %tr
         %th.widerow 出品者
-        %td 出品者名
+        %td #{@item.user_id}
       %tr
         %th.widerow カテゴリー
-        %td カテゴリー名
+        %td #{@item.name}
       %tr
         %th ブランド
-        %td ブランド名
+        %td #{@item.brand_id}
       %tr
         %th 商品のサイズ
-        %td サイズ
+        %td #{@item.name}
       %tr
         %th 商品の状態
-        %td ステータス
+        %td #{@item.name}
       %tr
         %th 配送料の負担
-        %td 金額
+        %td #{@item.name}
       %tr
         %th 配送の方法
-        %td 方法
+        %td #{@item.name}
       %tr
         %th 配送元の地域
-        %td 地域
+        %td #{@item.name}
       %tr
         %th 配送日の目安
-        %td 目安
+        %td #{@item.name}
 
   .price-frame
     .price-frame__price 300000
@@ -49,9 +50,9 @@
     .price-frame__delivery-burden 送料込み
   
   .buy-btn
-    .buy-btn__text
-      = link_to "購入画面に進む", card_buy_index_path, class: "button"
-  .description 商品説明
+    .buy-btn__text 
+    
+  .description #{@item.discription}
   
   .item-footer
     .item-footer__btns
