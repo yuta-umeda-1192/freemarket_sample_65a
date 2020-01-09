@@ -1,7 +1,7 @@
 = render "top/header-top"
 
 .user-wrapper
-  = render 'side'
+  = render 'users/side'
 
   .identification
     .identification__user-address__forms
@@ -17,19 +17,19 @@
           .identification__user-address__forms__menus__namae-kanji__title
             お名前
           .identification__user-address__forms__menus__namae-kanji__content
-            = @user.family_name + @user.first_name
+            -# = @user.family_name + @user.first_name
 
         .identification__user-address__forms__menus__namae-kana
           .identification__user-address__forms__menus__namae-kana__title
             お名前カナ
           .identification__user-address__forms__menus__namae-kana__content
-            = @user.family_name_kana + @user.first_name_kana
+            -# = @user.family_name_kana + @user.first_name_kana
 
         .identification__user-address__forms__menus__birthday
           .identification__user-address__forms__menus__birthday__title
             生年月日
           .identification__user-address__forms__menus__birthday__content
-            = @user.year+@user.month+@user.day
+            -# = @user.year+@user.month+@user.day
 
         .identification__user-address__forms__menus__zip-code
           .identification__user-address__forms__menus__zip-code__label

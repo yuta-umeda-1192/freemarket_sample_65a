@@ -12,5 +12,12 @@ Rails.application.routes.draw do
 
   root to: 'top#index'
   resources :items
-  resources :users, only: [:index, :new, :show]
+  resources :users, only: [:index, :new, :show] do
+    collection do
+      get 'mypage'
+      get 'mypage/profile'
+      get 'mypage/idenfication'
+      get 'mypage/logout'
+    end
+  end
 end

@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   def index
-    @items = Item.order('created_at DESC')
+    @items = Item.order('created_at DESC').page(params[:page]).per(5)
   end
 
   def new
@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
 
   def show
     @images = @item.images
-    @items = Item.where(user_id: @item.user_id)
+    @items = Item.where(user_id: @item.user_id).order('created_at DESC')
   end
 
   def edit
