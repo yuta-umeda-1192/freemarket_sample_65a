@@ -43,6 +43,10 @@
         margin: 0 auto;
         border-radius: 4px;
         font-size: 14px;
+        a{
+          text-decoration: none;
+          color: white;
+        }
       }
       &__facebook{
         background-color:#385185;

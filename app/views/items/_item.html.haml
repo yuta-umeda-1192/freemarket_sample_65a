@@ -1,0 +1,21 @@
+.item-list
+  .item-list__contents
+    .item-list__contents__header
+      .item-list__contents__header__title
+        新着アイテム
+      .item-list__contents__header__more
+        = link_to "もっと見る ＞"
+
+    .item-list__contents__items
+      - @items.each do |item|
+      - image = item.images[0]
+        .item-list__contents__items__item
+          = link_to item_path(item) do
+            .item-list__contents__items__item__main
+              #image-box
+                = image_tag image.src.url, width: '180', height: '180'
+              .item-list__contents__items__item__main__price
+                ¥
+                = item.price
+            .item-list__contents__items__item__name
+              = item.name

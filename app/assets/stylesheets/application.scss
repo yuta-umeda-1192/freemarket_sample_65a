@@ -1,5 +1,5 @@
 @import "./reset";
-@import "./item_exhibit.scss";
+@import "./item.scss";
 @import "font-awesome-sprockets";
 @import "./font-awesome";
 @import "slick.scss";
@@ -15,13 +15,16 @@
 @import "users/new5";
 @import "users/new6";
 @import "users/new7";
+@import "users/show";
+@import "users/show1";
+@import "items/index";
 @import "item_details.scss";
 @import "card/new";
 @import "card/index";
 @import "card/destroy";
 @import "card_buy/show";
-@import "card_buy/create"
-
+@import "card_buy/create";
+@import "users/show4"
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

@@ -19,13 +19,78 @@
         &__info{
           color:#EA352D;
         }
+        &__tele{
+          color:#888888;
+        }
+        &__address{
+          color:#888888;
+        }
+        &__pay{
+          color:#888888;
+        }
+        &__end{
+          color:#888888;
+        }
       }
       &__arrow {
         font-size: 30px;
         display: flex;
         justify-content: space-around;
+        letter-spacing: -3px;
         &__info{
           color:#EA352D;
+        }
+        &__info-line{
+          hr{
+          width: 70px;
+          height: 3px;
+          background-color:#888888;
+          color:#888888;;
+          border-width: 0;
+          }
+        }
+
+        &__tele{
+          color:#888888;
+        }
+        &__tele-line{
+          hr{
+          width: 70px;
+          height: 3px;
+          background-color:#888888;
+          color: #888888;
+          border-width: 0;
+          }
+        }
+
+        &__address{
+          color:#888888;
+        }
+        &__address-line{
+          hr{
+          width: 70px;
+          height: 3px;
+          background-color:#888888;
+          color: #888888;
+          border-width: 0;
+          }
+        }
+
+        &__pay{
+          color:#888888;
+        }
+        &__pay-line{
+          hr{
+          width: 70px;
+          height: 3px;
+          background-color:#888888;
+          color: #888888;
+          border-width: 0;
+          }
+        }
+
+        &__end{
+          color:#888888;
         }
       }
     }
@@ -34,7 +99,7 @@
   &__forms {
     background-color: white;
     width: 700px;
-    height: 1500px;
+    height: 1700px;
     margin: 0 auto;
     padding-bottom: 40px;
     &__header{
@@ -52,19 +117,25 @@
       margin: 0 auto;
       width: 343px;
       padding: 24px 16px 40px;
-        &__nickname{
+        &__field{
           margin-bottom: 20px;
-          &__label{
+          #must{
+            background-color: #EA352D;
+            color: white;
+            margin-left: 10px;
+            display: block;
+            width: 40px;
+            font-size: 16px;
+            text-align: center;
+            line-height: 18px;
+          }
+          label{
             display: flex;
             justify-content: flex-start;
             padding-bottom: 5px;
+            font-weight: bold;
             &__title{
               font-weight: bold;
-            }
-            &__must{
-              background-color: #EA352D;
-              color: white;
-              margin-left: 10px;
             }
           }
           input {
@@ -204,7 +275,7 @@
           font-size: 14px;
         }
 
-        &__next{
+        #btn{
           background-color:#EA352D;
           color: white;
           display: block;
@@ -230,7 +301,6 @@
         }
     }
   }
-
 
   &__footer {
     display: flex;

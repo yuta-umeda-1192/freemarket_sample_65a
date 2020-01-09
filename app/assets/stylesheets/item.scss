@@ -1,0 +1,277 @@
+// Place all the styles related to the item_exhibit controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.exhibit{
+  background-color: #f5f5f5;
+  padding-bottom: 220px;
+  position: relative;
+  .form__require{
+    background: red;
+    color: white;
+    display: inline;
+    padding: 3px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .header{
+    text-align: center;
+    &__logo{
+      width: 200px;
+      display: inline-block;
+      &--btn{
+        margin: 40px 0;
+      }
+    }
+  }
+
+  .main{
+    &__container{
+      background-color: white;
+      width: 700px;
+      margin: 0 auto;
+      padding: 40px;
+      .container__title{
+        padding:40px 0;
+        font-size: 25px;
+        text-align: center;
+        border-bottom: solid 1px #f5f5f5;
+      }
+
+      .form__container{
+        #image-box{
+          border-bottom: solid 1px #f5f5f5;
+          padding: 40px 0;
+          .name__container{
+            margin-bottom: 10px;
+            .name__container--title{
+              float: left;
+            }
+          }
+          .js-file_group{
+            border: dotted 1px #cccccc;
+            background-color: #f5f5f5;
+            .js-remove{
+              color: #0099e8;
+            }
+          }
+        }
+
+        .item__name{
+          border-bottom: solid 1px #f5f5f5;
+          padding: 40px 0;
+          .item__name{
+            &--title{
+              margin-bottom: 10px;
+            }
+            &--form{
+              width: 620px;
+              height: 50px;
+              border:solid 1px #cccccc;
+              border-radius: 4px;
+              margin-top: 10px;
+              .form__text{
+                color:#cccccc;
+                height: 50px;
+                padding-top: 15px;
+                padding-left: 20px;
+              }
+            }
+          }
+        }
+        .item__description{
+          border-bottom: solid 1px #f5f5f5;
+          padding: 40px 0;
+          &__title{
+            margin-bottom: 10px;
+            .description__title__text{
+              float: left;
+            }
+             .form__require{
+
+            }
+          }
+          .item__description__form{
+            width: 100%;
+            min-height: 104px;
+            .description__form__text{
+              height: 145px;
+              border:solid 1px #cccccc;
+            }
+          }
+        }
+
+        .form__details{
+          border-bottom: solid 1px #f5f5f5;
+          padding: 40px 0;
+          overflow: hidden;
+          &__title{
+            float: left;
+          }
+          .details__right{
+            width: 400px;
+            float: right;
+            .form__group{
+              .details__title{
+                padding-bottom: 5px;
+              }
+              .details__category__menu{
+                width: 100%;
+                background-color: white;
+                border-radius: 4px;
+                height: 48px;
+                border: solid 1px #cccccc;
+                margin-bottom: 40px;
+              }
+              .details__title{
+
+              }
+              .datails__status__menu{
+                width: 100%;
+                background-color: white;
+                border-radius: 4px;
+                height: 48px;
+                border: solid 1px #cccccc;
+              }
+            }
+          }
+        }
+        .form__delivery{
+          border-bottom: solid 1px #f5f5f5;
+          padding: 40px 0;
+          overflow: hidden;
+          &__title{
+            float: left;
+          }
+          &__group{
+            float: right;
+            width: 400px;
+            .form__group{
+              .delivery__title{
+                padding-bottom: 5px;
+              }
+              .delivery__menu{
+                background-color: white;
+                border-radius: 4px;
+                height: 48px;
+                border: solid 1px #cccccc;
+                margin-bottom: 40px;
+                width: 100%;
+              }
+            }
+          }
+        }
+        .form__sale{
+          border-bottom: solid 1px #f5f5f5;
+          padding: 40px 0;
+          overflow: hidden;
+          &__title{
+            float: left;
+            .form__group{
+              float: right;
+              margin-left: 100px;
+              .sale__group__content{
+                display: flex;
+                .sale__title{
+                  display: flex;
+                  margin: 12px 0;
+                  float: left;
+                  &__price{
+                    display: inline-block;
+                    text-align: center;
+                  }
+                }
+                 .form__title__box{
+                   margin-left: 50px;
+                  .sale__title__box{
+                    display: inline-block;
+                    width: 200px;
+                    height: 50px;
+                    margin: 0 0 0 auto;
+                    .price__input{
+                      width: 160px;
+                      height: 50px;
+                      margin: 0 0 0 auto;
+                      text-align: right;
+                      line-height: 50px;
+                      border-radius: 4px;
+                      padding-right: 10px;
+                      border: solid 1px #cccccc;
+                      }
+                    }
+                  }
+                }
+              .sale__commission{
+                padding: 25px 0;
+                border-top: solid 1px #cccccc;
+              }
+              .sale__menu{
+                padding: 25px 0;
+                border-top: solid 1px #cccccc;
+              }
+            }
+          }
+        }
+
+      .form__exhibit{
+        border-bottom: solid 1px #f5f5f5;
+        padding:40px 0;
+        overflow: hidden;
+        cursor: pointer;
+        cursor: hand;
+      }
+
+      .form__exhibit__btn{
+        .exhibit__sell{
+          background-color: red;
+          color: white;
+          height: 50px;
+          line-height: 50px;
+          width: 100%;
+          border: none;
+          margin-top: 40px;
+          text-align: center;
+        }
+        .exhibit__back{
+          color: white;
+          background-color: #aaaaaa;
+          text-align: center;
+          line-height: 50px;
+          height: 50px;
+          margin: 25px 25% 0 25%;
+          text-decoration: none;
+          display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .footer{
+    position: absolute;
+    bottom: 0;
+    padding: 40px 0;
+    width: 100%;
+
+    &__container{
+      text-align: center;
+      &--nav{
+        display: inline-block;
+        .li{
+          display: inline-block;
+          margin: 0 15px;
+        }
+      }
+      &--logo{
+        width: 80px;
+        height: 65px;
+        margin: 40px auto 0;
+      }
+      &--copyright{
+        margin-top: 10px;
+      }
+    }
+  }
+}

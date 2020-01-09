@@ -1,0 +1,107 @@
+= render "top/header-top"
+
+.container
+  .container__item-name
+    #{@item.name}
+  .container__item
+    .details-container
+      #main-image= image_tag src="#{@item.images[0].src}", data: {url: "#{@item.images[0].src}"}, size: "260x260"
+
+      .thumbnails-frame
+        - @images.each do |image|
+          .thumbnails-frame__thumbnail=image_tag src="#{image.src}", data: {url: "#{image.src}"}, size: "50x50"
+
+    %table
+      %tr
+        %th.widerow 出品者
+        - @user = User.find_by(id: @item[:user_id])
+        %td 
+          =link_to root_path do
+            #{@user.nickname}
+
+      -# 以下は登録できる情報が増え次第表示させる予定なので、残してあります。
+
+      -# %tr
+      -#   %th.widerow カテゴリー
+      -#   %td 
+      -# %tr
+      -#   %th ブランド
+      -#   %td 
+      -# %tr
+      -#   %th 商品のサイズ
+      -#   %td 
+      -# %tr
+      -#   %th 商品の状態
+      -#   %td 
+      -# %tr
+      -#   %th 配送料の負担
+      -#   %td
+      -# %tr
+      -#   %th 配送の方法
+      -#   %td 
+      -# %tr
+      -#   %th 配送元の地域
+      -#   %td 
+      -# %tr
+      -#   %th 配送日の目安
+      -#   %td 
+
+  .price-frame
+    .price-frame__price ¥#{@item.price.to_s(:delimited, delimiter: ',')}円
+    .price-frame__text (税込)
+    .price-frame__delivery-burden
+
+  = link_to root_path do
+    .buy-btn
+      .buy-btn__text
+        商品を購入する
+
+  .description 
+    = simple_format(@item.discription)
+
+
+-# 以下は機能が実装された場合に備えて、残してあります。
+
+  -# .item-footer
+  -#   .item-footer__btns
+  -#     = link_to "#" do
+  -#       .radius
+  -#         □
+  -#         いいね！
+  -#         3
+  -#       .radius
+  -#         □
+  -#     .item-footer__link
+  -#     □
+  -#     あんしん・あんぜんへの取り組み
+
+-# .link-frame
+-#   %a 前の商品
+-#   %a 次の商品
+
+  -# %i.fab.fa-facebook-square.fa-3x
+  -# %i.fab.fa-twitter-square.fa-3x
+
+
+.link-lightblue
+  = link_to "#" do
+    #{@user.nickname}さんのその他の出品
+
+.details-item-list
+  - items_list = @items.limit(6)
+  - items_list.each do |item|
+  - image = item.images[0]
+    .details-item-list__items__item
+      = link_to item_path(item) do
+        .details-item-list__items__item__main
+          #image-box
+            = image_tag image.src.url, width: '180', height: '180'
+          .details-item-list__items__item__main__price
+            ¥
+            = item.price
+        .details-item-list__items__item__name
+          = item.name
+
+.wrapper
+  = render "top/footer-top"
+  = render "top/top2" 

@@ -36,18 +36,59 @@
         font-size: 30px;
         display: flex;
         justify-content: space-around;
+        letter-spacing: -3px;
         &__info{
           color:#EA352D;
         }
+        &__info-line{
+          hr{
+          width: 70px;
+          height: 3px;
+          background-color:#EA352D;
+          color: #EA352D;
+          border-width: 0;
+          }
+        }
+
         &__tele{
           color:#EA352D;
         }
+        &__tele-line{
+          hr{
+          width: 70px;
+          height: 3px;
+          background-color:#EA352D;
+          color: #EA352D;
+          border-width: 0;
+          }
+        }
+
         &__address{
           color:#EA352D;
         }
+        &__address-line{
+          hr{
+          width: 70px;
+          height: 3px;
+          background-color:#EA352D;
+          color: #EA352D;
+          border-width: 0;
+          }
+        }
+
         &__pay{
           color:#EA352D;
         }
+        &__pay-line{
+          hr{
+          width: 70px;
+          height: 3px;
+          background-color:#EA352D;
+          color:#EA352D;
+          border-width: 0;
+          }
+        }
+
         &__end{
           color:#EA352D;
         }
@@ -93,6 +134,10 @@
           text-align: center;
           font-size: 14px;
           margin-bottom: 20px;
+          a{
+            text-decoration: none;
+            color: white;
+          }
         }
 
         img{
