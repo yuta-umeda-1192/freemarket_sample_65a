@@ -31,7 +31,6 @@ class CardController < ApplicationController
   end
   
   def new # カードの登録画面。送信ボタンを押すとcreateアクションへ。
-    card = Card.find_by(user_id: current_user.id)
     redirect_to action: "index" if card.present?
   end
 
@@ -70,7 +69,6 @@ class CardController < ApplicationController
   end
 
   def show #Cardのデータpayjpに送り情報を取り出します
-    card = Card.find_by(user_id: current_user.id)
     if card.blank?
       redirect_to action: "new" 
     else
