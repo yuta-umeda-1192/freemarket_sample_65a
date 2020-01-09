@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new(item_params)   
+    @item = Item.new(item_params)
     if @item.save
       redirect_to root_path
     else
@@ -26,7 +26,7 @@ class ItemsController < ApplicationController
     @images = @item.images
     @items = Item.where(user_id: @item.user_id)
   end
-  
+
   def edit
   end
 
@@ -48,7 +48,7 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name, :price, :discription, images_attributes: [:id, :src])
+    params.require(:item).permit(:name, :price, :discription, images_attributes: [:id, :src]).merge(user_id: current_user.id)
   end
 
   def set_item
