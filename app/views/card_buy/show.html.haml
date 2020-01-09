@@ -16,9 +16,9 @@
               .buy__product__image__item
                 
                 .buy__product__image__item__name
-                  = @items.name
+                  = @item.name
                 .buy__product__image__item__price
-                  = @items.price
+                  = @item.price
                   %span （税込)送料込み
     .buy__body__under
       .buy__body__under__inner
@@ -50,7 +50,7 @@
                   = link_to "登録してください", new_user_path, class: "button"
           .buy_push
             %button.push_btn
-              = link_to "購入する", item_card_buy_index_path(@items.id), method: :post, class: "buy_button"
+              = link_to "購入する", item_card_buy_index_path(@item.id), method: :post, class: "buy_button"
   .buy__footer
     .buy__footer__body
       %div.text  
