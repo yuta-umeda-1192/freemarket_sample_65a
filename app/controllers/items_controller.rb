@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new(item_params)   
+    @item = Item.new(item_params)
     if @item.save
       redirect_to root_path
     else
@@ -26,7 +26,7 @@ class ItemsController < ApplicationController
     @images = @item.images
     @items = Item.where(user_id: @item.user_id).order('created_at DESC')
   end
-  
+
   def edit
   end
 
