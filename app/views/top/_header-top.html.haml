@@ -5,45 +5,50 @@
         =link_to image_tag("fmarket_logo_red.svg", class: "img", size: "100×100", alt: "mercari"), root_path
       .toppage__header__search
         %input{ name: '', class: 'toppage__header__search__form',placeholder: '何かお探しですか？' }
-        = icon('fas', 'search', alt: 'search-icon',class: 'topppage__header__search__button')
+          = icon('fas', 'search', alt: 'search-icon',class: 'topppage__header__search__button')
       
 -if user_signed_in?
-  .choice
-    .choice__category
-      = icon('fas', 'list-ul ', style: 'color:red',class: 'choice__category__icon')
-      カテゴリーから探す
-    .choice__brand
-      = icon('fas', 'tag ',style: 'color:red', class: 'choice__brand__icon')
-      ブランドから探す
-    .choice__management
-      .choice__management__good
-        = icon('far', 'heart ',style: 'color:gray', class: 'choice__good__icon')
-        いいね！一覧
-      .choice__management__information
-        = icon('far', 'bell',style: 'color:gray', class: 'choice__infomation__icon')
-        お知らせ
-      .choice__management__todolist
-        = icon('fas', 'check',style: 'color:gray', class: 'choice__todolist__icon')
-        やることリスト
-      .choice__management__mypage
-        = icon('fas', 'user', style: 'color:gray', class: 'choice__mypsge__icon')
-        = link_to "マイページ", user_path(current_user)
-      .choice__management__logout
-        = icon('fas', 'user', style: 'color:gray', class: 'choice__mypsge__icon')
-        = link_to "ログアウト", destroy_user_session_path, method: :delete
+  .toppage__choice
+    .toppage__choice__left
+      .toppage__choice__left__category
+        = icon('fas', 'list-ul ', style: 'color:red',class: 'choice__category__icon')
+        カテゴリーから探す
+      .toppage__choice__left__brand
+        = icon('fas', 'tag ',style: 'color:red', class: 'choice__brand__icon')
+        ブランドから探す
+
+    .toppage__choice__right
+      .toppage__choice__right__management
+        .toppage__choice__right__management__good
+          = icon('far', 'heart ',style: 'color:gray', class: 'choice__good__icon')
+          いいね！一覧
+        .toppage__choice__right__management__information
+          = icon('far', 'bell',style: 'color:gray', class: 'choice__infomation__icon')
+          お知らせ
+        .toppage__choice__right__management__todolist
+          = icon('fas', 'check',style: 'color:gray', class: 'choice__todolist__icon')
+          やることリスト
+        .toppage__choice__right__management__mypage
+          = icon('fas', 'user', style: 'color:gray', class: 'choice__mypsge__icon')
+          =link_to 'マイページ', mypage_users_path
+        .toppage__choice__right__management__logout
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
 
 - else
-  .choice
-    .choice__category
-      = icon('fas', 'list-ul ', style: 'color:red',class: 'choice__category__icon')
-      カテゴリーから探す
-    .choice__brand
-      = icon('fas', 'tag ',style: 'color:red', class: 'choice__brand__icon')
-      ブランドから探す
-    .choice__management
-      .choice__management__registration
-        = icon('fas', 'user', style: 'color:gray', class: 'choice__mypsge__icon')
-        = link_to "新規会員登録", users_path
-      .choice__management__login
-        = icon('fas', 'user', style: 'color:gray', class: 'choice__mypsge__icon')
-        = link_to "ログイン", new_user_session_path
+  .toppage__choice
+    .toppage__choice__left
+      .toppage__choice__left__category
+        = icon('fas', 'list-ul ', style: 'color:red',class: 'choice__category__icon')
+        カテゴリーから探す
+      .toppage__choice__left__brand
+        = icon('fas', 'tag ',style: 'color:red', class: 'choice__brand__icon')
+        ブランドから探す
+    .toppage__choice__right
+      .toppage__choice__right__management
+        .toppage__choice__right__management__registration
+          = link_to "新規会員登録", users_path
+        .toppage__choice__right__management__login
+          = link_to "ログイン", new_user_session_path
+
+.itembutton
+  =link_to image_tag("itembutton.gif", width: "200px", height: '200px', alt: "itembutton"), new_item_path
