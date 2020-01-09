@@ -5,7 +5,7 @@ class CardController < ApplicationController
 
   def index #CardのデータをPayjpに送って情報を取り出す
     if @card.present?
-      Payjp.api_key = "sk_test_b13301a481b177854022e46b"
+      Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
       customer = Payjp::Customer.retrieve(@card.customer_id)
       @card_information = customer.cards.retrieve(@card.card_id)
 
@@ -38,7 +38,7 @@ class CardController < ApplicationController
  # indexアクションはここでは省略
 
   def create #PayjpとCardのデータベースを作成
-    Payjp.api_key = 'sk_test_b13301a481b177854022e46b'
+    Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
 
     if params['payjpToken'].blank?
       redirect_to action: "new"
@@ -61,7 +61,7 @@ class CardController < ApplicationController
 
   
   def destroy #PayjpとCardのデータベースを削除
-    Payjp.api_key = "sk_test_b13301a481b177854022e46b"
+    Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
     customer = Payjp::Customer.retrieve(@card.customer_id)
     customer.delete
     if @card.destroy
