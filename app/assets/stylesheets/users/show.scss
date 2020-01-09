@@ -1,200 +1,280 @@
-body {
+.user-wrapper{
+  display: flex;
+  justify-content: flex-start;
+  background-color: #F5F5F5;
+  height: 100%;
+}
+
+.side{
+  background-color: #F5F5F5;
+  width: 300px;
+  height: 100%;
+  margin-left: 100px;
   font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-}
-
-.mypage-contents1 {
-  box-sizing: border-box;
-  width: 700px;
-  margin: 0 auto;
-  padding: 0;
-  border-style: solid;
-  border-width: 0;
-  display: block;
-  color: #333;
-  margin-top: 50px;
-  margin-bottom: 50px;
-
-  &__headbar1 {
-    height: 200px;
-    width: 100%;
-    background-color: #b3d4fc;
-    text-align: center;
-    font-size: 14px;
-
-    &__user-icon {
-      display: block;
-      padding-top: 40px;
-      h2 {
+  &__contents__main{
+    background-color: white;
+    height:100%;
+    margin: 50px auto;
+    &__menu{
+      height: 30px;
+      padding: 10px 10px;
+      border-bottom: 1px solid #F5F5F5;
+      &:hover{
+        background-color: #F5F5F5;
         font-weight: bold;
-        margin: 8px 0 0;
       }
-    }
-    &__user-status {
-      display: block;
-      p {
-        display: inline;
-        margin: 8px;
-        font-size: 96%;
+      &__content{
+        float:left;
       }
+      &__arrow{
+        float: right;
+      }
+
     }
   }
-
-  &__switchtabs {
-    height: 70px;
-    width: 100%;
-    padding: 0;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #eee;
-    display: flex;
-    justify-content: space-between;
-
-    &__tab.active {
-      background-color: #fff;
-      border-top: solid red 1px;
-    }
-
-
-    &__tab {
-      display: inline-block;
-      height: 70px;
-      width: 347px;
-      background: #eee;
-      border-width: 0px;
-      line-height: 70px;
-    }
-  }
-
-  &__contents {
-    width: 100%;
-
-    &__content.show {
-      display: block;
-    }
-    
-    &__content {
-      width: 100%;
+  &__contents{
+    &__merpay{
       background-color: white;
-      display: none;
-      
-      &__news {
-        height: 70px;
-        width: 100%;
-        background-color: white;
-        border-bottom: 1px solid #eee;
-        font-size: 14px;
-        vertical-align: middle;
-
-        &__icon {
-          display: inline-block;
-          margin: 10px;
-          position: relative;
+      height: 100%;
+      margin-bottom: 50px;
+      &__menu{
+        height: 30px;
+        padding: 10px 10px;
+        border-bottom: 1px solid #F5F5F5;
+        &:hover{
+          background-color: #F5F5F5;
+          font-weight: bold;
         }
-        
-        &__headline {
-          width: 70%;
-          display: inline-block;
-          padding: 10px;
-          &__text {
-            display: inline-block;
-            word-break : break-all;
-            color: #333;
+        &__content{
+          float:left;
+        }
+        &__arrow{
+          float: right;
+        }
+      }
+    }
+  }
+  &__contents__configuration{
+    background-color: white;
+    height:100%;
+    margin-bottom: 50px;
+    &__menu{
+      height: 30px;
+      padding: 10px 10px;
+      border-bottom: 1px solid #F5F5F5;
+      &:hover{
+        background-color: #F5F5F5;
+        font-weight: bold;
+      }
+      &__content{
+        float:left;
+      }
+      &__arrow{
+        float: right;
+      }
+    }
+  }
+}
+
+
+.identification{
+  margin: 50px 10px 50px 50px;
+  width: 750px;
+  &__user-address{
+  background-color: #F5F5F5;
+  height: 100%;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+
+  &__forms {
+    background-color: white;
+    width: 750px;
+    height: 1300px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    &__header{
+      color: #333333;
+      font-size: 24px;
+      font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      border-bottom: 1px solid #F5F5F5;
+      font-weight: bold;
+    }
+    &__menus{
+      display: flex;
+      flex-direction: column;
+      font-size: 15px;
+      font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+      margin: 0 auto;
+      width: 80%;
+      padding: 80px 16px 40px;
+      &__upload{
+        text-align: right;
+        color:#0099E8;
+        margin-top: 10px;
+      }
+      &__namae-kanji{
+        margin-top: 30px;
+        &__title{
+          font-weight: bold;
+        }
+        &__content{
+        }
+        input {
+          width: 343px;
+          height: 48px;
+        }
+      }
+
+        &__namae-kana{
+          margin-top: 30px;
+          &__title{
+            font-weight: bold;
           }
-          &__time {
-            font-size: 13px;
-            color: lightslategray;
-          }        
+          &__content{
+          }
+          input {
+            width: 343px;
+            height: 48px;
+          }
         }
-      }
 
-      &__notifications {
-        height: 70px;
-        width: 100%;
-        background-color: white;
-        border-bottom: 1px solid #eee;
-        font-size: 14px;
-        position: relative;
-        
-        &__text {
-          display: inline-block;
+        &__birthday{
+          margin-top: 30px;
+          &__title{
+            font-weight: bold;
+          }
+          &__content{
+          }
+          input {
+            width: 343px;
+            height: 48px;
+          }
+        }
+
+        &__zip-code{
+          margin-top: 30px;
+          margin-bottom: 30px;
+          &__label{
+            display: flex;
+            justify-content: flex-start;
+            padding-bottom: 5px;
+            &__title{
+              font-weight: bold;
+            }
+            &__must{
+              background-color: #CCCCCC;
+              color: white;
+              margin-left: 10px;
+            }
+          }
+          input {
+            width: 100%;
+            height: 48px;
+          }
+        }
+
+        &__prefectures{
+          margin-bottom: 30px;
+          &__label{
+            display: flex;
+            justify-content: flex-start;
+            padding-bottom: 5px;
+            &__title{
+              font-weight: bold;
+            }
+            &__must{
+              background-color:  #CCCCCC;
+              color: white;
+              margin-left: 10px;
+            }
+          }
+          input {
+            width: 100%;
+            height: 48px;
+          }
+        }
+      
+        &__municipalities{
+          margin-bottom: 30px;
+          &__label{
+            display: flex;
+            justify-content: flex-start;
+            padding-bottom: 5px;
+            &__title{
+              font-weight: bold;
+            }
+            &__must{
+              background-color:   #CCCCCC;
+              color: white;
+              margin-left: 10px;
+            }
+          }
+          input {
+            width: 100%;
+            height: 48px;
+          }
+        }
+
+        &__address{
+          margin-bottom: 30px;
+          &__label{
+            display: flex;
+            justify-content: flex-start;
+            padding-bottom: 5px;
+            &__title{
+              font-weight: bold;
+            }
+            &__must{
+              background-color:    #CCCCCC;
+              color: white;
+              margin-left: 10px;
+            }
+          }
+          input {
+            width: 100%;
+            height: 48px;
+          }
+        }
+
+        &__building{
+          margin-bottom: 50px;
+          &__label{
+            display: flex;
+            justify-content: flex-start;
+            padding-bottom: 5px;
+            &__title{
+              font-weight: bold;
+            }
+            &__must{
+              background-color:  #CCCCCC;
+              color: white;
+              margin-left: 10px;
+            }
+          }
+          input {
+            width: 100%;
+            height: 48px;
+          }
+        }
+
+        &__next{
+          background-color:#EA352D;
+          color: white;
+          width: 100%;
           height: 50px;
-          width: 90%;
-          position: absolute;
-          top: 14%;
-          left: 5%;
+          line-height: 50px;
           text-align: center;
-          line-height: 55px;
+          font-size: 14px;
+        }
+
+        &__about{
+          text-align: right;
+          color:#0099E8;
+          margin-top: 30px;
         }
       }
     }
-  }
-}
-
-.mypage-contents2 {
-  box-sizing: border-box;
-  width: 700px;
-  margin: 0 auto;
-  padding: 0;
-  border-style: solid;
-  border-width: 0;
-  display: block;
-  color: #333;
-  margin-top: 50px;
-  margin-bottom: 50px;
-
-  &__headbar2 {
-    box-sizing: border-box;
-    height: 70px;
-    width: 100%;
-    background: #fff;
-    line-height: 50px;
-    padding: 10px;
-  }
-
-  &__switchtabs {
-    height: 70px;
-    width: 100%;
-    padding: 0;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #eee;
-    display: flex;
-    justify-content: space-between;
-
-    &__tab.active {
-      background-color: #fff;
-      border-top: solid red 1px;
-    }
-
-    &__tab {
-      display: inline-block;
-      height: 70px;
-      width: 347px;
-      background: #eee;
-      border-width: 0px;
-      line-height: 70px;
-    }
-  }
-
-  &__contents {
-    width: 100%;
-
-    &__content.show {
-      display: block;
-    }
-
-    &__content {
-      width: 100%;
-      background-color: white;
-      display: none;
-
-    }
-  }
-}
-
-a{
-  text-decoration: none;
-  :hover{
-    background-color : rgb(248, 248, 248);
   }
 }
