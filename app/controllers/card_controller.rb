@@ -1,6 +1,6 @@
 class CardController < ApplicationController
   require "payjp"
-  before_action :set_card
+  before_action :set_card, only:[:show,:destroy]
 
 
   def index #CardのデータをPayjpに送って情報を取り出す
@@ -31,7 +31,7 @@ class CardController < ApplicationController
   end
   
   def new # カードの登録画面。送信ボタンを押すとcreateアクションへ。
-    card = Card.where(user_id: current_user.id).first
+    card = Card.find_by(user_id: current_user.id)
     redirect_to action: "index" if card.present?
   end
 
@@ -71,7 +71,7 @@ class CardController < ApplicationController
   end
 
   def show #Cardのデータpayjpに送り情報を取り出します
-    card = Card.where(user_id: current_user.id).first
+    card = Card.find_by(user_id: current_user.id)
     if card.blank?
       redirect_to action: "new" 
     else
@@ -84,6 +84,6 @@ end
   private
 
   def set_card
-    @card = Card.where(user_id: current_user).first if Card.where(user_id: current_user).present?
+    @card = Card.find_by(user_id: current_user) if Card.find_by(user_id: current_user).present?
   end
 end

@@ -5,7 +5,7 @@ class CardBuyController < ApplicationController
   end
 
   def create #クレジット購入
-    card = Card.where(user_id: current_user.id).first
+    card = Card.find_by(user_id: current_user.id)
     if card.blank?
       redirect_to controller: "card",action:"new"
       flash[:alert] = '購入にはクレジットカード登録が必要です'
