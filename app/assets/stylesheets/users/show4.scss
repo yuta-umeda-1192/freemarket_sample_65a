@@ -62,6 +62,7 @@ body {
       background: #eee;
       border-width: 0px;
       line-height: 70px;
+      cursor : pointer;
     }
   }
 
@@ -173,6 +174,7 @@ body {
       background: #eee;
       border-width: 0px;
       line-height: 70px;
+      cursor : pointer;
     }
   }
 
@@ -192,7 +194,7 @@ body {
   }
 }
 
-a{
+.mypage-link {
   text-decoration: none;
   :hover{
     background-color : rgb(248, 248, 248);
