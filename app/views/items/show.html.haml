@@ -51,6 +51,7 @@
     .price-frame__text (税込)
     .price-frame__delivery-burden
 
+
   - if user_signed_in? && current_user.id == @item.user_id
     
     = link_to edit_item_path(@item) do
@@ -67,9 +68,7 @@
     = link_to item_card_buy_path(@item) do
       .buy-btn
         .buy-btn__text
-          商品を購入する  
-
-  
+          商品を購入する
 
   .description 
     = simple_format(@item.discription)
@@ -119,4 +118,4 @@
 
 .wrapper
   = render "top/footer-top"
-  = render "top/top2" 
+  = render "top/top2"

@@ -52,4 +52,7 @@
           = link_to "ログイン", new_user_session_path
 
 .itembutton
-  =link_to image_tag("itembutton.gif", width: "200px", height: '200px', alt: "itembutton"), new_item_path
+  -if user_signed_in?
+    =link_to image_tag("itembutton.gif", width: "200px", height: '200px', alt: "itembutton"), new_item_path
+  - else
+    =link_to image_tag("itembutton.gif", width: "200px", height: '200px', alt: "itembutton"), new_user_session_path
