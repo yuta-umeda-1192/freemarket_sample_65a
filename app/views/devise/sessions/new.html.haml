@@ -12,9 +12,10 @@
     .user-new-session__contents__menus
       .user-new-session__contents__menus__facebook
         -# = link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post
+        Facebookでログイン
       .user-new-session__contents__menus__google
         -# = link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post
-
+        Googleでログイン
       = form_for(@user, url: user_session_path) do |f|
         = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス"
         %br/

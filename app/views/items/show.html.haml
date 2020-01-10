@@ -51,7 +51,7 @@
     .price-frame__text (税込)
     .price-frame__delivery-burden
 
-  = link_to root_path do
+  = link_to item_card_buy_path(@item) do
     .buy-btn
       .buy-btn__text
         商品を購入する
@@ -104,4 +104,4 @@
 
 .wrapper
   = render "top/footer-top"
-  = render "top/top2" 
+  = render "top/top2"
