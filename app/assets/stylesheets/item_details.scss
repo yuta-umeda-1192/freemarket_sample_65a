@@ -95,12 +95,33 @@ table td {
   width:100%;
   background-color: red;
   text-align:center;
-  line-height: 75px;
+  line-height: 60px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  display: inline-block;
 
   &__text {
     font-size: 25px;
     color: white;
-    display: inline-block;
+    display: inline;
+  }
+
+}
+
+.buy-btn2 {
+  height: 60px;
+  width:100%;
+  background-color: #0099E8;
+  text-align:center;
+  line-height: 60px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  display: inline-block;
+
+  &__text {
+    font-size: 25px;
+    color: white;
+    display: inline;  
   }
 }
 
