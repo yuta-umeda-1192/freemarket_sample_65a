@@ -51,10 +51,25 @@
     .price-frame__text (税込)
     .price-frame__delivery-burden
 
-  = link_to root_path do
-    .buy-btn
-      .buy-btn__text
-        商品を購入する
+  - if user_signed_in? && current_user.id == @item.user_id
+    
+    = link_to edit_item_path(@item) do
+      .buy-btn2
+        .buy-btn__text
+          商品情報を編集する
+    
+    = link_to item_path(@item) ,method: :delete do
+      .buy-btn
+        .buy-btn__text
+          商品を削除する
+
+  - else
+    = link_to item_card_buy_path(@item) do
+      .buy-btn
+        .buy-btn__text
+          商品を購入する  
+
+  
 
   .description 
     = simple_format(@item.discription)

@@ -24,4 +24,5 @@ Rails.application.routes.draw do
       get 'mypage/logout'
     end
   end
+  resources :card
 end

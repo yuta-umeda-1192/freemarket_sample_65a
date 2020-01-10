@@ -1,7 +1,8 @@
 class CardBuyController < ApplicationController
 
   def show
-    @item = Item.find(1)
+    @item = Item.find(params[:item_id])
+    # @item = Item.find(1)
     #１は仮置きです
   end
 
