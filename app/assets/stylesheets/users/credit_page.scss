@@ -1,0 +1,40 @@
+  .credit_page{
+    background-color:white;
+    margin: 50px 10px 50px 50px;
+    width: 750px;
+    height:300px;
+    .pay-text{
+    font-weight:bold;
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    font-size:20px;
+    text-align: center;
+    padding-top:10px;
+    border-bottom: 1px solid #F5F5F5;
+    }
+    .credit_list{
+      .pay-text2{
+      font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+      font-size:16px;
+      font-weight:bold;
+      padding-top:30px;
+      padding-left:230px;
+
+      }
+      .credit_button{
+        padding-left:230px;
+        padding-top:30px;
+        .credit_btn{
+        background-color:red;
+        height:40px;
+        width:300px;
+        border-radius:5px;
+          .btn-text{
+            color:white;
+            font-size:18px;
+          }
+        }
+      }
+    }
+
+  }
+
