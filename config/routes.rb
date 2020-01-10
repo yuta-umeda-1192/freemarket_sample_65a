@@ -22,6 +22,8 @@ Rails.application.routes.draw do
       get 'mypage/profile'
       get 'mypage/idenfication'
       get 'mypage/logout'
+      get 'mypage/credit_page'
     end
   end
+  resources :card
 end

@@ -1,0 +1,14 @@
+= render "top/header-top"
+
+.user-wrapper
+  = render 'users/side'
+
+  .credit_page
+    %h1.pay-text 支払い方法
+    .credit_list
+      %h1.pay-text2 クレジットカード一覧
+      .credit_button
+        %button.credit_btn
+          = link_to "💳  クレジットカードを追加する", new_card_path, class: "btn-text"
+
+= render "top/top2"
