@@ -20,8 +20,12 @@
 @import "items/index";
 @import "item_details.scss";
 @import "breadcrumbs";
-
-
+@import "card/new";
+@import "card/index";
+@import "card/destroy";
+@import "card_buy/show";
+@import "card_buy/create";
+@import "users/show4"
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

@@ -1,0 +1,200 @@
+body {
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+}
+
+.mypage-contents1 {
+  box-sizing: border-box;
+  width: 700px;
+  margin: 0 auto;
+  padding: 0;
+  border-style: solid;
+  border-width: 0;
+  display: block;
+  color: #333;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  &__headbar1 {
+    height: 200px;
+    width: 100%;
+    background-color: #b3d4fc;
+    text-align: center;
+    font-size: 14px;
+
+    &__user-icon {
+      display: block;
+      padding-top: 40px;
+      h2 {
+        font-weight: bold;
+        margin: 8px 0 0;
+      }
+    }
+    &__user-status {
+      display: block;
+      p {
+        display: inline;
+        margin: 8px;
+        font-size: 96%;
+      }
+    }
+  }
+
+  &__switchtabs {
+    height: 70px;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+
+    &__tab.active {
+      background-color: #fff;
+      border-top: solid red 1px;
+    }
+
+
+    &__tab {
+      display: inline-block;
+      height: 70px;
+      width: 347px;
+      background: #eee;
+      border-width: 0px;
+      line-height: 70px;
+    }
+  }
+
+  &__contents {
+    width: 100%;
+
+    &__content.show {
+      display: block;
+    }
+    
+    &__content {
+      width: 100%;
+      background-color: white;
+      display: none;
+      
+      &__news {
+        height: 70px;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+        vertical-align: middle;
+
+        &__icon {
+          display: inline-block;
+          margin: 10px;
+          position: relative;
+        }
+        
+        &__headline {
+          width: 70%;
+          display: inline-block;
+          padding: 10px;
+          &__text {
+            display: inline-block;
+            word-break : break-all;
+            color: #333;
+          }
+          &__time {
+            font-size: 13px;
+            color: lightslategray;
+          }        
+        }
+      }
+
+      &__notifications {
+        height: 70px;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+        position: relative;
+        
+        &__text {
+          display: inline-block;
+          height: 50px;
+          width: 90%;
+          position: absolute;
+          top: 14%;
+          left: 5%;
+          text-align: center;
+          line-height: 55px;
+        }
+      }
+    }
+  }
+}
+
+.mypage-contents2 {
+  box-sizing: border-box;
+  width: 700px;
+  margin: 0 auto;
+  padding: 0;
+  border-style: solid;
+  border-width: 0;
+  display: block;
+  color: #333;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  &__headbar2 {
+    box-sizing: border-box;
+    height: 70px;
+    width: 100%;
+    background: #fff;
+    line-height: 50px;
+    padding: 10px;
+  }
+
+  &__switchtabs {
+    height: 70px;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+
+    &__tab.active {
+      background-color: #fff;
+      border-top: solid red 1px;
+    }
+
+    &__tab {
+      display: inline-block;
+      height: 70px;
+      width: 347px;
+      background: #eee;
+      border-width: 0px;
+      line-height: 70px;
+    }
+  }
+
+  &__contents {
+    width: 100%;
+
+    &__content.show {
+      display: block;
+    }
+
+    &__content {
+      width: 100%;
+      background-color: white;
+      display: none;
+
+    }
+  }
+}
+
+a{
+  text-decoration: none;
+  :hover{
+    background-color : rgb(248, 248, 248);
+  }
+}
