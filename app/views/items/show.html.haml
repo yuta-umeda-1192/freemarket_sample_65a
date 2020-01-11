@@ -6,7 +6,7 @@
       #{@item.name}
     .container__item
       .details-container
-        #main-image= image_tag src="#{@item.images[0].src}", data: {url: "#{@item.images[0].src}"}, size: "260x260"
+        -# #main-image= image_tag src="#{@item.images[0].src}", data: {url: "#{@item.images[0].src}"}, size: "260x260"
 
         .thumbnails-frame
           - @images.each do |image|
@@ -114,7 +114,7 @@
         = link_to item_path(item) do
           .details-item-list__items__item__main
             #image-box
-              = image_tag image.src.url, width: '180', height: '180'
+              -# = image_tag image.src.url, width: '180', height: '180'
             .details-item-list__items__item__main__price
               ¥
               = item.price
