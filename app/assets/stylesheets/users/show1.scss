@@ -65,7 +65,7 @@
             height: 100px;
             background-color: skyblue;
             &__nickname{
-              background-color: snow;
+              background-color:  skyblue;
               text-align: center;
               display: block;
               height: 40px;
@@ -76,12 +76,18 @@
             }
           }
           &__form{
-            height: 100%;
-            width: 100%;
-            border: solid 1px #f5f5f5;
-            padding: 10px 0;
           }
         }
+
+        textarea{
+          height: 200px;
+          width: 100%;
+          border: solid 1px #f5f5f5;
+          padding: 10px 0;
+          margin-bottom: 30px;
+          text-align: left;
+        }
+
 
         &__next{
           background-color:#EA352D;

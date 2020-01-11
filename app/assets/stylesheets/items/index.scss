@@ -33,14 +33,17 @@
     }
   }
   &__items{
+    overflow:scroll;
     display: flex;
     justify-content: flex-start;
-    width: 940px;
+    flex-wrap:wrap;
+    width: 960px;
     &__item{
       width: 180px;
       border: 1px solid #CCCCCC;
       box-shadow: 4px 4px 4px #CCCCCC;
       margin-right: 10px;
+      margin-bottom: 20px;
       a{
         text-decoration: none;
       }

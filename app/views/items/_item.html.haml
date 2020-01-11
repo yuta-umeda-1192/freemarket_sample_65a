@@ -4,7 +4,10 @@
       .item-list__contents__header__title
         新着アイテム
       .item-list__contents__header__more
-        = link_to "もっと見る ＞"
+        - if current_page?(root_path)
+          = link_to "もっと見る ＞",items_path(@items)
+        - else 
+          = ""
 
     .item-list__contents__items
       - @items.each do |item|

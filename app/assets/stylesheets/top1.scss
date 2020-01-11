@@ -2,7 +2,7 @@
   width: 1000px;
   margin: 0px auto;
   padding: 8px 0px 0px;
-  height:60px;
+  height:50px;
   padding-right:60px;
   &__top{
     height: 50px;
@@ -56,7 +56,7 @@
     }
     .fa-search{
       position: absolute;
-      padding-left:800px;
+      padding-left:830px;
       top: 15px;
     }
   } 
@@ -74,8 +74,11 @@
   font-weight: 60px;
   line-height: 36px;
   margin-top:3px;
-  margin-bottom:10px;
+  margin-bottom:4px;
   font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  border-bottom: 1px solid #CCCCCC;
+  box-shadow: 0 4px 4px #CCCCCC;
+  padding-bottom: 5px;
 
   cursor: pointer;
   &__left{
@@ -125,43 +128,49 @@
         }
       }
       &__logout{
-        color: inherit;
+        color: #0099E8;
         margin-left: 10px;
-        font-weight: bold;
         a{
-          color: inherit;
           text-decoration: none;
           color:#0099E8;
           border: 1px solid;
           border-radius: 10%;
-          padding: 5px;
+          padding: 7px;
+        }
+        &:hover{
+          border: 3px solid white;
+          transition: 0.3s ease;
         }
       }
       &__registration{
-        color: inherit;
+        color: white;
         margin-left: 30px;
-        font-weight: bold;
         a{
-          color: inherit;
           text-decoration: none;
           color:white;
           background-color:#EA352D;
           border: 1px solid;
           border-radius: 10%;
-          padding: 10px;
+          padding: 7px;
+        }
+        &:hover{
+          border: 3px solid white;
+          transition: 0.3s ease;
         }
       }
       &__login{
-        color: inherit;
         margin-left: 10px;
-        font-weight: bold;
         a{
-          color: inherit;
           text-decoration: none;
           color:#0099E8;
+          background-color: white;
           border: 1px solid;
           border-radius: 10%;
-          padding: 10px;
+          padding: 7px;
+        }
+        &:hover{
+          border: 3px solid white;
+          transition: 0.3s ease;
         }
       }
     }
@@ -176,10 +185,11 @@
   &__scroll{
     display:flex;
     &__scroll1{
-      background-image:image-url("2016okazari.jpg");
+      background-image:image-url("gahag-0116277904-1.jpg");
       background-size: cover;
-      height: 500px;
+      height: 400px;
       font-family: 'Courier New', Courier, monospace;
+      color: white;
       .div1{
         margin-top:20px;
         padding-left: 1000px;
@@ -214,7 +224,7 @@
     &__scroll2{
       background-image:image-url("og.jpg");
       background-size: cover;
-      height: 500px;
+      height: 400px;
     }
     
   }  
@@ -228,7 +238,7 @@
     &__middle{
       position: relative;
       width: 100%;
-      padding: 20px 40px;
+      padding: 0 40px;
     }
 }
 }
@@ -249,58 +259,59 @@
   width: 100%;
   margin: -10px 0px 0px -10px;
   padding-bottom: 20px;
+  font-weight: bold;
   .major__women{
     color: inherit;
     text-decoration: none;
     padding-right:30px;
-    background-color:gray;
+    background-color:#F5F5F5;
     cursor: pointer;
     display:inline-block;
     font-size:14px;
     font-weight: 600px;
     border-radius: 15px;
     padding: 8px 16px;
+    margin-right: 10px;
 
   }
   .major__men{
     color: inherit;
     text-decoration: none;
     padding-right:30px;
-    background-color:gray;
+    background-color:#F5F5F5;
     cursor: pointer;
     display:inline-block;
     font-size:14px;
     font-weight: 600px;
     border-radius: 15px;
     padding: 8px 16px;
-
+    margin-right: 10px;
   }
 
   .major__home{
     color: inherit;
     text-decoration: none;
     padding-right:35px;
-    background-color:gray;
+    background-color:#F5F5F5;
     cursor: pointer;
     display:inline-block;
     font-size:14px;
     font-weight: 600px;
     border-radius: 15px;
     padding: 8px 16px;
-
+    margin-right: 10px;
   }
   .major__hobby{
     color: inherit;
     text-decoration: none;
     padding-right:30px;
-    background-color:gray;
+    background-color:#F5F5F5;
     cursor: pointer;
     display:inline-block;
     font-size:14px;
     font-weight: 600px;
     border-radius: 15px;
     padding: 8px 16px;
-
   }
 }
 
