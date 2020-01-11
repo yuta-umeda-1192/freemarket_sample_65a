@@ -2,8 +2,9 @@
   min-height: 100vh;
 }
 
-.body {
-  background-color:beige;
+.item-detail-body {
+  background-color:#F5F5F5;
+  padding-top: 20px;
 }
 
 .container {
@@ -12,12 +13,14 @@
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  padding: 40px;
+  padding: 25px 40px;
   text-align: center;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
 
   &__item-name {
     font-size:22px;
     text-align: center;
+    margin-bottom:20px;
   }
 
   &__item {
@@ -44,20 +47,21 @@ table {
   font-size: 13px;
   border-collapse: collapse;
   text-align: left;
+  color: rgb(51, 51, 51);
 }
 
 table th {
   height: 32px;
-  width: 100px;
+  width: 115px;
   padding: 3px 10px;
-  border: solid 0.5px gray;
-  background: lightblue;
+  border: solid 0.5px #F5F5F5;
+  background: #F5F5F5;
 }
 
 table td {
-  width: 140px;
+  width: 155px;
   padding: 3px 10px;
-  border: solid 0.5px gray;
+  border: solid 0.5px #F5F5F5;
 }
 
 .widerow {
@@ -93,7 +97,8 @@ table td {
 .buy-btn {
   height: 60px;
   width:100%;
-  background-color: red;
+  background-color: #EA352D;
+  font-weight: bold;
   text-align:center;
   line-height: 60px;
   margin-bottom: 8px;
@@ -112,6 +117,7 @@ table td {
   height: 60px;
   width:100%;
   background-color: #0099E8;
+  font-weight: bold;
   text-align:center;
   line-height: 60px;
   margin-bottom: 8px;
@@ -154,7 +160,7 @@ table td {
   }
 
   &__link {
-    color: cornflowerblue;
+    color: #0099E8;
   }
 }
 
@@ -175,6 +181,7 @@ table td {
   width:600px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
   font-size:22px;
   color: #0099E8;
   text-align: left;
@@ -183,7 +190,7 @@ table td {
 .details-item-list  {
   width: 600px;
   height: 600px;
-  margin: 0 auto;
+  margin: 5px auto;
   &__items{
     &__item{
       width: 180px;

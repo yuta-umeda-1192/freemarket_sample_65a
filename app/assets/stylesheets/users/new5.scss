@@ -1,6 +1,6 @@
 .user-new-registration__user-address{
   background-color: #F5F5F5;
-  height: 100%;
+  height: 100vh;
   font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
 
   &__header {
@@ -36,9 +36,10 @@
         font-size: 30px;
         display: flex;
         justify-content: space-around;
-        letter-spacing: -3px;
+        letter-spacing: -0.2em;
         &__info{
           color:#EA352D;
+          z-index:1;
         }
         &__info-line{
           hr{
@@ -47,11 +48,13 @@
           background-color:#EA352D;
           color: #EA352D;
           border-width: 0;
+          margin-right: -5px;
           }
         }
 
         &__tele{
           color:#EA352D;
+          z-index:1;
         }
         &__tele-line{
           hr{
@@ -60,11 +63,13 @@
           background-color:#EA352D;
           color: #EA352D;
           border-width: 0;
+          margin-right: -5px;
           }
         }
 
         &__address{
           color:#EA352D;
+          z-index:1;
         }
         &__address-line{
           hr{
@@ -73,11 +78,13 @@
           background-color:#888888;
           color: #888888;
           border-width: 0;
+          margin-right: -5px;
           }
         }
 
         &__pay{
           color:#888888;
+          z-index:1;
         }
         &__pay-line{
           hr{
@@ -86,11 +93,13 @@
           background-color:#888888;
           color: #888888;
           border-width: 0;
+          margin-right: -5px;
           }
         }
 
         &__end{
           color:#888888;
+          z-index:1;
         }
       }
     }
@@ -99,7 +108,7 @@
   &__forms {
     background-color: white;
     width: 700px;
-    height: 900px;
+    height: 800px;
     margin: 0 auto;
     padding-bottom: 40px;
     &__header{
@@ -117,25 +126,34 @@
       margin: 0 auto;
       width: 343px;
       padding: 24px 16px 40px;
-
+      input{
+        border-radius: 4px;
+        margin-top:5px;
+      }
         &__field{
-          margin-bottom: 20px;
+          margin-bottom: 30px;
           #must{
             background-color: #EA352D;
             color: white;
-            display: block;
+            margin-left: 5px;
             width: 40px;
-            font-size: 16px;
-            text-align: center;
-            line-height: 18px;
+            font-size: 12px;
+            line-height: 12px;
+            border-radius: 2px;
+            padding: 3px;
           }
-
-          &__label{
-            display: flex;
-            justify-content: flex-start;
-            padding-bottom: 5px;
-
-
+          label{
+            margin-bottom: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            &__title{
+              font-weight: bold;
+            }
+            &__must{
+              background-color: #EA352D;
+              color: white;
+              margin-left: 10px;
+            }
           }
           input {
             width: 343px;
@@ -149,8 +167,6 @@
           margin-bottom: 20px;
           &__label{
             display: flex;
-            justify-content: flex-start;
-            padding-bottom: 5px;
             &__title{
               font-weight: bold;
             }
