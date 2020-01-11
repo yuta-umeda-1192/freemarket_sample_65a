@@ -1,6 +1,7 @@
 .bought__body__all
   .bought__header__top
-    = image_tag("fmarket_logo_red.svg", class: "logo", size: "100×100", alt: "fmarket")
+    .bought__header__top__logo
+      = link_to image_tag("fmarket_logo_red.svg", class: ".bought__header__top", size: "185x45", alt: "logo"), root_path
     .bought__title
       .bought__text__filed
         %button.bought-btn
@@ -10,7 +11,7 @@
       %div.text.bought  
         = link_to 'プライバシーポリシー',"https://www.mercari.com/jp/privacy/"    
       %div.text.bought2
-        = link_to 'メルカリ利用規約',"https://www.mercari.com/jp/tos/"
+        = link_to 'Fmarket利用規約',"https://www.mercari.com/jp/tos/"
       %div.text.bought3
         = link_to '特定商取引に関する表記',"https://www.mercari.com/jp/tokutei/"
   .bought__footer__body__logo

@@ -1,12 +1,13 @@
 .destroy__body__all{
-  background-color:lightgray;
+  background-color:#F5F5F5;
+  height:100vh;
   .destroy__header__top{
-    .logo{
-    padding-top: 50px;
-    padding-bottom: 30px;
-    width: 200px;
-    margin-left: 600px;
-    }
+    &__logo{
+      padding-top: 50px;
+      padding-bottom: 30px;
+      width: 200px;
+      margin-left: 600px;
+      }
 
     .destroy__title{
       background-color:white;
@@ -25,6 +26,9 @@
           background-color:red;
           height:40px;
           border-radius:10px
+        }
+        a{
+          text-decoration: none;
         }
         .des-btn2{
           font-size:18px;
@@ -55,6 +59,10 @@
       .destroy3{
       cursor: pointer;
       padding-right:20px;
+    }
+    a{
+      text-decoration: none;
+      color: #ccc;
     }
 }
 }

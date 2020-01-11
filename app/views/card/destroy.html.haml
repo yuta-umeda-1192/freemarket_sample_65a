@@ -1,6 +1,7 @@
 .destroy__body__all
   .destroy__header__top
-    = image_tag("fmarket_logo_red.svg", class: "logo", size: "100×100", alt: "fmarket")
+    .destroy__header__top__logo
+      = link_to image_tag("fmarket_logo_red.svg", class: ".user-new-registration__header__logo", size: "185x45", alt: "logo"), root_path
     .destroy__title
       .destroy__text__filed
         %button.des-btn
@@ -10,7 +11,7 @@
       %div.text.destroy  
         = link_to 'プライバシーポリシー',"https://www.mercari.com/jp/privacy/"    
       %div.text.destroy2 
-        = link_to 'メルカリ利用規約',"https://www.mercari.com/jp/tos/"
+        = link_to 'Fmarket利用規約',"https://www.mercari.com/jp/tos/"
       %div.text.destroy3
         = link_to '特定商取引に関する表記',"https://www.mercari.com/jp/tokutei/"
   .destroy__footer__body__logo
