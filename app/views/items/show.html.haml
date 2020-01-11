@@ -5,7 +5,7 @@
     #{@item.name}
   .container__item
     .details-container
-      #main-image= image_tag src="#{@item.images[0].src}", data: {url: "#{@item.images[0].src}"}, size: "260x260"
+      //#main-image= image_tag src="#{@item.images[0].src}", data: {url: "#{@item.images[0].src}"}, size: "260x260"
 
       .thumbnails-frame
         - @images.each do |image|
