@@ -16,7 +16,7 @@
           = link_to item_path(item) do
             .item-list__contents__items__item__main
               #image-box
-                -# = image_tag image.src.url, width: '180', height: '180'
+                = image_tag image.src.url, width: '180', height: '180'
               .item-list__contents__items__item__main__price
                 ¥
                 = item.price
