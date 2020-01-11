@@ -3,30 +3,30 @@
     .credit__header__top2__logo2
       = image_tag("fmarket_logo_red.svg", class: ".index_logo", size: "100×100", alt: "fmarket")
   .credit__title2
-    %h2 支払い方法
+    %h2.paypay 支払い方法
     .content__credit-cards
-      %h3 クレジットカード一覧
+      %h3.list-card クレジットカード一覧
       - if @card.present?
         %ul.content__credit-cards__list
           %li
-            = form_with url: card_path(@card.id), method: :delete, local: true, id: 'charge-form' do |f|
-              //カードブランドのアイコンを表示する場合-----
-              %figure
-                = image_tag "credit-cards/#{@card_src}", width: '36', height: '30', alt: @card_brand, id: "card_image"
-              .content__credit-cards__list--pay-num
-                = "**** **** **** " + @card_information.last4
-              .content__credit-cards__list--pay-num
-                - exp_month = @card_information.exp_month.to_s
-                - exp_year = @card_information.exp_year.to_s.slice(2,3)
-                = exp_month + " / " + exp_year
-              %input{type: "hidden", name: "card_id", value: ""}
-              = f.submit "削除する", {class: "content__credit-cards__list__remove"}
-              - if flash[:notice]
-                .alert.alert-success
-                = flash[:notice]
-              - if flash[:alert]
-                .alert.alert-dange
-                = flash[:alert]
+          = form_with url: card_path(@card.id), method: :delete, local: true, id: 'charge-form' do |f|
+            //カードブランドのアイコンを表示する場合-----
+            %figure
+              = image_tag "credit-cards/#{@card_src}", width: '36', height: '30', alt: @card_brand, id: "card_image"
+            .content__credit-cards__list--pay-num
+              = "**** **** **** " + @card_information.last4
+            .content__credit-cards__list--pay-num
+              - exp_month = @card_information.exp_month.to_s
+              - exp_year = @card_information.exp_year.to_s.slice(2,3)
+              = exp_month + " / " + exp_year
+            %input{type: "hidden", name: "card_id", value: ""}
+            = f.submit "削除する", {class: "content__credit-cards__list__remove"}
+            - if flash[:notice]
+              .alert.alert-success
+              = flash[:notice]
+            - if flash[:alert]
+              .alert.alert-dange
+              = flash[:alert]
 
   .credit__footer2
     .credit__footer2__body2

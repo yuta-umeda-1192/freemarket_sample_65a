@@ -10,7 +10,7 @@ class CardBuyController < ApplicationController
     card = Card.find_by(user_id: current_user.id)
     if card.blank?
       redirect_to controller: "card",action:"new"
-      flash[:alert] = '購入にはクレジットカード登録が必要です'
+      # flash[:alert] = '購入にはクレジットカード登録が必要です'
     else
       @item = Item.find(params[:item_id])
       

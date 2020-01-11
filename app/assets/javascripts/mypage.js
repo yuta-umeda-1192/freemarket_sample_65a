@@ -1,4 +1,4 @@
-window.addEventListener("load", function() {
+window.addEventListener("turbolinks:load", function() {
   let tab1 = $(".mypage-contents1__switchtabs__tab");
   tabsAry1 = Array.prototype.slice.call(tab1);
 
@@ -17,7 +17,7 @@ window.addEventListener("load", function() {
   });
 });
 
-window.addEventListener("load", function() {
+window.addEventListener("turbolinks:load", function() {
   let tab2 = $(".mypage-contents2__switchtabs__tab");
   tabsAry2 = Array.prototype.slice.call(tab2);
 

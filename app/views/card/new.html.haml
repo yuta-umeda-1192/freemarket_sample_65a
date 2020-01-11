@@ -7,8 +7,8 @@
       .credit-cards
         .credit-cards__inner
           = form_with url: card_index_path, method: :post, id: "charge-form", html: { name: "inputForm" } do |f|
-            = f.label :カード番号, class: 'cards-number'
-            %span.require 必須
+            = f.label :カード番号, class: '.credit-cards__inner__cards-number'
+            .credit-cards__inner__require 必須
             = f.text_field :card_number, type: 'text', class: 'input-number', placeholder: '半角数字のみ', maxlength: "16"
             .cards-expire
               = f.label :有効期限, class: 'limited'
