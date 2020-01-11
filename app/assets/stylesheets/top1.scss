@@ -401,3 +401,17 @@
   bottom: 5px;
   right: 5px;
 }
+
+.breadcrumbs{
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px solid #CCCCCC;
+  box-shadow: 0 4px 4px #CCCCCC;
+  margin-bottom: 5px;
+  padding-top:2px;
+  font-size: 15px;
+  a{
+  font-size: 15px;
+  }
+}
+
