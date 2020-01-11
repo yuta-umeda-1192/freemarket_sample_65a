@@ -10,7 +10,7 @@
     .mypage-contents1__headbar1
       .mypage-contents1__headbar1__user-icon
         = image_tag("logo_red.svg", size: "60x60")
-        %h2 ユーザーネーム
+        %h2= @user.nickname
       .mypage-contents1__headbar1__user-status
         %p 評価 0
         %p 出品数 0

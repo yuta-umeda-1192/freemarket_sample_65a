@@ -1,6 +1,6 @@
 .user-new-registration__completion-registration{
   background-color: #F5F5F5;
-  height: 100%;
+  height: 100vh;
   font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
 
   &__header {
@@ -36,9 +36,10 @@
         font-size: 30px;
         display: flex;
         justify-content: space-around;
-        letter-spacing: -3px;
+        letter-spacing: -0.2em;
         &__info{
           color:#EA352D;
+          z-index:1;
         }
         &__info-line{
           hr{
@@ -47,11 +48,13 @@
           background-color:#EA352D;
           color: #EA352D;
           border-width: 0;
+          margin-right: -5px;
           }
         }
 
         &__tele{
           color:#EA352D;
+          z-index:1;
         }
         &__tele-line{
           hr{
@@ -60,11 +63,13 @@
           background-color:#EA352D;
           color: #EA352D;
           border-width: 0;
+          margin-right: -5px;
           }
         }
 
         &__address{
           color:#EA352D;
+          z-index:1;
         }
         &__address-line{
           hr{
@@ -73,11 +78,13 @@
           background-color:#EA352D;
           color: #EA352D;
           border-width: 0;
+          margin-right: -5px;
           }
         }
 
         &__pay{
           color:#EA352D;
+          z-index:1;
         }
         &__pay-line{
           hr{
@@ -86,11 +93,13 @@
           background-color:#EA352D;
           color:#EA352D;
           border-width: 0;
+          margin-right: -5px;
           }
         }
 
         &__end{
           color:#EA352D;
+          z-index:1;
         }
       }
     }
@@ -99,7 +108,7 @@
   &__forms {
     background-color: white;
     width: 700px;
-    height: 570px;
+    height: 300px;
     margin: 0 auto;
     padding-bottom: 40px;
     &__header{
@@ -142,7 +151,7 @@
 
         img{
           margin: 0 auto;
-        }
+        } 
     }
   }
 
@@ -151,7 +160,7 @@
   &__footer {
     display: flex;
     flex-direction: column;
-    margin: 100px auto;
+    margin: 50px auto;
     &__links {
       display: flex;
       justify-content: flex-start;

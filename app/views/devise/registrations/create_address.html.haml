@@ -1,6 +1,6 @@
 .user-new-registration
   .user-new-registration__completion-registration__header
-    = image_tag("fmarket_logo_red.svg", class: ".user-new-registration__header__logo", size: "185x45", alt: "logo")
+    = link_to image_tag("fmarket_logo_red.svg", class: ".user-new-registration__header__logo", size: "185x45", alt: "logo"), root_path
     .user-new-registration__completion-registration__header__navi
       .user-new-registration__completion-registration__header__navi__charts
         .user-new-registration__completion-registration__header__navi__charts__info
@@ -41,17 +41,17 @@
         ありがとうございます。
         %br 会員登録が完了しました。
       .user-new-registration__completion-registration__forms__menus__start
-        = link_to "メルカリをはじめる", root_path
+        = link_to "Fmarketをはじめる", root_path
 
   .user-new-registration__footer
     .user-new-registration__footer__links
       .user-new-registration__footer__links__policy
         プライバシーポリシー
       .user-new-registration__footer__links__terms
-        メルカリ利用規約
+        Fmarket利用規約
       .user-new-registration__footer__links__commerce
         特定商取引に関する表記
     .user-new-registration__footer__mercari
       = image_tag("logo_gray.svg", class: ".user-new-registration__footer__mercari__logo", size: "80x65", alt: "logo")
       .user-new-registration__footer__mercari__copyright
-        ©️ Mercari, Inc.
+        ©️ Fmarket, Inc.
