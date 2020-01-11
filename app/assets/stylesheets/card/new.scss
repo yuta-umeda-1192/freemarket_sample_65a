@@ -25,15 +25,18 @@
       padding-top: 20px;
     }
   }
+
     .credit-cards{
       padding-top: 30px;
       padding-left: 190px;
-      .credit-cards__inner{
+      display:flex;
+      justify-content: flex-start;
+      &__inner{
         margin-top: 20px;
-        .cards-number{
+        &__cards-number{
           font-family: 'Courier New', Courier, monospace;
         }
-        .require{
+        &__require{
           background-color: #EA352D; 
           color: white;
           display: block;

@@ -1,6 +1,6 @@
 class CardController < ApplicationController
   require "payjp"
-  before_action :set_card, only:[:show,:destroy,:new]
+  before_action :set_card, only: [:index, :show, :destroy, :new]
 
 
   def index #CardのデータをPayjpに送って情報を取り出す
@@ -57,7 +57,6 @@ class CardController < ApplicationController
       end
     end
   end
-
   
   def destroy #PayjpとCardのデータベースを削除
     Payjp.api_key = 'sk_test_b13301a481b177854022e46b'
@@ -65,7 +64,7 @@ class CardController < ApplicationController
     customer = Payjp::Customer.retrieve(@card.customer_id)
     customer.delete
     if @card.destroy
-      redirect_to action: "index", alert: "削除できませんでした"
+      redirect_to action: "index"
     end
   end
 

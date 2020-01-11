@@ -64,12 +64,18 @@
           .buy-btn__text
             商品を削除する
 
-    - else
+    - elsif user_signed_in?
       = link_to item_card_buy_path(@item) do
         .buy-btn
           .buy-btn__text
             購入画面に進む
 
+    - else
+      = link_to new_user_session_path do
+        .buy-btn
+          .buy-btn__text
+            ログインして購入
+      
     .description 
       = simple_format(@item.discription)
 
