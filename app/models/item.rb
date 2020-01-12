@@ -21,4 +21,9 @@ class Item < ApplicationRecord
   #   no1: 1,
   #   no2: 2
   # }
+
+  def self.search(search)
+    return Item.all unless search
+    Item.where('name LIKE(?) OR discription LIKE(?)', "%#{search}%", "%#{search}%")
+  end
 end

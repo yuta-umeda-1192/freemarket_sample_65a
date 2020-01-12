@@ -13,6 +13,9 @@ Rails.application.routes.draw do
 
   root to: 'top#index'
   resources :items do
+    collection do
+      get 'search'
+    end
     resources :card_buy, only: [:show, :create] do 
     end
   end

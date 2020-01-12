@@ -44,8 +44,6 @@
         height: 40px;
         line-height: 1.4em;
         cursor: pointer;
-        right: 0px;
-        top: 0px;
         -webkit-appearance: none;
         border-width: initial;
         border-style: none;
@@ -53,7 +51,9 @@
         border-image: initial;
         border-radius: 0px 4px 4px 0px;
         padding: 0px;
-    }
+        padding-left:830px;
+      }
+
     .fa-search{
       position: absolute;
       padding-left:830px;

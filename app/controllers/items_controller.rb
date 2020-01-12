@@ -47,6 +47,10 @@ class ItemsController < ApplicationController
     end
   end
 
+  def search
+    @items = Item.search(params[:keyword])
+  end
+
   private
   def item_params
     params.require(:item).permit(:name, :price, :discription, images_attributes: [:id, :src]).merge(user_id: current_user.id)
