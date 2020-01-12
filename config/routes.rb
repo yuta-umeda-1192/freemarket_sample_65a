@@ -13,9 +13,6 @@ Rails.application.routes.draw do
 
   root to: 'top#index'
   resources :items do
-    collection do
-      get 'search'
-    end
     resources :card_buy, only: [:show, :create] do 
     end
   end
@@ -29,4 +26,9 @@ Rails.application.routes.draw do
     end
   end
   resources :card
+  resources :searches, only: [:index] do
+    collection do
+      get 'detail_search'
+    end
+  end
 end
