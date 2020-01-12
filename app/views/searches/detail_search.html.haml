@@ -1,0 +1,33 @@
+= render "top/header-top"
+
+.search
+  .search-container
+    .search-left
+      = render 'form-bar'
+    .search-right
+      %section.items-box-container
+        -if @search.present?
+          %h2.search-result-head
+            =@search
+            %span.search-result-head-text
+              の検索結果
+          .search-result-number
+            ="1-#{@items.count}件表示"
+        -else
+          %h2.search-result-nil
+            検索結果
+          .search-result-number
+            ="1-#{@items.count}件表示"
+        .search-item-list__contents__items
+          - @items.each do |item|
+          - image = item.images[0]
+            .search-item-list__contents__items__item
+              = link_to item_path(item) do
+                .search-item-list__contents__items__item__main
+                  #image-box
+                    = image_tag image.src.url, width: '180', height: '180'
+                  .search-item-list__contents__items__item__main__price
+                    ¥
+                    = item.price
+                .search-item-list__contents__items__item__name
+                  = item.name
