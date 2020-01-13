@@ -25,6 +25,9 @@ class CardBuyController < ApplicationController
       )
 
      # ↑商品の金額をamountへ、cardの顧客idをcustomerへ、currencyをjpyへ入れる
+      if @item.update(buyer_id: current_user.id)
       end
+    end
+     #↑この辺はこちら側のテーブル設計どうりに色々しています
   end
 end
