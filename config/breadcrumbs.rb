@@ -7,7 +7,7 @@ crumb :mypage do
 end
 
 crumb :profile do
-  link "プロフィール設定",mypage_profile_users_path
+  link "プロフィール",mypage_profile_users_path
   parent :mypage
 end
 
@@ -21,6 +21,10 @@ crumb :idenfication do
   parent :mypage
 end
 
+crumb :credit do
+  link "支払い方法",mypage_credit_page_users_path
+  parent :mypage
+end
 
 # crumb :users do
 #   link "マイページ", user_path(current_user.id)
