@@ -64,6 +64,11 @@
           .buy-btn__text
             商品を削除する
 
+    - elsif user_signed_in? && @item.buyer_id
+      .buy-btn
+        .buy-btn__text
+          SOLD OUT
+
     - elsif user_signed_in?
       = link_to item_card_buy_path(@item) do
         .buy-btn
