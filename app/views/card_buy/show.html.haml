@@ -6,13 +6,14 @@
     .buy__body__header__top
       %h2.buy__body__header__text 購入内容の画面
       .buy__product
-
+        
         .buy__product__inner
 
           .buy__product__inner__body
-            
+            -# - @items.each do |item|
+            -# - image = item.images[0]
             .buy__product__image
-              
+              -# = image_tag image.src.url, width: '180', height: '180'
               .buy__product__image__item
                 
                 .buy__product__image__item__name
@@ -39,18 +40,10 @@
                 %i.add
                   +
                 .register1
-                  = link_to "登録してください", new_card_path, class: "button"
-          .buy__body__under__inner__place
-            .place
-              %h3 配送先
-              .place2
-                %i.add2
-                  +
-                .register2
-                  = link_to "登録してください", new_user_path, class: "button"
-          .buy_push
-            %button.push_btn
-              = link_to "購入する", item_card_buy_index_path(@item.id), method: :post, class: "buy_button"
+                  = link_to "登録してください", new_card_path(@card), class: "button"
+        .buy_push          
+          %button.push_btn
+            = link_to "購入する", item_card_buy_index_path, method: :post, class: "buy_button"
   .buy__footer
     .buy__footer__body
       %div.text  

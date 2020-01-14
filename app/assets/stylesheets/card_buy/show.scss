@@ -17,7 +17,7 @@
     margin-right: 380px;
     border-style: solid 1px gray;
     border-width: 0;
-    height:700px;
+    height:600px;
     min-width: 280px;
   
     &__top{
@@ -134,42 +134,11 @@
           }
         }
       }
-          .buy__body__under__inner__place{
-            border-bottom:1px solid lightgrey;
-            .place{
-              border-bottom:1px solid lightgrey;
-              border-top:1px solid lightgrey;
-              height:100px;
-              h3{
-              margin-top:20px;
-              margin-left:200px;
-              font-size:13px;
-              font-family: 'Courier New', Courier, monospace;
-              }
-              .place2{
-                display:flex;
-                margin-top:10px;
-                margin-left: 200px;
-                .add2{
-                background-color:white;
-                border:solid 1px skyblue ;
-                border-radius:3px;
-                color: blue;
-                margin-right:10px;
-                width: 13px; 
-                text-align:center;
-                }  
-                .register2{
-                cursor: pointer;
-                font-size:13px;
-                }
-        }
-      }
-  }
+          
         
         .buy_push{
           margin-top: 80px;
-          margin-left:140px;
+          margin-left:170px;
           cursor: pointer;
           .push_btn{
             width:350px;

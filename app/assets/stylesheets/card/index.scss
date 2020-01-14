@@ -1,6 +1,8 @@
 .credit__body__all2{
-  background-color:#F5F5F5;
-  height: 100vh;
+  background-color:lightgray;
+  margin: 0px;
+  padding:0px;
+  height:800px;
   .credit__header__top2{
     &__logo2{
     padding-top: 50px;
@@ -17,7 +19,7 @@
     border-style: solid;
     border-width: 0;
     height:330px;
-    h2{
+    .paypay{
       text-align: center;
       font-size: 22px;
       font-family: 'Courier New', Courier, monospace;
@@ -26,7 +28,7 @@
       padding-top: 20px;
     }
   .content__credit-cards{
-    h3{
+    .list-card{
       text-align: center;
       font-size: 20px;
       font-family: 'Courier New', Courier, monospace;
@@ -38,14 +40,14 @@
       #charge-form{
   
       #card_image{
-      margin-left:190px;
+        margin-left:190px;
       }
       .content__credit-cards__list--pay-num{
-      margin-left:230px;
+        margin-left:230px;
       }
       .content__credit-cards__list__remove{
         margin-top:20px;
-        margin-left: 230px;
+        margin-left: 200px;
         background-color:white;
         color:red;
         border: solid 1px red;
@@ -53,14 +55,27 @@
         width: 90px;
         height: 30px;
       }
-      .alert.alert-success{
-
+     
+      } 
+      
+    .buy-return{
+      float:right;
+      margin-top:20px;
+      margin-right: 220px;
+      border:1px solid red;
+      border-radius: 3px;
+      padding:4px;
+      width:100px;
+      .return-btn{
+        height: 30px;
       }
-      .alert.alert-dange{
-
+      .return{
+        color:red;
+        font-size: 14px;      
       }
-      }   
-}}
+    }  
+}
+}
 }
   .credit__footer2{
     margin-left:520px;

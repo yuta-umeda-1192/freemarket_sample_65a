@@ -1,9 +1,10 @@
 class CardController < ApplicationController
   require "payjp"
-  before_action :set_card, only: [:index, :show, :destroy, :new]
+  before_action :set_card, only: [:index, :new, :show, :destroy]
+  # before_action :set_item
 
 
-  def index #CardのデータをPayjpに送って情報を取り出す
+  def index #CardのデータをPayjpに送って情報を取り出
     if @card.present?
       Payjp.api_key = 'sk_test_b13301a481b177854022e46b'
       customer = Payjp::Customer.retrieve(@card.customer_id)
@@ -28,9 +29,11 @@ class CardController < ApplicationController
         @card_src = "Saison_card_logo.svg.png"
       end
     end
+    
   end
   
   def new # カードの登録画面。送信ボタンを押すとcreateアクションへ。
+
     redirect_to action: "index" if @card.present?
   end
 
@@ -76,10 +79,16 @@ class CardController < ApplicationController
       @default_card_information = customer.cards.retrieve(card.card_id)
     end
   end
+end
+end 
 
   private
 
   def set_card
     @card = Card.find_by(user_id: current_user) if Card.find_by(user_id: current_user).present?
   end
+
+  # def set_item
+  #   @item = Item.find(params[:id])
+  # end
 end
