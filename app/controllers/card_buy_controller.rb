@@ -21,11 +21,22 @@ class CardBuyController < ApplicationController
     # 購入した際の情報を元に引っ張ってくる
       Payjp.api_key = 'sk_test_b13301a481b177854022e46b'
     # キーをセットする(環境変数においても良い)
-      Payjp::Charge.create(
-      amount: @item.price, #支払金額
-      customer: card.customer_id, #顧客ID
-      currency: 'jpy', #日本円
-      )
+
+      require "date"
+      d = Date.today;
+      if d.month == 1
+        Payjp::Charge.create(
+        amount: (@item.price * 0.5).round, #支払金額
+        customer: card.customer_id, #顧客ID
+        currency: 'jpy', #日本円
+        )
+      else
+        Payjp::Charge.create(
+          amount: @item.price.round, #支払金額
+          customer: card.customer_id, #顧客ID
+          currency: 'jpy', #日本円
+          )
+      end
 
      # ↑商品の金額をamountへ、cardの顧客idをcustomerへ、currencyをjpyへ入れる
       @item.update(buyer_id: current_user.id)
