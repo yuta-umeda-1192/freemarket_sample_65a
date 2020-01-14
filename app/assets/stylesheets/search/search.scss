@@ -51,7 +51,6 @@
       justify-content: flex-start;
       flex-wrap:wrap;
       width: 960px;
-      background-color: #F5F5F5;
       &__item{
         width: 180px;
         border: 1px solid #CCCCCC;
@@ -64,9 +63,11 @@
         &:hover{
           border: 1px solid #0099E8;
         }
-        &__main{
+  
+        &__main1{
           height: 180px;
           position: relative;
+  
           &__picture{
           }
           &__price{
@@ -79,12 +80,79 @@
             border-radius: 0 10px 10px 0;
           }
         }
+  
+        &__main{
+          height: 180px;
+          position: relative;
+  
+          &__picture{
+          }
+          &__price{
+            position: absolute;
+            top: 145px;
+            left: 0px;
+            background-color: rgba(163, 162, 162, 0.5);
+            padding: 3px 3px;
+            color: white;
+            border-radius: 0 10px 10px 0;
+          }
+        }
+        &__main::before{
+          content: "";
+          top: 90px;
+          left: 0;
+          transform:skewX(45deg);
+          transform:skewY(45deg);
+          background-color: #EA352D;
+          width: 180px;
+          height: 50px;
+          position: absolute;
+          z-index: 1;
+  
+          &__picture{
+          }
+          &__price{
+            position: absolute;
+            top: 145px;
+            left: 0px;
+            background-color: rgba(163, 162, 162, 0.5);
+            padding: 3px 3px;
+            color: white;
+            border-radius: 0 10px 10px 0;
+          }
+        }
+  
+        &__main::after{
+          content: "SOLD OUT";
+          font-size:25px;
+          display: block;
+          top: 90px;
+          transform: rotate(45deg);
+          color: #fff;
+          left: 17px;
+          position: absolute;
+          z-index: 2;
+  
+          &__picture{
+          }
+          &__price{
+            position: absolute;
+            top: 145px;
+            left: 0px;
+            background-color: rgba(163, 162, 162, 0.5);
+            padding: 3px 3px;
+            color: white;
+            border-radius: 0 10px 10px 0;
+          }
+        }
+  
         &__name{
           word-wrap: break-word;
           background-color: white;
           height: 50px;
           padding: 10px 7px 10px 7px;
           color: black;
+          position:relative;z-index:10;
         }
       }
     }
