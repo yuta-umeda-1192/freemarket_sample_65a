@@ -31,7 +31,7 @@ class CardBuyController < ApplicationController
         )
       else
         Payjp::Charge.create(
-          amount: @item.price.round, #支払金額
+          amount: @item.price, #支払金額
           customer: card.customer_id, #顧客ID
           currency: 'jpy', #日本円
           )
