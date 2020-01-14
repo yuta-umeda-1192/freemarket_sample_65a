@@ -4,7 +4,7 @@
     .destroy__title
       .destroy__text__filed
         %button.des-btn
-          = link_to "削除完了", new_card_path, method: :get, class: "des-btn2"
+          = link_to "削除完了", new_card_path(@card,@item), method: :get, class: "des-btn2"
   .destroy__footer
     .destroy__footer__body
       %div.text.destroy  
