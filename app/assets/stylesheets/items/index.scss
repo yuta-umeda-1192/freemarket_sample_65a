@@ -90,13 +90,11 @@
         left: 0;
         transform:skewX(45deg);
         transform:skewY(45deg);
-        // border-bottom:9em solid transparent;
-        // border-left: 9em solid #EA352D;
         background-color: #EA352D;
         width: 180px;
         height: 50px;
         position: absolute;
-        z-index: 2;
+        z-index: 1;
 
         &__picture{
         }
@@ -120,7 +118,7 @@
         color: #fff;
         left: 95px;
         position: absolute;
-        z-index: 3;
+        z-index: 2;
 
         &__picture{
         }
@@ -141,6 +139,7 @@
         height: 50px;
         padding: 10px 7px 10px 7px;
         color: black;
+        position:relative;z-index:10;
       }
     }
   }
