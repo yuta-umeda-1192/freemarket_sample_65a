@@ -3,7 +3,7 @@ class Item < ApplicationRecord
   belongs_to :user
   accepts_nested_attributes_for :images,  allow_destroy: true
   has_many :images, dependent: :destroy
-  validates :name, :discription, :price, presence: true
+  validates :name, :discription, :price, :images, presence: true
   # validates :name,  length: { maximum: 40 }
   # validates :discription, length: { maximum: 1000 }
   # validates :price, numericality:{only_integer:true, greater_than: 300, less_than: 9,999,999}
