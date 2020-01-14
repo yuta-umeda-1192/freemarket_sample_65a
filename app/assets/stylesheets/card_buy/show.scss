@@ -6,7 +6,6 @@
     padding-bottom: 30px;
     width: 50px;
     margin-left: 600px;
-    min-width:200px;
     }
   }
   .buy__body__header{
@@ -15,10 +14,10 @@
     background-color:white;
     margin-left: 380px;
     margin-right: 380px;
-    border-style: solid 1px gray;
+    border-style: solid 1px #F5F5F5;
     border-width: 0;
     height:600px;
-    min-width: 280px;
+    color:black;
   
     &__top{
       padding-top: 20px;
@@ -26,42 +25,36 @@
       text-align: center;
       font-size: 22px;
       font-family: 'Courier New', Courier, monospace;
-      border-bottom:1px solid lightgrey;
+      border-bottom:1px solid #F5F5F5;
       padding-bottom: 20px;
+      color: #333333;
       }
     }
       .buy__product{
-        border-bottom:1px solid lightgrey;
-        text-align: center;
+        border-bottom:1px solid #F5F5F5;
         &__inner{
-          max-width: 343px;
-          margin: 0 auto;
           &__body{
-                      
+            padding-top:30px;
+            padding-bottom:30px;
             .buy__product__image{
               display:flex;
+              justify-content: flex-start;
+              margin-left: 100px;
               &__item{
-                height: 80px;
-                width: 80px;
-                min-width: 80px;
-                justify-content: center;
-                align-items: center;
                 &__name{
-                
+                  margin-left: 30px;
                 }
-                
                 &__price{
+                  margin-left: 30px;
                   font-size:12px;
                   font-family: 'Courier New', Courier, monospace;
-                  text-align: center;
-                  padding:32px 16px;
-                  background-repeat:no-repeat;
                 }
               }
             }
           }
         }
       }
+      
     .buy__body__under{
       &__inner{
         
@@ -70,12 +63,11 @@
           ul.inner{
           }
             li.inner{
-              height:100px;
-              position: relative;;
-              padding-top:20px;
+              padding-top:30px;
+              padding-bottom:30px;
+              margin-left: 100px;
             }
               div.payprice{
-                position:absolute;
                 left:200px;
                 h3.paypricetext{
                 font-size:22px;
@@ -91,7 +83,6 @@
               }
               label.have{
                 padding-top:10px;
-                position:absolute;
                 top: 50%;
                 margin-top: -0.5em;
                 left:200px;
@@ -101,28 +92,37 @@
               }
       }
 
+          .alart{
+            color: red;
+            font-weight: bold;
+          }
+
           .buy__body__under__inner__way{
             
             .way{
-              border-bottom:1px solid lightgrey;
-              border-top:1px solid lightgrey;
+              border-bottom:1px solid #F5F5F5;
+              border-top:1px solid #F5F5F5;
               height:100px;
             
               h3{
                 margin-top:20px;
-                margin-left:200px;
+                margin-left:100px;
                 font-size:13px;
                 font-family: 'Courier New', Courier, monospace;
               }
                 .way2{
                   display:flex;
                   margin-top:10px;
-                  margin-left: 200px;
+                  margin-left: 100px;
+                  a{
+                    text-decoration: none;
+                    color: skyblue;
+                  }
                   .add{
                   background-color:white;
                   border:solid 1px skyblue ;
                   border-radius:3px;
-                  color: blue;
+                  color: skyblue;
                   margin-right:10px;
                   width: 13px; 
                   text-align:center;
@@ -134,17 +134,16 @@
           }
         }
       }
-          
-        
+
         .buy_push{
           margin-top: 80px;
-          margin-left:170px;
+          margin-left:130px;
           cursor: pointer;
           .push_btn{
             width:350px;
-            background-color:red;
+            background-color:#EA352D;
+            border: #EA352D;
             height:40px;
-            border-radius:10px;
           }
           a{
             text-decoration: none;
