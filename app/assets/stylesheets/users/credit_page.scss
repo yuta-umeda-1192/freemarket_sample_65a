@@ -2,7 +2,7 @@
     background-color:white;
     margin: 50px 10px 50px 50px;
     width: 750px;
-    height:300px;
+    height:400px;
     .pay-text{
     font-weight:bold;
     font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
@@ -32,9 +32,39 @@
             color:white;
             font-size:18px;
           }
+          a{
+            text-decoration: none;
+          }
         }
       }
     }
+  }
 
+  
+  .content__credit-cards__list{
+    #charge-form{
+    }
+    #card_image{
+    margin-left:190px;
+    }
+    .content__credit-cards__list--pay-num{
+    margin-left:230px;
+    }
+    .content__credit-cards__list__remove{
+      margin-top:20px;
+      margin-left: 230px;
+      background-color:white;
+      color:red;
+      border: solid 1px red;
+      border-radius: 3px;
+      width: 90px;
+      height: 30px;
+    }
+    .alert.alert-success{
+
+    }
+    .alert.alert-dange{
+
+    }
   }
 

@@ -2,8 +2,7 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   def index
-    @items = Item.order('created_at DESC')
-
+    @items = Item.order('created_at DESC').page(params[:page]).per(5)
   end
 
   def new
@@ -16,8 +15,12 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    if @item.save
-      redirect_to root_path
+    if item_params[:images_attributes].present?
+      if @item.save
+        redirect_to root_path
+      else
+        redirect_to new_item_path
+      end
     else
       redirect_to new_item_path
     end
@@ -32,8 +35,12 @@ class ItemsController < ApplicationController
   end
 
   def update
-    if @item.update(item_params)
-      redirect_to root_path
+    if item_params[:images_attributes].present?
+      if @item.update(item_params)
+        redirect_to root_path
+      else
+        redirect_to edit_item_path
+      end
     else
       redirect_to edit_item_path
     end
@@ -49,11 +56,18 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name, :price, :discription, images_attributes: [:id, :src]).merge(user_id: current_user.id)
+    params.require(:item).permit(:name, :price, :discription, images_attributes: [:id, :src, :_destroy]).merge(user_id: current_user.id)
   end
 
   def set_item
     @item = Item.find(params[:id])
+  end
+
+  def correct_user
+    @item = Item.find(params[:id])
+    unless current_user.id == @item.user_id
+      redirect_to item_path(@item)
+    end
   end
 
 end

@@ -1,7 +1,7 @@
 .credit__body__all
   .credit__header__top
     .credit__header__top__logo
-      = image_tag("fmarket_logo_red.svg", class: "buy-img", size: "100×100", alt: "fmarket")
+      = link_to image_tag("fmarket_logo_red.svg", class: ".user-new-registration__header__logo", size: "185x45", alt: "logo"), root_path
     .credit__title
       %h2 クレジットカード情報
       .credit-cards
@@ -32,7 +32,7 @@
       %div.text  
       = link_to 'プライバシーポリシー',"https://www.mercari.com/jp/privacy/" 
       %div.text2  
-      = link_to 'メルカリ利用規約',"https://www.mercari.com/jp/tos/"
+      = link_to 'Fmarket利用規約',"https://www.mercari.com/jp/tos/"
       %div.text3  
       = link_to '特定商取引に関する表記',"https://www.mercari.com/jp/tokutei/"
   .credit__footer__body__logo

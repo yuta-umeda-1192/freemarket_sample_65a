@@ -1,9 +1,13 @@
 class CardBuyController < ApplicationController
- 
+  before_action :correct_user, only: [:create]
+
   def show
     @card = Card.find_by(user_id: current_user.id)
     @item = Item.find(params[:item_id])
     session[:item] = params[:item_id]
+    if @item.buyer_id
+      redirect_to root_path
+    end
   end
 
   def create #クレジット購入
@@ -13,9 +17,9 @@ class CardBuyController < ApplicationController
       # flash[:alert] = '購入にはクレジットカード登録が必要です'
     else
       @item = Item.find(params[:item_id])
-     # 購入した際の情報を元に引っ張ってくる
+    # 購入した際の情報を元に引っ張ってくる
       Payjp.api_key = 'sk_test_b13301a481b177854022e46b'
-     # キーをセットする(環境変数においても良い)
+    # キーをセットする(環境変数においても良い)
       Payjp::Charge.create(
       amount: @item.price, #支払金額
       customer: card.customer_id, #顧客ID
@@ -23,6 +27,19 @@ class CardBuyController < ApplicationController
       )
 
      # ↑商品の金額をamountへ、cardの顧客idをcustomerへ、currencyをjpyへ入れる
-      end
+      @item.update(buyer_id: current_user.id)
+    end
+     #↑この辺はこちら側のテーブル設計どうりに色々しています
+  end
+
+  private
+
+  def correct_user
+    @item = Item.find(params[:item_id])
+    if @item.buyer_id || current_user.id == @item.user_id
+      redirect_to root_path
+    end
   end
 end
+
+

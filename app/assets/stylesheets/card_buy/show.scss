@@ -1,5 +1,5 @@
 .buy__body__all{
-  background-color:lightgray;
+  background-color:#F5F5F5;
   .buy__header__top{
     &__logo{
     padding-top: 50px;
@@ -146,6 +146,9 @@
             height:40px;
             border-radius:10px;
           }
+          a{
+            text-decoration: none;
+          }
           .buy_button{
           font-size:18px;
           font-family: 'Courier New', Courier, monospace;
@@ -177,6 +180,10 @@
       .text3{
         cursor: pointer;
         padding-right:20px;
+      }
+      a{
+        text-decoration: none;
+        color:#ccc;
       }
     }
   }

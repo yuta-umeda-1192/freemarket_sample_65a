@@ -20,6 +20,7 @@ body {
     background-color: #b3d4fc;
     text-align: center;
     font-size: 14px;
+    background-image:image-url("912162b8.jpg");
 
     &__user-icon {
       display: block;
@@ -183,6 +184,10 @@ body {
 
     &__content.show {
       display: block;
+      height: 150px;
+      color: #ccc;
+      text-align: center;
+      padding-top: 100px;
     }
 
     &__content {

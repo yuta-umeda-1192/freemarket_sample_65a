@@ -6,19 +6,31 @@
       .item-list__contents__header__more
         - if current_page?(root_path)
           = link_to "もっと見る ＞",items_path(@items)
-        - else 
+        - else
           = ""
 
     .item-list__contents__items
       - @items.each do |item|
       - image = item.images[0]
         .item-list__contents__items__item
-          = link_to item_path(item) do
-            .item-list__contents__items__item__main
-              #image-box
-                = image_tag image.src.url, width: '180', height: '180'
-              .item-list__contents__items__item__main__price
-                ¥
-                = item.price
-            .item-list__contents__items__item__name
-              = item.name
+          -if item.buyer_id
+            = link_to item_path(item) do
+              .item-list__contents__items__item__main
+                #image-box
+                  = image_tag image.src.url, width: '180', height: '180'
+                .item-list__contents__items__item__main__price
+                  ¥
+                  = item.price
+              .item-list__contents__items__item__name
+                = item.name
+
+          -else
+            = link_to item_path(item) do
+              .item-list__contents__items__item__main1
+                #image-box
+                  = image_tag image.src.url, width: '180', height: '180'
+                .item-list__contents__items__item__main1__price
+                  ¥
+                  = item.price
+              .item-list__contents__items__item__name
+                = item.name

@@ -26,4 +26,9 @@ Rails.application.routes.draw do
     end
   end
   resources :card
+  resources :searches, only: [:index] do
+    collection do
+      get 'detail_search'
+    end
+  end
 end

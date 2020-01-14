@@ -1,0 +1,92 @@
+.search-container{
+  display: flex;
+  justify-content: flex-start;
+  background-color: #F5F5F5;
+}
+
+.search-right{
+  width: calc(100vw-300px);
+  height: 100vh;
+  background-color:#F5F5F5;
+  padding-top:30px;
+}
+
+.search-item-list{
+  width: 100vw;
+  height: 100%;
+  background-color:#F5F5F5;
+
+  &__contents{
+    background-color:#F5F5F5;
+    padding: 50px;
+    width: 940px;
+    margin: 0 auto;
+    &__header{
+      display: flex;
+      justify-content: space-between;
+      width: 940px;
+      padding-top:30px;
+      &__title{
+        color: #333333;
+        font-size: 24px;
+        font-weight: bold;
+        font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+        padding-bottom: 15px;
+      }
+      &__more{
+        font-size: 12px;
+        font-weight: bold;
+        
+        color:  #0099E8;
+        a{
+          text-decoration: none;
+          font-weight: bold;
+          color: #0099E8;
+        }
+      }
+    }
+    &__items{
+      overflow:scroll;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap:wrap;
+      width: 960px;
+      background-color: #F5F5F5;
+      &__item{
+        width: 180px;
+        border: 1px solid #CCCCCC;
+        box-shadow: 4px 4px 4px #CCCCCC;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        a{
+          text-decoration: none;
+        }
+        &:hover{
+          border: 1px solid #0099E8;
+        }
+        &__main{
+          height: 180px;
+          position: relative;
+          &__picture{
+          }
+          &__price{
+            position: absolute;
+            top: 145px;
+            left: 0px;
+            background-color: rgba(163, 162, 162, 0.5);
+            padding: 3px 3px;
+            color: white;
+            border-radius: 0 10px 10px 0;
+          }
+        }
+        &__name{
+          word-wrap: break-word;
+          background-color: white;
+          height: 50px;
+          padding: 10px 7px 10px 7px;
+          color: black;
+        }
+      }
+    }
+  }
+}

@@ -9,7 +9,7 @@ class CardController < ApplicationController
       Payjp.api_key = 'sk_test_b13301a481b177854022e46b'
       customer = Payjp::Customer.retrieve(@card.customer_id)
       @card_information = customer.cards.retrieve(@card.card_id)
-      #ENV['PAYJP_PRIVATE_KEY']
+      # ENV['PAYJP_PRIVATE_KEY']
       #《＋α》 登録しているカード会社のブランドアイコンを表示するためのコードです。---------
       @card_brand = @card_information.brand      
       case @card_brand
@@ -41,7 +41,7 @@ class CardController < ApplicationController
 
   def create #PayjpとCardのデータベースを作成
     Payjp.api_key = 'sk_test_b13301a481b177854022e46b'
-    #ENV['PAYJP_PRIVATE_KEY']
+    # ENV['PAYJP_PRIVATE_KEY']
     if params['payjpToken'].blank?
       redirect_to action: "new"
     else
@@ -63,7 +63,7 @@ class CardController < ApplicationController
   
   def destroy #PayjpとCardのデータベースを削除
     Payjp.api_key = 'sk_test_b13301a481b177854022e46b'
-    #ENV['PAYJP_PRIVATE_KEY']
+    # ENV['PAYJP_PRIVATE_KEY']
     customer = Payjp::Customer.retrieve(@card.customer_id)
     customer.delete
     @card.destroy
@@ -74,10 +74,12 @@ class CardController < ApplicationController
       redirect_to action: "new" 
     else
       Payjp.api_key = 'sk_test_b13301a481b177854022e46b'
-      # ENV["PAYJP_PRIVATE_KEY"]
+      # ENV['PAYJP_PRIVATE_KEY']
       customer = Payjp::Customer.retrieve(card.customer_id)
       @default_card_information = customer.cards.retrieve(card.card_id)
+    end
   end
+end
 end 
 
   private
