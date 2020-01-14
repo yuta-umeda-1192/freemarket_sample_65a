@@ -1,8 +1,8 @@
 .credit__body__all2{
-  background-color:lightgray;
+  background-color:#F5F5F5;
   margin: 0px;
   padding:0px;
-  height:800px;
+  height:900px;
   .credit__header__top2{
     &__logo2{
     padding-top: 50px;
@@ -18,7 +18,7 @@
     margin-right: 380px;
     border-style: solid;
     border-width: 0;
-    height:330px;
+    height: 450px;
     .paypay{
       text-align: center;
       font-size: 22px;
@@ -47,31 +47,32 @@
       }
       .content__credit-cards__list__remove{
         margin-top:20px;
-        margin-left: 200px;
+        margin-left: 230px;
         background-color:white;
-        color:red;
-        border: solid 1px red;
-        border-radius: 3px;
-        width: 90px;
+        color:#EA352D;
+        border: solid 1px ;
+        width:100px;
         height: 30px;
       }
      
       } 
       
     .buy-return{
-      float:right;
-      margin-top:20px;
-      margin-right: 220px;
-      border:1px solid red;
-      border-radius: 3px;
+      margin-top:30px;
+      margin-left:226px;
       padding:4px;
-      width:100px;
+      a{
+        text-decoration: none;
+      }
       .return-btn{
         height: 30px;
       }
       .return{
-        color:red;
-        font-size: 14px;      
+        color: white;
+        background-color: #EA352D;
+        font-size: 14px;
+        padding:15px;
+        width:100px;
       }
     }  
 }

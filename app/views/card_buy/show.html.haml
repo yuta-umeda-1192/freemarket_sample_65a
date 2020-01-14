@@ -10,15 +10,14 @@
         .buy__product__inner
 
           .buy__product__inner__body
-            -# - @items.each do |item|
-            -# - image = item.images[0]
             .buy__product__image
-              -# = image_tag image.src.url, width: '180', height: '180'
+              #main-image
+                = image_tag src="#{@item.images[0].src}", data: {url: "#{@item.images[0].src}"}, size: "80x80"
               .buy__product__image__item
-                
                 .buy__product__image__item__name
                   = @item.name
                 .buy__product__image__item__price
+                  ¥
                   = @item.price
                   %span （税込)送料込み
     .buy__body__under
@@ -27,12 +26,27 @@
           %ul.inner
             %li.inner
               %div.payprice
-                %h3.paypricetext 支払い金額
+
+                - require "date"
+                - d = Date.today;
+                - if d.month == 1
+                  %h3.paypricetext
+                    支払い金額
+                    ¥
+                    = (@item.price * 0.5).round
+                  .alart
+                    現在キャンペーン中のため、半額です！！
+
+                - else
+                  %h3.paypricetext
+                    支払い金額
+                    ¥
+                    = @item.price
+
               %div.inner
                 %span.data
               %i.inner
               %label.have
-                ポイントを使用（所持ポイント: P0）
           .buy__body__under__inner__way
             .way
               %h3 お支払い方法
