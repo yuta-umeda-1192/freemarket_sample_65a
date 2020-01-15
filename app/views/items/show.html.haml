@@ -47,10 +47,23 @@
         -#   %td 
 
     .price-frame
-      .price-frame__price ¥#{@item.price.to_s(:delimited, delimiter: ',')}円
+    - require "date"
+    - d = Date.today;
+    - if d.month == 1
+      .price-frame__pricesale ¥#{@item.price.to_s(:delimited, delimiter: ',')}
       .price-frame__text (税込)
+      .sale
+        現在キャンペーン中で半額!!
+        %h3.paypricetext
+          ¥
+          = (@item.price * 0.5).round
+          !!
       .price-frame__delivery-burden
 
+    - else
+      .price-frame__price ¥#{@item.price.to_s(:delimited, delimiter: ',')}
+      .price-frame__text (税込)
+      .price-frame__delivery-burden
 
     - if user_signed_in? && current_user.id == @item.user_id
       
