@@ -2,6 +2,7 @@
 %html
   %head
     %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}
+    %script{src: "https://code.jquery.com/ui/1.12.0/jquery-ui.js"}
     %script{src: "https://js.pay.jp/", type: "text/javascript"}
     = csrf_meta_tags
     = csp_meta_tag
@@ -9,6 +10,5 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = analytics_init if Rails.env.production?
     = display_meta_tags(default_meta_tags)
-    %script{src: "https://code.jquery.com/ui/1.12.0/jquery-ui.js"}
   %body
     = yield

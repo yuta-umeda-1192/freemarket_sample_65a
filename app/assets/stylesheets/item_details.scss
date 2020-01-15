@@ -71,7 +71,7 @@ table td {
 
 .price-frame {
   width: 100%;
-  height: 40px;
+  height: 100%;
   padding: 10px;
   text-align: center;
   padding: 28px 0;
@@ -81,6 +81,15 @@ table td {
     padding-right: 10px;
     display: inline;
   }
+
+  &__pricesale {
+    font-size: 40px;
+    padding-right: 10px;
+    display: inline;
+    text-decoration: line-through;
+    text-decoration-color:  #EA352D;
+  }
+
 
   &__text {
     font-size: 10px;
@@ -93,6 +102,13 @@ table td {
     display: inline;
   }
 }
+
+.sale{
+  font-size: 40px;
+  color: #EA352D;
+
+}
+
 
 .buy-btn {
   height: 60px;
