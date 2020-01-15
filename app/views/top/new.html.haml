@@ -1,7 +1,5 @@
--# .lp キャンペーン
--# .lp2 キャンペーン
--# .lp3 キャンペーン
-
+.picture1__scroll__scroll2
+  =image_tag(src= "banner.jpg", class: "scroll2_link")
 
 .lp-item-list
   - items_list = @items
@@ -14,6 +12,6 @@
             = image_tag image.src.url, width: '180', height: '180'
           .lp-item-list__items__item__main__price
             ¥
-            = item.price
+            = (item.price * 0.5).round
         .lp-item-list__items__item__name
           = item.name
