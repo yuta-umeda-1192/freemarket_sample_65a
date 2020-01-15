@@ -22,6 +22,7 @@
       display:flex;
       position: relative;
        &__form{
+        margin-right:10px;
         width:800px;
         background-color: rgb(245, 245, 245);
         font-size: 16px;
@@ -36,7 +37,7 @@
         outline: none;
         padding: 0px 50px 0px 10px;
         transition: all 0.3s ease-out 0s;
-        cursor: pointer;      
+        cursor: pointer;
       }
     
       &__button{
@@ -50,8 +51,11 @@
         border-color: initial;
         border-image: initial;
         border-radius: 0px 4px 4px 0px;
-        padding: 0px;
         padding-left:830px;
+      }
+
+      #submit-button{
+        margin-top:10px;
       }
 
     .fa-search{
