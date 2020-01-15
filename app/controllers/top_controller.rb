@@ -3,7 +3,7 @@ class TopController < ApplicationController
     @items = Item.order('created_at DESC').page(params[:page]).per(10)
   end
 
-  def show
+  def new
     @items = Item.order('created_at DESC')
   end
 
