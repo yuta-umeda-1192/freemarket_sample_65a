@@ -1,5 +1,5 @@
 class CardBuyController < ApplicationController
-  before_action :correct_user, only: [:create,:show]
+  before_action :correct_user, only: [:show]
 
   def show
     @card = Card.find_by(user_id: current_user.id)
