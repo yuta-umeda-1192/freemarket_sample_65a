@@ -37,8 +37,6 @@ class CardController < ApplicationController
     redirect_to action: "index" if @card.present?
   end
 
- # indexアクションはここでは省略
-
   def create #PayjpとCardのデータベースを作成
     Payjp.api_key = 'sk_test_b13301a481b177854022e46b'
     # ENV['PAYJP_PRIVATE_KEY']
